@@ -7,7 +7,7 @@ from pybricks.parameters import Color
 # Initialize the EV3
 ev3 = EV3Brick()
 
-# Turn on a red light 
+# Turn on a red light
 ev3.light.on(Color.RED)
 
 # Wait
