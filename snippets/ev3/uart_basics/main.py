@@ -1,7 +1,7 @@
 #!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.tools import print
-from pybricks.customdevices import UARTDevice
+from pybricks.iodevices import UARTDevice
 from pybricks.media.ev3dev import SoundFile
 
 # Initialize the EV3

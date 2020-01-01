@@ -1,7 +1,7 @@
 #!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.tools import print
-from pybricks.customdevices import UARTDevice
+from pybricks.iodevices import UARTDevice
 
 # Initialize the EV3
 ev3 = EV3Brick()

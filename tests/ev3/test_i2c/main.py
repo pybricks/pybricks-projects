@@ -1,6 +1,6 @@
 #!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
-from pybricks.customdevices import I2CDevice
+from pybricks.iodevices import I2CDevice
 from pybricks.tools import wait, print
 
 # Initialize the EV3
