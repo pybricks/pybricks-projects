@@ -1,12 +1,13 @@
 #!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.iodevices import I2CDevice
+from pybricks.parameters import Port
 
 # Initialize the EV3
 ev3 = EV3Brick()
 
 # Initialize I2C Sensor
-device = I2CDevice(ev3.Port.S2, 0xD2 >> 1)
+device = I2CDevice(Port.S2, 0xD2 >> 1)
 
 # Read one byte from the device.
 # For this device, we can read the Who Am I

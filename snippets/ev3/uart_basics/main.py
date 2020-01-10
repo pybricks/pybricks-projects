@@ -2,13 +2,14 @@
 from pybricks.hubs import EV3Brick
 from pybricks.tools import print
 from pybricks.iodevices import UARTDevice
+from pybricks.parameters import Port
 from pybricks.media.ev3dev import SoundFile
 
 # Initialize the EV3
 ev3 = EV3Brick()
 
 # Initialize sensor port 2 as a uart device
-ser = UARTDevice(ev3.Port.S2, baudrate=115200)
+ser = UARTDevice(Port.S2, baudrate=115200)
 
 # Write some data
 ser.write(b'\r\nHello, world!\r\n')

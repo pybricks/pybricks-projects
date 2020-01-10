@@ -2,12 +2,13 @@
 from pybricks.hubs import EV3Brick
 from pybricks.iodevices import I2CDevice
 from pybricks.tools import wait, print
+from pybricks.parameters import Port
 
 # Initialize the EV3
 ev3 = EV3Brick()
 
 # Initialize I2C Sensor
-gyro = I2CDevice(ev3.Port.S2, 0xD2 >> 1)
+gyro = I2CDevice(Port.S2, 0xD2 >> 1)
 
 # Check the Who Am I register
 if 211 not in gyro.read(0x0F, 1):

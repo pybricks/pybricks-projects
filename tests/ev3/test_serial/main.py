@@ -2,6 +2,7 @@
 from pybricks.hubs import EV3Brick
 from pybricks.tools import print
 from pybricks.iodevices import UARTDevice
+from pybricks.parameters import Port
 
 # Initialize the EV3
 ev3 = EV3Brick()
@@ -9,10 +10,10 @@ ev3 = EV3Brick()
 print("Init test")
 
 # Initialize all ports as serial, with various init choices
-ser = UARTDevice(ev3.Port.S1, 115200, 1000)
-ser = UARTDevice(ev3.Port.S2, baudrate=115200, timeout=1000)
-ser3 = UARTDevice(ev3.Port.S3, baudrate=115200, timeout=None)
-ser4 = UARTDevice(ev3.Port.S4, 115200, 0)
+ser = UARTDevice(Port.S1, 115200, 1000)
+ser = UARTDevice(Port.S2, baudrate=115200, timeout=1000)
+ser3 = UARTDevice(Port.S3, baudrate=115200, timeout=None)
+ser4 = UARTDevice(Port.S4, 115200, 0)
 
 print("Read test")
 
