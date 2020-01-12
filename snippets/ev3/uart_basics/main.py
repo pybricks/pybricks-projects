@@ -16,9 +16,9 @@ ser.write(b'\r\nHello, world!\r\n')
 
 # Play a sound while we wait for some data
 for i in range(3):
-    ev3.speaker.play(SoundFile.HELLO)
-    ev3.speaker.play(SoundFile.GOOD)
-    ev3.speaker.play(SoundFile.MORNING)
+    ev3.speaker.play_file(SoundFile.HELLO)
+    ev3.speaker.play_file(SoundFile.GOOD)
+    ev3.speaker.play_file(SoundFile.MORNING)
     print("Bytes waiting to be read:", ser.waiting())
 
 # Read all data received while the sound was playing

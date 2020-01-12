@@ -74,10 +74,10 @@ CELL_WIDTH, CELL_HEIGHT = 75, 100
 # Get sub-images for each individual cell
 # This is more efficient that loading individual images
 walk_right = [Image(sprite, sub=True, x1=x * CELL_WIDTH, y1=0,
-              x2=(x + 1) * CELL_WIDTH - 1, y2=CELL_HEIGHT - 1)
+                    x2=(x + 1) * CELL_WIDTH - 1, y2=CELL_HEIGHT - 1)
               for x in range(NUM_CELLS)]
 walk_left = [Image(sprite, sub=True, x1=x * CELL_WIDTH, y1=CELL_HEIGHT,
-             x2=(x + 1) * CELL_WIDTH - 1, y2=2 * CELL_HEIGHT - 1)
+                   x2=(x + 1) * CELL_WIDTH - 1, y2=2 * CELL_HEIGHT - 1)
              for x in range(NUM_CELLS)]
 
 
