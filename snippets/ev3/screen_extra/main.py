@@ -5,7 +5,7 @@ import math
 from pybricks.hubs import EV3Brick
 from pybricks.parameters import Color
 from pybricks.tools import wait
-from pybricks.resources import Image, Font
+from pybricks.media.ev3dev import Font, Image
 
 
 # Initialize the EV3

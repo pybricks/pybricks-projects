@@ -2,8 +2,7 @@
 
 from pybricks.hubs import EV3Brick
 from pybricks.tools import wait
-from pybricks.resources import Image, Font
-from pybricks.media.ev3dev import ImageFile
+from pybricks.media.ev3dev import Font, Image, ImageFile
 
 # It takes some time for fonts to load from file, so it is best to only
 # load them once at the beginning of the program like this:
