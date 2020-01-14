@@ -42,16 +42,8 @@ wait(5000)
 
 # IMAGES ######################################################################
 
-# TODO: this needs to be implemented in the Image class
-def show_image(img):
-    ev3.screen.clear()
-    x = (ev3.screen.width - img.width) // 2
-    y = (ev3.screen.height - img.height) // 2
-    ev3.screen.draw_image(x, y, img)
-
-
 # Show an image
-show_image(ev3_img)
+ev3.screen.show_image(ev3_img)
 
 # Wait some time too look at image
 wait(5000)
