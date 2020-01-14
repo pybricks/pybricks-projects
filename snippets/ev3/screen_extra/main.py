@@ -25,9 +25,11 @@ right = Image(ev3.screen, sub=True, x1=ev3.screen.width // 2, y1=0,
 # Use a monospaced font so that text is vertically aligned when we print
 right.set_font(Font(size=8, monospace=True))
 
+
 # Graphing y = sin(x)
 def f(x):
     return math.sin(x)
+
 
 for t in range(200):
     # Graph on left side
