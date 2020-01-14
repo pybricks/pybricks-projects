@@ -45,6 +45,11 @@ wait(1000)
 
 # TEXT TO SPEECH ##############################################################
 
+# Say something in English
 ev3.speaker.say('I am am E V 3. Pleased to meet you.')
+
+# Say something in Danish + female
+ev3.speaker.set_speech_options(voice='da+f5')
+ev3.speaker.say('Leg godt!')
 
 wait(1000)
