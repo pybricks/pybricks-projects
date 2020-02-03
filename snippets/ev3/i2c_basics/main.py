@@ -12,7 +12,7 @@ device = I2CDevice(Port.S2, 0xD2 >> 1)
 # Read one byte from the device.
 # For this device, we can read the Who Am I
 # register (0x0F) for the expected value: 211.
-if 211 not in device.read(0x0F, 1):
+if 211 not in device.read(0x0F):
     raise OSError("Device is not attached")
 
 # To write data, create a bytes object of one

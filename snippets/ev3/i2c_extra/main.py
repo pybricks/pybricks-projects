@@ -18,11 +18,18 @@ device.read(reg=None, length=1)
 # Read 0 bytes from no particular register:
 device.read(reg=None, length=0)
 
+# I2C write operations consist of a register byte followed
+# by a series of data bytes. Depending on your device, you
+# can choose to skip the register or data as follows:
+
 # Recommended for writing:
 device.write(reg=0x22, data=b'\x08')
 
 # Write 1 byte to no particular register:
 device.write(reg=None, data=b'\x08')
 
+# Write 0 bytes to a particular register:
+device.write(reg=0x08, data=None)
+
 # Write 0 bytes to no particular register:
-device.write(reg=None, data=b'')
+device.write(reg=None, data=None)
