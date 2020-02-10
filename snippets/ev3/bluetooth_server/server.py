@@ -4,9 +4,10 @@
 # paired using Bluetooth, but do NOT connect them. The program will take care
 # of establishing the connection.
 
-from pybricks.bluetooth import ALL_BRICKS, EV3MailboxServer
+from pybricks.messaging import BluetoothMailboxServer, TextMailbox
 
-server = EV3MailboxServer()
+server = BluetoothMailboxServer()
+mbox = TextMailbox('mbox', server)
 
 # The server must be started before the client!
 print('waiting for connection...')
@@ -15,6 +16,6 @@ print('connected!')
 
 # In this program, the server waits for the client to send the first message
 # and then sends a reply.
-server.wait_for_update('msg1')
-print(server.get_text('msg1'))
-server.send_text(ALL_BRICKS, 'msg2', 'hello to you too!')
+mbox.wait()
+print(mbox.read())
+mbox.send('hello to you too!')
