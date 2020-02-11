@@ -47,9 +47,9 @@ for t in range(200):
     # Shift the current graph to the left one pixel
     left.draw_image(-1, 0, left)
     # Fill the last column with white to erase the previous plot point
-    left.draw_line(left.width - 1, 0, left.width - 1, left.height - 1, Color.WHITE)
+    left.draw_line(left.width - 1, 0, left.width - 1, left.height - 1, 1, Color.WHITE)
     # Draw the new value of the graph in the last column
-    left.draw_line(left.width - 2, int(sy0), left.width - 1, int(sy1))
+    left.draw_line(left.width - 2, int(sy0), left.width - 1, int(sy1), 3)
 
     # Print every 10th value on right side
     if t % 10 == 0:

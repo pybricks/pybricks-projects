@@ -42,7 +42,7 @@ wait(5000)
 # IMAGES ######################################################################
 
 # Show an image
-ev3.screen.show_image(ev3_img)
+ev3.screen.load_image(ev3_img)
 
 # Wait some time too look at image
 wait(5000)
