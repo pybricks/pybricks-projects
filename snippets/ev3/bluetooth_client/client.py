@@ -6,9 +6,8 @@
 
 from pybricks.messaging import BluetoothMailboxClient, TextMailbox
 
-# Replace this with the Bluetooth address of the server. This address can be
-# found on the screen of the client EV3 after pairing with the server.
-SERVER = '00:17:E7:XX:XX:XX'
+# This is the name of the remote EV3 we are connecting to.
+SERVER = 'ev3dev'
 
 client = BluetoothMailboxClient()
 mbox = TextMailbox('mbox', client)
