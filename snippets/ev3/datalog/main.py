@@ -5,7 +5,7 @@ from pybricks.tools import DataLog, StopWatch, wait
 
 # Create a data log file in the project folder on the EV3 Brick.
 # * By default, the file name contains the current date and time, for example:
-#   log_2020_02_12_16_26_21_275020.txt
+#   log_2020_02_13_10_07_44_431260.csv
 # * You can optionally specify the titles of your data columns. For example,
 #   if you want to record the motor angles at a given time, you could do:
 data = DataLog('time', 'angle')
@@ -32,4 +32,3 @@ for i in range(10):
     wait(100)
 
 # You can now upload your file to your computer
-
