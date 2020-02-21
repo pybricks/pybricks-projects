@@ -294,8 +294,7 @@ while True:
         # Make sure loop time is at least TARGET_LOOP_PERIOD. The output power
         # calculation above depends on having a certain amount of time in each
         # loop.
-        while single_loop_timer.time() < TARGET_LOOP_PERIOD:
-            pass
+        wait(TARGET_LOOP_PERIOD - single_loop_timer.time())
 
     # Handle falling over. If we get to this point in the program, it means
     # that the robot fell over.
