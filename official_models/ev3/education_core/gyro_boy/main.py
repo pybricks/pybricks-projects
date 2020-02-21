@@ -16,7 +16,7 @@ import urandom
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, UltrasonicSensor, ColorSensor, GyroSensor
-from pybricks.parameters import Port, Button, Color, ImageFile, SoundFile
+from pybricks.parameters import Port, Color, ImageFile, SoundFile
 from pybricks.tools import wait, StopWatch
 
 # Initialize the EV3 brick.
