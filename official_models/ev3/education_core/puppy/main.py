@@ -16,7 +16,7 @@ import urandom
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, ColorSensor, TouchSensor
 from pybricks.parameters import Port, Button, Color, Stop, Direction
-from pybricks.media.ev3dev import ImageFile, SoundFile
+from pybricks.media.ev3dev import Image, ImageFile, SoundFile
 from pybricks.tools import wait, StopWatch
 
 
@@ -25,6 +25,21 @@ class Puppy:
     HALF_UP_ANGLE = 25
     STAND_UP_ANGLE = 65
     STRETCH_ANGLE = 125
+
+    # These constants are for positioning the head.
+    HEAD_UP_ANGLE = 0
+    HEAD_DOWN_ANGLE = -40
+
+    # These constants are for the eyes.
+    NEUTRAL_EYES = Image(ImageFile.NEUTRAL)
+    TIRED_EYES = Image(ImageFile.TIRED_MIDDLE)
+    TIRED_LEFT_EYES = Image(ImageFile.TIRED_LEFT)
+    TIRED_RIGHT_EYES = Image(ImageFile.TIRED_RIGHT)
+    SLEEPING_EYES = Image(ImageFile.SLEEPING)
+    HURT_EYES = Image(ImageFile.HURT)
+    ANGRY_EYES = Image(ImageFile.ANGRY)
+    HEART_EYES = Image(ImageFile.LOVE)
+    SQUINTY_EYES = Image(ImageFile.TEAR)  # the tear is erased later
 
     def __init__(self):
         # Initialize the EV3 brick.
@@ -35,14 +50,18 @@ class Puppy:
         self.right_leg_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 
         # Initialize the motor connected to the head.
-        self.head_motor = Motor(Port.C)
+        # Worm gear moves 1 tooth per rotation. It is interfaced to a 24-tooth
+        # gear. The 24-tooth gear is connected to parallel 12-tooth gears via
+        # an axle. The 12-tooth gears interface with 36-tooth gears.
+        self.head_motor = Motor(Port.C, Direction.COUNTERCLOCKWISE,
+                                gears=[[1, 24], [12, 36]])
 
-        # Initialize the Color Sensor. It is used to detect the colors when feeding
-        # the puppy.
+        # Initialize the Color Sensor. It is used to detect the colors when
+        # feeding the puppy.
         self.color_sensor = ColorSensor(Port.S4)
 
-        # Initialize the touch sensor. It is used to detect when someone pets the
-        # puppy.
+        # Initialize the touch sensor. It is used to detect when someone pets
+        # the puppy.
         self.touch_sensor = TouchSensor(Port.S1)
 
         self.pet_count_timer = StopWatch()
@@ -54,7 +73,19 @@ class Puppy:
         self.feed_target = None
         self.pet_count = None
         self.feed_count = None
+
+        # These attributes are used by properties.
         self._behavior = None
+        self._behavior_changed = None
+        self._eyes = None
+        self._eyes_changed = None
+
+        # These attributes are used in the eyes update
+        self.eyes_timer_1 = StopWatch()
+        self.eyes_timer_1_end = 0
+        self.eyes_timer_2 = StopWatch()
+        self.eyes_timer_2_end = 0
+        self.eyes_closed = False
 
         # These attributes are used by the playful behavior.
         self.playful_timer = StopWatch()
@@ -64,9 +95,10 @@ class Puppy:
         self.prev_petted = None
         self.prev_color = None
 
+
     def adjust_head(self):
-        """Use the up and down buttons on the EV3 brick to adjust the puppy's head
-        up or down.
+        """Use the up and down buttons on the EV3 brick to adjust the puppy's
+        head up or down.
         """
         self.ev3.screen.load_image(ImageFile.EV3_ICON)
         self.ev3.light.on(Color.ORANGE)
@@ -76,9 +108,9 @@ class Puppy:
             if Button.CENTER in buttons:
                 break
             elif Button.UP in buttons:
-                self.head_motor.run(-1500)
+                self.head_motor.run(20)
             elif Button.DOWN in buttons:
-                self.head_motor.run(1500)
+                self.head_motor.run(-20)
             else:
                 self.head_motor.stop()
 
@@ -87,7 +119,22 @@ class Puppy:
         self.ev3.light.on(Color.GREEN)
 
 
+    def move_head(self, target):
+        """Move the head to the target angle.
+
+        Arguments:
+            target (int):
+                The target angle in degrees. 0 is the starting position,
+                negative values are below this point and positive values
+                are above this point.
+        """
+        self.head_motor.run_target(20, target)
+
+
     def reset(self):
+        # must be called when puppy is sitting down.
+        self.left_leg_motor.reset_angle(0)
+        self.right_leg_motor.reset_angle(0)
         # Pick a random number of time to pet the puppy.
         self.pet_target = urandom.randint(3, 6)
         # Pick a random number of time to feed the puppy.
@@ -108,7 +155,7 @@ class Puppy:
         if self.did_behavior_change:
             print('idle')
             self.stand_up()
-        # self.update_eyes()
+        self.update_eyes()
         self.update_behavior()
         self.update_pet_count()
         self.update_feed_count()
@@ -117,10 +164,10 @@ class Puppy:
         """Makes the puppy go to sleep."""
         if self.did_behavior_change:
             print('go_to_sleep')
-            # self.eyes = 5
+            self.eyes = self.TIRED_EYES
             self.sit_down()
-            #self.move_head(self.DOWN)
-            # self.eyes = 1
+            self.move_head(self.HEAD_DOWN_ANGLE)
+            self.eyes = self.SLEEPING_EYES
             self.ev3.speaker.play_file(SoundFile.SNORING)
         if self.touch_sensor.pressed() and Button.CENTER in self.ev3.buttons.pressed():
             self.count_changed_timer.reset()
@@ -130,9 +177,9 @@ class Puppy:
         """Makes the puppy wake up."""
         if self.did_behavior_change:
             print('wake_up')
-        # self.eyes = 5
+        self.eyes = self.TIRED_EYES
         self.ev3.speaker.play_file(SoundFile.DOG_WHINE)
-        # self.move_head(self.UP)
+        self.move_head(self.HEAD_UP_ANGLE)
         self.sit_down()
         self.stretch()
         wait(1000)
@@ -143,7 +190,7 @@ class Puppy:
         """Makes the puppy act playful."""
         if self.did_behavior_change:
             print('act_playful')
-            #self.eyes = 0
+            self.eyes = self.NEUTRAL_EYES
             self.stand_up()
             self.playful_bark_interval = 0
 
@@ -160,7 +207,7 @@ class Puppy:
         """Makes the puppy act angry."""
         if self.did_behavior_change:
             print('act_angry')
-        #self.eyes = 4
+        self.eyes = self.ANGRY_EYES
         self.ev3.speaker.play_file(SoundFile.DOG_GROWL)
         self.stand_up()
         wait(1500)
@@ -172,7 +219,7 @@ class Puppy:
     def act_hungry(self):
         if self.did_behavior_change:
             print('act_hungry')
-            #self.eyes = 3
+            self.eyes = self.HURT_EYES
             self.sit_down()
             self.ev3.speaker.play_file(SoundFile.DOG_WHINE)
 
@@ -187,7 +234,7 @@ class Puppy:
     def go_to_bathroom(self):
         if self.did_behavior_change:
             print('go_to_bathroom')
-        #self.eyes = 2
+        self.eyes = self.SQUINTY_EYES
         self.stand_up()
         wait(100)
         self.right_leg_motor.run_target(100, self.STRETCH_ANGLE)
@@ -204,7 +251,7 @@ class Puppy:
     def act_happy(self):
         if self.did_behavior_change:
             print('act_happy')
-        #self.eyes = 8
+        self.eyes = self.HEART_EYES
         #self.move_head(self.?)
         self.sit_down()
         for _ in range(3):
@@ -223,8 +270,6 @@ class Puppy:
         self.left_leg_motor.stop()
         self.right_leg_motor.stop()
         wait(100)
-        self.left_leg_motor.reset_angle(0)
-        self.right_leg_motor.reset_angle(0)
 
     # The next 4 methods define actions that are used to make some parts of
     # the behaviors above.
@@ -261,17 +306,17 @@ class Puppy:
 
     def hop(self):
         """Makes the puppy hop."""
-        self.left_leg_motor.run(1000)
-        self.right_leg_motor.run(1000)
-        wait(300)
+        self.left_leg_motor.run(500)
+        self.right_leg_motor.run(500)
+        wait(275)
         self.left_leg_motor.stop(Stop.HOLD)
         self.right_leg_motor.stop(Stop.HOLD)
-        wait(300)
+        wait(275)
         self.left_leg_motor.run(-50)
         self.right_leg_motor.run(-50)
-        wait(300)
-        self.left_leg_motor.stop(Stop.HOLD)
-        self.right_leg_motor.stop(Stop.HOLD)
+        wait(275)
+        self.left_leg_motor.stop(Stop.COAST)
+        self.right_leg_motor.stop(Stop.COAST)
 
     @property
     def behavior(self):
@@ -289,9 +334,10 @@ class Puppy:
         """bool: Tests if the behavior changed since the last time this
         property was read.
         """
-        changed = self._behavior_changed
-        self._behavior_changed = False
-        return changed
+        if self._behavior_changed:
+            self._behavior_changed = False
+            return True
+        return False
 
     def update_behavior(self):
         """Updates the :prop:`behavior` property based on the current state
@@ -313,6 +359,35 @@ class Puppy:
             # If we have no food, act hungry.
             self.behavior = self.act_hungry
 
+    @property
+    def eyes(self):
+        """Gets and sets the eyes."""
+        return self._eyes
+
+    @eyes.setter
+    def eyes(self, value):
+        if value != self._eyes:
+            self._eyes = value
+            self.ev3.screen.load_image(value)
+
+    def update_eyes(self):
+        if self.eyes_timer_1.time() > self.eyes_timer_1_end:
+            self.eyes_timer_1.reset()
+            if self.eyes == self.SLEEPING_EYES:
+                self.eyes_timer_1_end = urandom.randint(1, 5) * 1000
+                self.eyes = self.TIRED_RIGHT_EYES
+            else:
+                self.eyes = self.SLEEPING_EYES
+
+        if self.eyes_timer_2.time() > self.eyes_timer_2_end:
+            self.eyes_timer_2.reset()
+            if self.eyes != self.SLEEPING_EYES:
+                self.eyes_timer_2_end = urandom.randint(1, 10) * 1000
+                if self.eyes != self.TIRED_LEFT_EYES:
+                    self.eyes = self.TIRED_LEFT_EYES
+                else:
+                    self.eyes = self.TIRED_RIGHT_EYES
+
     def update_pet_count(self):
         """Updates the :attr:`pet_count` attribute if the puppy is currently
         being petted (touch sensor pressed).
@@ -330,7 +405,7 @@ class Puppy:
             print('pet_count:', self.pet_count, 'pet_target:', self.pet_target)
             self.count_changed_timer.reset()
             if not self.behavior == self.act_hungry:
-                # self.eyes = 2
+                self.eyes = self.SQUINTY_EYES
                 self.ev3.speaker.play_file(SoundFile.DOG_SNIFF)
             changed = True
 
@@ -355,18 +430,18 @@ class Puppy:
             changed = True
             self.count_changed_timer.reset()
             self.prev_color = color
-            #self.eyes = 2
+            self.eyes = self.SQUINTY_EYES
             self.ev3.speaker.play_file(SoundFile.CRUNCHING)
 
         return changed
 
     def monitor_counts(self):
         """Monitors pet and feed counts and decreases them over time."""
-        if self.pet_count_timer.time() > 10000:
+        if self.pet_count_timer.time() > 15000:
             self.pet_count_timer.reset()
             self.pet_count = max(0, self.pet_count - 1)
             print('pet_count:', self.pet_count, 'pet_target:', self.pet_target)
-        if self.feed_count_timer.time() > 10000:
+        if self.feed_count_timer.time() > 15000:
             self.feed_count_timer.reset()
             self.feed_count = max(0, self.feed_count - 1)
             print('feed_count:', self.feed_count, 'feed_target:', self.feed_target)
@@ -378,13 +453,17 @@ class Puppy:
     def run(self):
         """This is the main program run loop."""
         self.sit_down()
-        # self.adjust_head()
-        # self.eyes = 1
+        self.adjust_head()
+        self.eyes = self.SLEEPING_EYES
         self.reset()
         while True:
             self.monitor_counts()
             self.behavior()
             wait(100)
+
+
+# This covers up the tear to make a new image.
+Puppy.SQUINTY_EYES.draw_box(120, 60, 140, 85, fill=True, color=Color.WHITE)
 
 
 if __name__ == '__main__':
