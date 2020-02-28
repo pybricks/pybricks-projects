@@ -113,6 +113,7 @@ class Puppy:
                 self.head_motor.run(-20)
             else:
                 self.head_motor.stop()
+            wait(100)
 
         self.head_motor.stop()
         self.head_motor.reset_angle(0)
@@ -377,6 +378,7 @@ class Puppy:
                 self.eyes_timer_1_end = urandom.randint(1, 5) * 1000
                 self.eyes = self.TIRED_RIGHT_EYES
             else:
+                self.eyes_timer_1_end = 250
                 self.eyes = self.SLEEPING_EYES
 
         if self.eyes_timer_2.time() > self.eyes_timer_2_end:
