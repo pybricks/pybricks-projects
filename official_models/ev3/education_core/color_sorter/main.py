@@ -42,7 +42,7 @@ while True:
     # This is done by running the motor forward until it stalls. This
     # means that it cannot move any further. From this end point, the motor
     # rotates backward by 180 degrees. Then it is in the starting position.
-    feed_motor.run_until_stalled(120)
+    feed_motor.run_until_stalled(120, duty_limit=30)
     feed_motor.run_angle(450, -200)
 
     # Get the conveyor belt motor in the correct starting position.
