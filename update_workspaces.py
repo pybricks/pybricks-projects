@@ -33,6 +33,7 @@ def make_workspace(root):
 # Make all the workspaces
 roots = (
     path.join('snippets', 'ev3'),
+    path.join('official_models', 'ev3'),
 )
 
 for root in roots:
