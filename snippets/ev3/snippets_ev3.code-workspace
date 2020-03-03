@@ -1,0 +1,46 @@
+{
+    "folders": [
+        {
+            "path": "buttons"
+        },
+        {
+            "path": "bluetooth_server"
+        },
+        {
+            "path": "screen_basics"
+        },
+        {
+            "path": "bluetooth_client"
+        },
+        {
+            "path": "vernier_surface_temperature"
+        },
+        {
+            "path": "datalog"
+        },
+        {
+            "path": "screen_extra"
+        },
+        {
+            "path": "speaker_basics"
+        },
+        {
+            "path": "light_color"
+        },
+        {
+            "path": "i2c_basics"
+        },
+        {
+            "path": "uart_basics"
+        },
+        {
+            "path": "ev3devsensor"
+        },
+        {
+            "path": "i2c_extra"
+        }
+    ],
+    "settings": {
+        "debug.openDebug": "neverOpen"
+    }
+}
