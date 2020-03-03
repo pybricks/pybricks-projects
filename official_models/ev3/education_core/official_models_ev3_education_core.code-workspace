@@ -1,0 +1,10 @@
+{
+    "folders": [
+        {
+            "path": "robot_arm"
+        }
+    ],
+    "settings": {
+        "debug.openDebug": "neverOpen"
+    }
+}
