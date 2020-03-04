@@ -1,7 +1,7 @@
 #!/usr/bin/env pybricks-micropython
 
 from pybricks.hubs import EV3Brick
-from pybricks.tools import wait, print
+from pybricks.tools import wait
 from pybricks.parameters import Button
 
 # Initialize the EV3
