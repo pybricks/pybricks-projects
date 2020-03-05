@@ -95,7 +95,6 @@ class Puppy:
         self.prev_petted = None
         self.prev_color = None
 
-
     def adjust_head(self):
         """Use the up and down buttons on the EV3 brick to adjust the puppy's
         head up or down.
@@ -119,7 +118,6 @@ class Puppy:
         self.head_motor.reset_angle(0)
         self.ev3.light.on(Color.GREEN)
 
-
     def move_head(self, target):
         """Move the head to the target angle.
 
@@ -130,7 +128,6 @@ class Puppy:
                 are above this point.
         """
         self.head_motor.run_target(20, target)
-
 
     def reset(self):
         # must be called when puppy is sitting down.
@@ -253,7 +250,7 @@ class Puppy:
         if self.did_behavior_change:
             print('act_happy')
         self.eyes = self.HEART_EYES
-        #self.move_head(self.?)
+        # self.move_head(self.?)
         self.sit_down()
         for _ in range(3):
             self.ev3.speaker.play_file(SoundFile.DOG_BARK_1)
@@ -261,7 +258,6 @@ class Puppy:
         wait(500)
         self.sit_down()
         self.reset()
-
 
     def sit_down(self):
         """Makes the puppy sit down."""
