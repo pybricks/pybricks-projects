@@ -10,6 +10,9 @@
             "path": "screen_basics"
         },
         {
+            "path": "getting_started"
+        },
+        {
             "path": "bluetooth_client"
         },
         {
