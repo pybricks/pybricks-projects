@@ -2,6 +2,15 @@
     "folders": [
         {
             "path": "robot_arm"
+        },
+        {
+            "path": "color_sorter"
+        },
+        {
+            "path": "gyro_boy"
+        },
+        {
+            "path": "puppy"
         }
     ],
     "settings": {
