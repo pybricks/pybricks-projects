@@ -47,7 +47,7 @@ elbow_motor.run(15)
 while elbow_sensor.reflection() < 32:
     wait(10)
 elbow_motor.reset_angle(0)
-elbow_motor.stop(Stop.HOLD)
+elbow_motor.hold()
 
 # Initialize the base. First rotate it until the Touch Sensor
 # in the base is pressed. Reset the motor angle to make this
@@ -56,13 +56,13 @@ base_motor.run(-60)
 while not base_switch.pressed():
     wait(10)
 base_motor.reset_angle(0)
-base_motor.stop(Stop.HOLD)
+base_motor.hold()
 
 # Initialize the gripper. First rotate the motor until it stalls.
 # Stalling means that it cannot move any further. This position
 # corresponds to the closed position. Then rotate the motor
 # by 90 degrees such that the gripper is open.
-gripper_motor.run_until_stalled(200, Stop.COAST, 50)
+gripper_motor.run_until_stalled(200, then=Stop.COAST, duty_limit=50)
 gripper_motor.reset_angle(0)
 gripper_motor.run_target(200, -90)
 
@@ -73,13 +73,13 @@ def robot_pick(position):
     # raises the elbow to pick up the object.
 
     # Rotate to the pick-up position.
-    base_motor.run_target(60, position, Stop.HOLD)
+    base_motor.run_target(60, position)
     # Lower the arm.
     elbow_motor.run_target(60, -40)
     # Close the gripper to grab the wheel stack.
-    gripper_motor.run_until_stalled(200, Stop.HOLD, 50)
+    gripper_motor.run_until_stalled(200, then=Stop.HOLD, duty_limit=50)
     # Raise the arm to lift the wheel stack.
-    elbow_motor.run_target(60, 0, Stop.HOLD)
+    elbow_motor.run_target(60, 0)
 
 
 def robot_release(position):
@@ -88,13 +88,13 @@ def robot_release(position):
     # release the object. Then it raises its arm again.
 
     # Rotate to the drop-off position.
-    base_motor.run_target(60, position, Stop.HOLD)
+    base_motor.run_target(60, position)
     # Lower the arm to put the wheel stack on the ground.
     elbow_motor.run_target(60, -40)
     # Open the gripper to release the wheel stack.
     gripper_motor.run_target(200, -90)
     # Raise the arm.
-    elbow_motor.run_target(60, 0, Stop.HOLD)
+    elbow_motor.run_target(60, 0)
 
 
 # Play three beeps to indicate that the initialization is complete.
