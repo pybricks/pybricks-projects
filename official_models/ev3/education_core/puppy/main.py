@@ -278,8 +278,8 @@ class Puppy:
         while not self.left_leg_motor.control.done():
             wait(100)
 
-        self.left_leg_motor.run_target(50, self.STAND_UP_ANGLE, Stop.HOLD, wait=False)
-        self.right_leg_motor.run_target(50, self.STAND_UP_ANGLE, Stop.HOLD)
+        self.left_leg_motor.run_target(50, self.STAND_UP_ANGLE, wait=False)
+        self.right_leg_motor.run_target(50, self.STAND_UP_ANGLE)
         while not self.left_leg_motor.control.done():
             wait(100)
 
@@ -306,14 +306,14 @@ class Puppy:
         self.left_leg_motor.run(500)
         self.right_leg_motor.run(500)
         wait(275)
-        self.left_leg_motor.stop(Stop.HOLD)
-        self.right_leg_motor.stop(Stop.HOLD)
+        self.left_leg_motor.hold()
+        self.right_leg_motor.hold()
         wait(275)
         self.left_leg_motor.run(-50)
         self.right_leg_motor.run(-50)
         wait(275)
-        self.left_leg_motor.stop(Stop.COAST)
-        self.right_leg_motor.stop(Stop.COAST)
+        self.left_leg_motor.stop()
+        self.right_leg_motor.stop()
 
     @property
     def behavior(self):
