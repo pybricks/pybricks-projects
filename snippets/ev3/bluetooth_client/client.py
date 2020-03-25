@@ -4,15 +4,16 @@
 # paired using Bluetooth, but do NOT connect them. The program will take care
 # of establishing the connection.
 
+# The server must be started before the client!
+
 from pybricks.messaging import BluetoothMailboxClient, TextMailbox
 
 # This is the name of the remote EV3 we are connecting to.
 SERVER = 'ev3dev'
 
 client = BluetoothMailboxClient()
-mbox = TextMailbox('mbox', client)
+mbox = TextMailbox('greeting', client)
 
-# The server must be started before the client!
 print('establishing connection...')
 client.connect(SERVER)
 print('connected!')

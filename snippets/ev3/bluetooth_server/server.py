@@ -4,10 +4,12 @@
 # paired using Bluetooth, but do NOT connect them. The program will take care
 # of establishing the connection.
 
+# The server must be started before the client!
+
 from pybricks.messaging import BluetoothMailboxServer, TextMailbox
 
 server = BluetoothMailboxServer()
-mbox = TextMailbox('mbox', server)
+mbox = TextMailbox('greeting', server)
 
 # The server must be started before the client!
 print('waiting for connection...')
@@ -18,4 +20,4 @@ print('connected!')
 # and then sends a reply.
 mbox.wait()
 print(mbox.read())
-mbox.send('hello to you too!')
+mbox.send('hello to you!')
