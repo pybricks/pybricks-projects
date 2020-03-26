@@ -25,8 +25,8 @@ base_motor = Motor(Port.C, Direction.COUNTERCLOCKWISE, [12, 36])
 
 # Limit the elbow and base accelerations. This results in
 # very smooth motion. Like an industrial robot.
-elbow_motor.set_run_settings(60, 120)
-base_motor.set_run_settings(60, 120)
+elbow_motor.control.limits(speed=60, acceleration=120)
+base_motor.control.limits(speed=60, acceleration=120)
 
 # Set up the Touch Sensor. It acts as an end-switch in the base
 # of the robot arm. It defines the starting point of the base.
