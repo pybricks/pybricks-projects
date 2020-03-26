@@ -30,5 +30,5 @@ ev3.screen.print('HELLO')
 ev3.screen.set_font(chinese_font)
 ev3.screen.print('你好')
 
-# Wait some time too look at the screen
+# Wait some time to look at the screen
 wait(5000)
