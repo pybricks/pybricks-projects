@@ -15,7 +15,7 @@ import urandom
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, ColorSensor, TouchSensor
-from pybricks.parameters import Port, Button, Color, Stop, Direction
+from pybricks.parameters import Port, Button, Color, Direction
 from pybricks.media.ev3dev import Image, ImageFile, SoundFile
 from pybricks.tools import wait, StopWatch
 
