@@ -16,5 +16,5 @@ ev3 = EV3Brick()
 # Show an image
 ev3.screen.load_image(ev3_img)
 
-# Wait some time too look at the image
+# Wait some time to look at the image
 wait(5000)

@@ -28,5 +28,5 @@ ev3.screen.draw_line(x1, y1, x2, y2)
 ev3.screen.draw_line(x2, y2, x3, y3)
 ev3.screen.draw_line(x3, y3, x1, y1)
 
-# Wait some time too look at the shapes
+# Wait some time to look at the shapes
 wait(5000)
