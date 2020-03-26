@@ -1,11 +1,14 @@
 #!/usr/bin/env pybricks-micropython
 
-from pybricks import ev3brick as brick
+from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, UltrasonicSensor
-from pybricks.parameters import Port, Stop, Direction, SoundFile
+from pybricks.parameters import Port, Direction, SoundFile
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 from random import randint
+
+# Initialize the EV3 brick.
+ev3 = EV3Brick()
 
 # Configure 2 motors on Ports A and D.  Set the motor directions to
 # counterclockwise, so that positive speed values make the robot move
@@ -14,16 +17,16 @@ left_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 right_motor = Motor(Port.D, Direction.COUNTERCLOCKWISE)
 
 # The wheel diameter of Znap is about 45 mm.
-wheel_diameter = 45
+WHEEL_DIAMETER = 45
 
 # The axle track is the distance between the centers of each of the
 # wheels.  This is about 150 mm for Znap.
-axle_track = 150
+AXLE_TRACK = 150
 
 # The Driving Base is comprised of 2 motors.  There is a wheel on each
 # motor.  The wheel diameter and axle track values are used to make the
 # motors move at the correct speed when you give a drive command.
-robot = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
+robot = DriveBase(left_motor, right_motor, WHEEL_DIAMETER, AXLE_TRACK)
 
 # Configure the head motor with default settings.
 head_motor = Motor(Port.B)
@@ -70,15 +73,16 @@ while True:
         # will be set to "False."
         while checking and timer.time() < random_time:
             checking = ultrasonic_sensor.distance() > 400
+            wait(10)
 
         # Stop driving.
-        robot.stop(Stop.BRAKE)
+        robot.drive(0, 0)
 
     # Check if the object is closer than 250 mm.
     if ultrasonic_sensor.distance() < 250:
         # Roar and move the head forward to bite.
         head_motor.dc(-100)
-        brick.sound.file(SoundFile.T_REX_ROAR)
+        ev3.speaker.play_file(SoundFile.T_REX_ROAR)
         wait(250)
         head_motor.stop()
         wait(1000)
@@ -87,7 +91,7 @@ while True:
         head_motor.dc(-100)
         wait(100)
         head_motor.stop()
-        brick.sound.file(SoundFile.SNAKE_HISS)
+        ev3.speaker.play_file(SoundFile.SNAKE_HISS)
 
     # Reset the head motor to its initial position.
-    head_motor.run_time(1200, 1000, Stop.HOLD)
+    head_motor.run_time(1200, 1000)
