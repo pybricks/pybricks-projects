@@ -2,9 +2,10 @@
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, GyroSensor
-from pybricks.parameters import Port, Direction, Button, ImageFile
+from pybricks.parameters import Port, Direction, Button
 from pybricks.tools import wait
 from pybricks.robotics import DriveBase
+from pybricks.media.ev3dev import ImageFile
 
 # Initialize the EV3 brick.
 ev3 = EV3Brick()
@@ -13,7 +14,7 @@ ev3 = EV3Brick()
 # counterclockwise, so that positive speed values make the robot move
 # forward.  These will be the left and right motors of the Tank Bot.
 left_motor = Motor(Port.B, Direction.COUNTERCLOCKWISE)
-right_motor = Motor(Port.D, Direction.COUNTERCLOCKWISE)
+right_motor = Motor(Port.C, Direction.COUNTERCLOCKWISE)
 
 # The wheel diameter of the Tank Bot is about 54 mm.
 WHEEL_DIAMETER = 54
@@ -32,8 +33,7 @@ robot = DriveBase(left_motor, right_motor, WHEEL_DIAMETER, AXLE_TRACK)
 # during start-up of the EV3.
 gyro_sensor = GyroSensor(Port.S4)
 
-# Initialize the speed, steering, and overshoot variables.
-speed = 250
+# Initialize the steering and overshoot variables.
 steering = 60
 overshoot = 5
 
@@ -46,53 +46,57 @@ def right_angle():
     # Reset the Gyro Sensor angle.
     gyro_sensor.reset_angle(0)
 
-    # Drive forward for 3 seconds.
-    robot.drive_time(speed, 0, 3000)
+    # Drive forward for 750 millimeters
+    robot.straight(750)
 
     # Turn clockwise until the angle is 90 degrees.
     robot.drive(0, steering)
-    for _ in range(3):
-        ev3.speaker.beep()
-        wait(100)
+
+    ev3.speaker.beep()
+
     while gyro_sensor.angle() < 90 - overshoot:
         wait(1)
     robot.drive(0, 0)
+    wait(1000)
 
-    # Drive forward for 3 seconds.
-    robot.drive_time(speed, 0, 3000)
+    # Drive forward for 750 millimeters
+    robot.straight(750)
 
     # Turn clockwise until the angle is 270 degrees.
     robot.drive(0, steering)
-    for _ in range(3):
-        ev3.speaker.beep()
-        wait(100)
+
+    ev3.speaker.beep()
+
     while gyro_sensor.angle() < 270 - overshoot:
         wait(1)
     robot.drive(0, 0)
+    wait(1000)
 
-    # Drive forward for 3 seconds.
-    robot.drive_time(speed, 0, 3000)
+    # Drive forward for 750 millimeters
+    robot.straight(750)
 
     # Turn counterclockwise until the angle is 180 degrees.
     robot.drive(0, -steering)
-    for _ in range(3):
-        ev3.speaker.beep()
-        wait(100)
+
+    ev3.speaker.beep()
+
     while gyro_sensor.angle() > 180 + overshoot:
         wait(1)
     robot.drive(0, 0)
+    wait(1000)
 
-    # Drive forward for 3 seconds.
-    robot.drive_time(speed, 0, 3000)
+    # Drive forward for 750 millimeters
+    robot.straight(750)
 
     # Turn clockwise until the angle is 360 degrees.
     robot.drive(0, steering)
-    for _ in range(3):
-        ev3.speaker.beep()
-        wait(100)
+
+    ev3.speaker.beep()
+
     while gyro_sensor.angle() < 360 - overshoot:
         wait(1)
     robot.drive(0, 0)
+    wait(1000)
 
 
 def polygon(sides, length):
@@ -105,23 +109,23 @@ def polygon(sides, length):
 
     # Calculate the angle to turn to and the time to drive straight.
     angle = 360 / sides
-    time = length / speed * 1000
 
     # Drive along the polygon path.
     for side in range(1, sides + 1):
         target_angle = side * angle - overshoot
 
         # Drive forward.
-        robot.drive_time(speed, 0, time)
+        robot.straight(length)
 
         # Turn clockwise until the angle equals the target angle.
         robot.drive(0, steering)
-        for _ in range(3):
-            ev3.speaker.beep()
-            wait(100)
-        while gyro_sensor.angle() < target_angle:
+
+        ev3.speaker.beep()
+
+        while gyro_sensor.angle() < target_angle - overshoot:
             wait(1)
         robot.drive(0, 0)
+        wait(1000)
 
 
 # This is the main part of the program.  It is a loop that repeats
