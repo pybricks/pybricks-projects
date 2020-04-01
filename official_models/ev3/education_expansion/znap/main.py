@@ -2,9 +2,10 @@
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, UltrasonicSensor
-from pybricks.parameters import Port, Direction, SoundFile
+from pybricks.parameters import Port, Direction
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
+from pybricks.media.ev3dev import SoundFile
 from random import randint
 
 # Initialize the EV3 brick.
@@ -94,4 +95,4 @@ while True:
         ev3.speaker.play_file(SoundFile.SNAKE_HISS)
 
     # Reset the head motor to its initial position.
-    head_motor.run_time(1200, 1000)
+    head_motor.run_target(1200, 0)
