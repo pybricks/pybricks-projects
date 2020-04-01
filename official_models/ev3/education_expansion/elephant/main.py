@@ -2,8 +2,9 @@
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, ColorSensor, TouchSensor
-from pybricks.parameters import Port, Direction, SoundFile, Color, Button
+from pybricks.parameters import Port, Direction, Color, Button
 from pybricks.tools import wait, StopWatch
+from pybricks.media.ev3dev import SoundFile
 
 # Initialize the EV3 brick.
 ev3 = EV3Brick()
@@ -40,13 +41,13 @@ def reset():
     neck_motor.run(750)
     while color_sensor.color() != Color.RED:
         wait(10)
-    neck_motor.hold()
+    neck_motor.brake()
 
     # Run the trunk motor until the Touch Sensor is pressed.
     trunk_motor.run(600)
     while not touch_sensor.pressed():
         wait(10)
-    trunk_motor.hold()
+    trunk_motor.brake()
 
     # Play a sound.
     ev3.speaker.play_file(SoundFile.ELEPHANT_CALL)
