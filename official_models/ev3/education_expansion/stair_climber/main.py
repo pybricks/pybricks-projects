@@ -2,9 +2,9 @@
 
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, GyroSensor, TouchSensor
-from pybricks.parameters import Port, Direction, SoundFile, Button
+from pybricks.parameters import Port, Direction, Button
 from pybricks.tools import wait
-from pybricks.media.ev3dev import Font
+from pybricks.media.ev3dev import Font, SoundFile
 
 # Initialize the EV3 brick.
 ev3 = EV3Brick()
@@ -50,7 +50,7 @@ ev3.screen.set_font(big_font)
 rear_motor.dc(-20)
 lift_motor.dc(100)
 while not touch_sensor.pressed():
-    wait(100)
+    wait(10)
 lift_motor.dc(-100)
 rear_motor.dc(40)
 wait(50)
@@ -102,7 +102,7 @@ while steps > 0:
 
     # Keep moving until the robot is at an angle of at least 10 degrees.
     while gyro_sensor.angle() < 10:
-        wait(1)
+        wait(10)
 
     # Run the lift motor to move the rear structure up, while
     # simultaneously running the front and rear motors.
@@ -115,7 +115,7 @@ while steps > 0:
     while not touch_sensor.pressed():
         if gyro_sensor.angle() < -3:
             break
-        wait(1)
+        wait(10)
     lift_motor.hold()
 
     # Move the robot forward for some time using the front and rear
