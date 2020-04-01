@@ -7,19 +7,28 @@
             "path": "bluetooth_server"
         },
         {
-            "path": "screen_basics"
-        },
-        {
             "path": "getting_started"
         },
         {
             "path": "bluetooth_client"
         },
         {
+            "path": "buttons_quickstart"
+        },
+        {
+            "path": "screen_draw"
+        },
+        {
             "path": "vernier_surface_temperature"
         },
         {
             "path": "datalog"
+        },
+        {
+            "path": "screen_image"
+        },
+        {
+            "path": "screen_print"
         },
         {
             "path": "screen_extra"
