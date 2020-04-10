@@ -3,7 +3,7 @@ from pybricks.parameters import Color
 from pybricks.tools import DataLog
 
 # Create a data log file called my_file.txt
-data = DataLog('time', 'angle', name='my_file', timestamp=False, ext='txt')
+data = DataLog('time', 'angle', name='my_file', timestamp=False, extension='txt')
 
 # The log method uses the print() method to add a line of text.
 # So, you can do much more than saving numbers. For example:
