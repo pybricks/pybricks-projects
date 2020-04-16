@@ -7,6 +7,9 @@
             "path": "bluetooth_server"
         },
         {
+            "path": "datalog_extra"
+        },
+        {
             "path": "getting_started"
         },
         {

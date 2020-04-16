@@ -1,6 +1,9 @@
 {
     "folders": [
         {
+            "path": "robot_educator"
+        },
+        {
             "path": "robot_arm"
         },
         {
