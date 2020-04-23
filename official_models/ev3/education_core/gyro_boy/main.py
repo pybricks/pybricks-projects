@@ -249,7 +249,7 @@ while True:
 
         # calculate robot body angle and speed
         gyro_sensor_value = gyro_sensor.speed()
-        gyro_offset *= (1 - GYRO_OFFSET_FACTOR) * gyro_offset
+        gyro_offset *= (1 - GYRO_OFFSET_FACTOR)
         gyro_offset += GYRO_OFFSET_FACTOR * gyro_sensor_value
         robot_body_rate = gyro_sensor_value - gyro_offset
         robot_body_angle += robot_body_rate * average_control_loop_period
