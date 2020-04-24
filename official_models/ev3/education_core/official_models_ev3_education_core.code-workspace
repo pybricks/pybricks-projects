@@ -1,10 +1,16 @@
 {
     "folders": [
         {
-            "path": "robot_educator"
+            "path": "robot_educator_line"
+        },
+        {
+            "path": "robot_educator_ultrasonic"
         },
         {
             "path": "robot_arm"
+        },
+        {
+            "path": "robot_educator_basic"
         },
         {
             "path": "color_sorter"
