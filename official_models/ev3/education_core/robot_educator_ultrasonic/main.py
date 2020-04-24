@@ -20,8 +20,9 @@ right_motor = Motor(Port.C)
 # The DriveBase is composed of two motors, with a wheel on each motor.
 # The wheel_diameter and axle_track values are used to make the motors
 # move at the correct speed when you give a motor command.
-# The axle track is the distance between the centers of each of the wheels.
-robot = DriveBase(left_motor, right_motor, wheel_diameter=56, axle_track=114)
+# The axle track is the distance between the points where the wheels
+# touch the ground.
+robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
 # Play a sound to tell us when we are ready to start moving
 ev3.speaker.beep()
