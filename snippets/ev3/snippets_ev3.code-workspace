@@ -1,31 +1,43 @@
 {
     "folders": [
         {
-            "path": "buttons"
+            "path": "bluetooth_client"
         },
         {
             "path": "bluetooth_server"
         },
         {
-            "path": "datalog_extra"
-        },
-        {
-            "path": "getting_started"
-        },
-        {
-            "path": "bluetooth_client"
+            "path": "buttons"
         },
         {
             "path": "buttons_quickstart"
         },
         {
+            "path": "datalog"
+        },
+        {
+            "path": "datalog_extra"
+        },
+        {
+            "path": "ev3devsensor"
+        },
+        {
+            "path": "getting_started"
+        },
+        {
+            "path": "i2c_basics"
+        },
+        {
+            "path": "i2c_extra"
+        },
+        {
+            "path": "light_color"
+        },
+        {
             "path": "screen_draw"
         },
         {
-            "path": "vernier_surface_temperature"
-        },
-        {
-            "path": "datalog"
+            "path": "screen_extra"
         },
         {
             "path": "screen_image"
@@ -34,25 +46,13 @@
             "path": "screen_print"
         },
         {
-            "path": "screen_extra"
-        },
-        {
             "path": "speaker_basics"
-        },
-        {
-            "path": "light_color"
-        },
-        {
-            "path": "i2c_basics"
         },
         {
             "path": "uart_basics"
         },
         {
-            "path": "ev3devsensor"
-        },
-        {
-            "path": "i2c_extra"
+            "path": "vernier_surface_temperature"
         }
     ],
     "settings": {

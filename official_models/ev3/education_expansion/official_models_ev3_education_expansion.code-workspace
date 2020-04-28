@@ -1,6 +1,9 @@
 {
     "folders": [
         {
+            "path": "elephant"
+        },
+        {
             "path": "stair_climber"
         },
         {
@@ -8,9 +11,6 @@
         },
         {
             "path": "znap"
-        },
-        {
-            "path": "elephant"
         }
     ],
     "settings": {

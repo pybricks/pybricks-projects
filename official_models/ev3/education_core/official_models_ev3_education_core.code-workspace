@@ -1,10 +1,13 @@
 {
     "folders": [
         {
-            "path": "robot_educator_line"
+            "path": "color_sorter"
         },
         {
-            "path": "robot_educator_ultrasonic"
+            "path": "gyro_boy"
+        },
+        {
+            "path": "puppy"
         },
         {
             "path": "robot_arm"
@@ -13,13 +16,10 @@
             "path": "robot_educator_basic"
         },
         {
-            "path": "color_sorter"
+            "path": "robot_educator_line"
         },
         {
-            "path": "gyro_boy"
-        },
-        {
-            "path": "puppy"
+            "path": "robot_educator_ultrasonic"
         }
     ],
     "settings": {
