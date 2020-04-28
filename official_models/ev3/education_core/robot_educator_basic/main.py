@@ -21,7 +21,7 @@ ev3.speaker.beep()
 robot.straight(-1000)
 ev3.speaker.beep()
 
-# Turn by right by 360 degrees and back again.
+# Turn clockwise by 360 degrees and back again.
 robot.turn(360)
 ev3.speaker.beep()
 
