@@ -7,6 +7,7 @@ def make_workspace(root):
 
     # Get list of folder names
     names = [d.name for d in scandir(root) if d.is_dir()]
+    names.sort()
 
     # Make the workspace dictionary
     workspace = {
