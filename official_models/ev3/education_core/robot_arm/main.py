@@ -1,5 +1,16 @@
 #!/usr/bin/env pybricks-micropython
 
+"""
+Example LEGO® MINDSTORMS® EV3 Robot Arm Program
+-----------------------------------------------
+
+This program requires LEGO® EV3 MicroPython v2.0.
+Download: https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
+
+Building instructions can be found at:
+https://education.lego.com/en-us/support/mindstorms-ev3/building-instructions#building-core
+"""
+
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, TouchSensor, ColorSensor
 from pybricks.parameters import Port, Stop, Direction
