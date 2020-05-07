@@ -2,11 +2,12 @@
 # Copyright (C) 2020 The Pybricks Authors
 
 from _thread import allocate_lock
-from uerrno import ECONNRESET
-from ustruct import pack, unpack
+from errno import ECONNRESET
+from struct import pack, unpack
 
-from pybricks.bluetooth import (BDADDR_ANY, ThreadingRFCOMMServer,
-                                ThreadingRFCOMMClient, StreamRequestHandler)
+from .bluetooth import BDADDR_ANY, ThreadingRFCOMMServer, ThreadingRFCOMMClient
+
+from socketserver import StreamRequestHandler
 
 
 def resolve(brick):
@@ -127,7 +128,7 @@ class TextMailbox(Mailbox):
     """
 
     def encode(self, value):
-        return '{}\0'.format(value)
+        return ('{}\0'.format(value)).encode('utf-8')
 
     def decode(self, payload):
         return payload.decode().strip('\0')
@@ -155,7 +156,7 @@ class MailboxHandler(StreamRequestHandler):
                 raise
             size, = unpack('<H', buf)
             buf = self.rfile.read(size)
-            msg_count, cmd_type, cmd, name_size = unpack('<HBBB', buf)
+            msg_count, cmd_type, cmd, name_size = unpack('<HBBB', buf[0:5])
             if cmd_type != SYSTEM_COMMAND_NO_REPLY:
                 raise ValueError('Bad message type')
             if cmd != WRITEMAILBOX:
@@ -216,7 +217,7 @@ class MailboxHandlerMixIn:
         send_len = 7 + mbox_len + payload_len
         fmt = '<HHBBB{}sH{}s'.format(mbox_len, payload_len)
         data = pack(fmt, send_len, 1, SYSTEM_COMMAND_NO_REPLY, WRITEMAILBOX,
-                    mbox_len, mbox, payload_len, payload)
+                    mbox_len, mbox.encode('utf-8'), payload_len, payload)
         with self._lock:
             if brick is None:
                 for client in self._clients.values():

@@ -11,26 +11,13 @@ implementation details.
 """
 
 from _thread import start_new_thread
-from uctypes import addressof, sizeof, struct, ARRAY, UINT8, UINT16
-from usocket import socket, SOCK_STREAM
+from socket import socket, SOCK_STREAM
 
 # stuff from bluetooth/bluetooth.h
 
 AF_BLUETOOTH = 31
 BTPROTO_RFCOMM = 3
 BDADDR_ANY = '00:00:00:00:00:00'
-
-sa_family_t = UINT16
-
-bd_addr_t = {
-    'b': (ARRAY | 0, UINT8 | 6)
-}
-
-sockaddr_rc = {
-    'rc_family': sa_family_t | 0,
-    'rc_bdaddr': (2, bd_addr_t),
-    'rc_channel': UINT8 | 8,
-}
 
 
 def str2ba(string, ba):
@@ -63,12 +50,7 @@ class RFCOMMServer:
         self.socket = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM)
 
         try:
-            addr_data = bytearray(sizeof(sockaddr_rc))
-            addr = struct(addressof(addr_data), sockaddr_rc)
-            addr.rc_family = AF_BLUETOOTH
-            str2ba(server_address[0], addr.rc_bdaddr)
-            addr.rc_channel = server_address[1]
-            self.socket.bind(addr_data)
+            self.socket.bind((server_address[0], server_address[1]))
             # self.server_address = self.socket.getsockname()
             self.socket.listen(self.request_queue_size)
         except:
@@ -88,9 +70,7 @@ class RFCOMMServer:
             return
 
         try:
-            addr = struct(addressof(addr_data), sockaddr_rc)
-            client_address = (ba2str(addr.rc_bdaddr), addr.rc_channel)
-            self.process_request(request, client_address)
+            self.process_request(request, addr_data)
         except:
             request.close()
             raise
@@ -122,33 +102,6 @@ class ThreadingRFCOMMServer(ThreadingMixIn, RFCOMMServer):
     thread.
     """
     pass
-
-
-class StreamRequestHandler:
-    """Class that handles incoming requests.
-
-    This is based on ``socketserver.StreamRequestHandler`` from the Python
-    standard library.
-    """
-    def __init__(self, request, client_address, server):
-        self.request = request
-        self.client_address = client_address
-        self.server = server
-        self.setup()
-        try:
-            self.handle()
-        finally:
-            self.finish()
-
-    def setup(self):
-        self.wfile = self.request
-        self.rfile = self.request
-
-    def handle(self):
-        pass
-
-    def finish(self):
-        pass
 
 
 class RFCOMMClient:

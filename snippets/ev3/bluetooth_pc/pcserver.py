@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from pybricks.messaging import BluetoothMailboxServer, TextMailbox
 
 server = BluetoothMailboxServer()
