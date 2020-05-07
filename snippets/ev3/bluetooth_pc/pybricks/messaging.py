@@ -5,8 +5,16 @@ from _thread import allocate_lock
 from uerrno import ECONNRESET
 from ustruct import pack, unpack
 
-from pybricks.bluetooth import (resolve, BDADDR_ANY, ThreadingRFCOMMServer,
+from pybricks.bluetooth import (BDADDR_ANY, ThreadingRFCOMMServer,
                                 ThreadingRFCOMMClient, StreamRequestHandler)
+
+
+def resolve(brick):
+    """Fake resolver to get address from Bluetooth name.
+
+    To connect to an EV3 server, you must specify its full address.
+    """
+    return brick
 
 
 class Mailbox:

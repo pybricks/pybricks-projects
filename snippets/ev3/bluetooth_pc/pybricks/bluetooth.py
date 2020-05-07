@@ -14,8 +14,6 @@ from _thread import start_new_thread
 from uctypes import addressof, sizeof, struct, ARRAY, UINT8, UINT16
 from usocket import socket, SOCK_STREAM
 
-from bluetooth_c import resolve
-
 # stuff from bluetooth/bluetooth.h
 
 AF_BLUETOOTH = 31
