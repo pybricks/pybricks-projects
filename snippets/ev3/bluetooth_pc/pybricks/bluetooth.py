@@ -111,12 +111,7 @@ class RFCOMMClient:
         self.socket = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM)
 
     def handle_request(self):
-        addr_data = bytearray(sizeof(sockaddr_rc))
-        addr = struct(addressof(addr_data), sockaddr_rc)
-        addr.rc_family = AF_BLUETOOTH
-        str2ba(self.client_address[0], addr.rc_bdaddr)
-        addr.rc_channel = self.client_address[1]
-        self.socket.connect(addr_data)
+        self.socket.connect((self.client_address[0], self.client_address[1]))
         try:
             self.process_request(self.socket, self.client_address)
         except:
