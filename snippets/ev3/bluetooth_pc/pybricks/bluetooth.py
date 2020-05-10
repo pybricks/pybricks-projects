@@ -49,7 +49,7 @@ class RFCOMMServer:
             self.socket.bind((server_address[0], server_address[1]))
             # self.server_address = self.socket.getsockname()
             self.socket.listen(self.request_queue_size)
-        except:
+        except Exception:
             self.server_close()
             raise
 
@@ -67,7 +67,7 @@ class RFCOMMServer:
 
         try:
             self.process_request(request, addr_data)
-        except:
+        except Exception:
             request.close()
             raise
 
@@ -110,7 +110,7 @@ class RFCOMMClient:
         self.socket.connect((self.client_address[0], self.client_address[1]))
         try:
             self.process_request(self.socket, self.client_address)
-        except:
+        except Exception:
             self.socket.close()
             raise
 

@@ -325,7 +325,7 @@ class BluetoothMailboxClient(MailboxHandlerMixIn):
             raise ValueError('connection with this address already exists')
         try:
             client.handle_request()
-        except:
+        except Exception:
             del self._clients[addr]
             raise
 
