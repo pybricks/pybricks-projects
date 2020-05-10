@@ -11,13 +11,9 @@ implementation details.
 """
 
 from _thread import start_new_thread
-from socket import socket, SOCK_STREAM
+from bluetooth import BluetoothSocket, RFCOMM
 
-# stuff from bluetooth/bluetooth.h
-
-AF_BLUETOOTH = 31
-BTPROTO_RFCOMM = 3
-BDADDR_ANY = '00:00:00:00:00:00'
+BDADDR_ANY = ""
 
 
 def str2ba(string, ba):
@@ -47,7 +43,7 @@ class RFCOMMServer:
         self.server_address = server_address
         self.RequestHandlerClass = RequestHandlerClass
 
-        self.socket = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM)
+        self.socket = BluetoothSocket(RFCOMM)
 
         try:
             self.socket.bind((server_address[0], server_address[1]))
@@ -108,7 +104,7 @@ class RFCOMMClient:
     def __init__(self, client_address, RequestHandlerClass):
         self.client_address = client_address
         self.RequestHandlerClass = RequestHandlerClass
-        self.socket = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM)
+        self.socket = BluetoothSocket(RFCOMM)
 
     def handle_request(self):
         self.socket.connect((self.client_address[0], self.client_address[1]))
