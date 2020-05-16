@@ -8,7 +8,7 @@
             "name": "PC Bluetooth Example",
             "type": "python",
             "request": "launch",
-            "program": "pcserver.py",
+            "program": "pcclient.py",
             "console": "integratedTerminal"
         }
     ]
