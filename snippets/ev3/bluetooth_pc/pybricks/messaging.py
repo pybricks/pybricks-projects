@@ -5,9 +5,8 @@ from _thread import allocate_lock
 from errno import ECONNRESET
 from struct import pack, unpack
 
-from .bluetooth import BDADDR_ANY, ThreadingRFCOMMServer, ThreadingRFCOMMClient
-
-from socketserver import StreamRequestHandler
+from .bluetooth import (BDADDR_ANY, ThreadingRFCOMMServer,
+                        ThreadingRFCOMMClient, StreamRequestHandler)
 
 
 def resolve(brick):
@@ -148,14 +147,16 @@ class MailboxHandler(StreamRequestHandler):
             self.server._clients[self.client_address[0]] = self.request
         while True:
             try:
-                buf = self.rfile.read(2)
+                buf = self.rfile.recv(2)
+                if len(buf) == 0:
+                    break
             except OSError as ex:
                 # The client disconnected the connection
                 if ex.args[0] == ECONNRESET:
                     break
                 raise
             size, = unpack('<H', buf)
-            buf = self.rfile.read(size)
+            buf = self.rfile.recv(size)
             msg_count, cmd_type, cmd, name_size = unpack('<HBBB', buf[0:5])
             if cmd_type != SYSTEM_COMMAND_NO_REPLY:
                 raise ValueError('Bad message type')
@@ -279,6 +280,9 @@ class MailboxRFCOMMClient(ThreadingRFCOMMClient):
 
     def send(self, data):
         self.socket.send(data)
+
+    def shutdown_request(self, request):
+        request.close()
 
     def finish_request(self, request, client_address):
         self.RequestHandlerClass(request, client_address, self.parent)

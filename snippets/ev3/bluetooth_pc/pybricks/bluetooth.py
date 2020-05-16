@@ -10,8 +10,8 @@ remain a strict subset of that implementation when it comes to low-level
 implementation details.
 """
 
-from _thread import start_new_thread
 from bluetooth import BluetoothSocket, RFCOMM
+from socketserver import ThreadingMixIn
 
 BDADDR_ANY = ""
 
@@ -82,15 +82,31 @@ class RFCOMMServer:
         self.socket.close()
 
 
-class ThreadingMixIn:
-    def process_request_thread(self, request, client_address):
-        try:
-            self.finish_request(request, client_address)
-        finally:
-            request.close()
+class StreamRequestHandler:
+    """Class that handles incoming requests.
 
-    def process_request(self, request, client_address):
-        start_new_thread(self.process_request_thread, (request, client_address))
+    This is based on ``socketserver.StreamRequestHandler`` from the Python
+    standard library.
+    """
+    def __init__(self, request, client_address, server):
+        self.request = request
+        self.client_address = client_address
+        self.server = server
+        self.setup()
+        try:
+            self.handle()
+        finally:
+            self.finish()
+
+    def setup(self):
+        self.wfile = self.request
+        self.rfile = self.request
+
+    def handle(self):
+        pass
+
+    def finish(self):
+        pass
 
 
 class ThreadingRFCOMMServer(ThreadingMixIn, RFCOMMServer):
