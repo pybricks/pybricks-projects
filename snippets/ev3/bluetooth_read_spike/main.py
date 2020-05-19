@@ -13,6 +13,5 @@ spike = SpikePrimeStreamReader('F4:84:4C:AA:C8:A4')
 
 # Now you can simply read values!
 for i in range(100):
-    print(spike.orientation())
-    print(spike.device('B'))
+    print(spike.values())
     wait(100)

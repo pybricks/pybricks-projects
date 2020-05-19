@@ -28,7 +28,11 @@ def get_bluetooth_rfcomm_socket(address, channel):
 class SpikePrimeStreamReader():
     def __init__(self, address):
 
-        self.sock = get_bluetooth_rfcomm_socket(address, 1)
+        try:
+            self.sock = get_bluetooth_rfcomm_socket(address, 1)
+        except OSError as e:
+            print("Turn on Bluetooth on the EV3 and on SPIKE.")
+            raise e
 
         self._values = None
 
