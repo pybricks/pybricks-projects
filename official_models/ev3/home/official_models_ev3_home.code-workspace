@@ -1,5 +1,9 @@
 {
-    "folders": [],
+    "folders": [
+        {
+            "path": "ev3rstorm"
+        }
+    ],
     "settings": {
         "debug.openDebug": "neverOpen"
     }
