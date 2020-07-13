@@ -6,11 +6,12 @@ from pybricks.tools import wait
 sensor = ColorSensor(Port.A)
 
 while True:
-    # Read the color.
+    # Read the color and reflection
     color = sensor.color()
+    reflection = sensor.reflection()
 
-    # Print the measured color.
-    print(color)
+    # Print the measured color and reflection.
+    print(color, reflection)
 
     # Move the sensor around and see how
     # well you can detect colors.
