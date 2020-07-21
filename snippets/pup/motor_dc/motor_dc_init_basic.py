@@ -5,7 +5,7 @@ from pybricks.tools import wait
 # Initialize a motor without rotation sensors on port A.
 example_motor = DCMotor(Port.A)
 
-# Make the motor go clockwise (forward) at 70% duty cycle.
+# Make the motor go clockwise (forward) at 70% duty cycle ("70% power").
 example_motor.dc(70)
 
 # Wait for three seconds.
