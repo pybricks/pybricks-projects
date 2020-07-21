@@ -2,7 +2,7 @@ from pybricks.pupdevices import Motor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize a motor on port A.
+# Initialize motors on port A and B.
 track_motor = Motor(Port.A)
 gripper_motor = Motor(Port.B)
 
