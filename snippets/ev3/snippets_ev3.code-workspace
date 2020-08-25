@@ -4,6 +4,12 @@
             "path": "bluetooth_client"
         },
         {
+            "path": "bluetooth_pc"
+        },
+        {
+            "path": "bluetooth_read_spike"
+        },
+        {
             "path": "bluetooth_server"
         },
         {
@@ -32,6 +38,12 @@
         },
         {
             "path": "light_color"
+        },
+        {
+            "path": "ps4"
+        },
+        {
+            "path": "rcx_touch"
         },
         {
             "path": "screen_draw"
