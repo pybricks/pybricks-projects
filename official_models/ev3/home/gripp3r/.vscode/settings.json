@@ -2,5 +2,6 @@
 {
 	"files.eol": "\n",
 	"debug.openDebug": "neverOpen",
-	"python.linting.enabled": false
+	"editor.rulers": [79],
+	"python.linting.enabled": true
 }
