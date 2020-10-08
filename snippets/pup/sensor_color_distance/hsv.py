@@ -5,18 +5,18 @@ from pybricks.tools import wait
 # Initialize the sensor.
 sensor = ColorDistanceSensor(Port.A)
 
-# Show the default color map.
-print(sensor.color_map())
-
 while True:
-    # Read the HSV values.
-    h, s, v = sensor.hsv()
-
-    # Read the corresponding color based on the existing settings.
+    # The standard color method always "rounds" the
+    # measurement to the nearest "whole" color.
+    # That's useful for most applications.
     color = sensor.color()
 
-    # Print the measured values.
-    print("Hue:", h, "Sat:", s, "Val:", v, "Col:", color)
+    # But you can get the original hue, saturation,
+    # and value without "rounding", as follows:
+    hsv = sensor.hsv()
+
+    # Print the results.
+    print(color, hsv)
 
     # Wait so we can read the value.
-    wait(100)
+    wait(500)
