@@ -5,18 +5,17 @@ from pybricks.tools import wait
 # Initialize the sensor.
 sensor = ColorSensor(Port.A)
 
-# Show the default color map.
-print(sensor.color_map())
-
 while True:
-    # Read the HSV values.
-    h, s, v = sensor.hsv()
+    # The standard color() method always "rounds" the
+    # measurement to the nearest "whole" color.
+    # That's useful for most applications.
 
-    # Read the corresponding color based on the existing settings.
-    color = sensor.color()
+    # But you can get the original hue, saturation,
+    # and value without "rounding", as follows:
+    color = sensor.hsv()
 
-    # Print the measured values.
-    print("Hue:", h, "Sat:", s, "Val:", v, "Col:", color)
+    # Print the results.
+    print(color)
 
     # Wait so we can read the value.
-    wait(100)
+    wait(500)
