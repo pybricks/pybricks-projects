@@ -1,22 +1,7 @@
-#!/usr/bin/env pybricks-micropython
-
-"""
-Example LEGO® MINDSTORMS® EV3 Spik3r Program
---------------------------------------------
-
-This program requires LEGO® EV3 MicroPython v2.0 downloadable at:
-https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
-
-Building instructions can be found at:
-https://www.lego.com/en-us/themes/mindstorms/buildarobot
-"""
-
-
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, TouchSensor, ColorSensor, InfraredSensor
-from pybricks.media.ev3dev import ImageFile, SoundFile
+from pybricks.media.ev3dev import SoundFile
 from pybricks.parameters import Button, Direction, Port, Stop
-from pybricks.tools import wait
 
 
 class Spik3r:
@@ -113,20 +98,3 @@ class Spik3r:
                 time=1000,
                 then=Stop.COAST,
                 wait=True)
-
-    def main(self, speed: float = 1000):
-        """
-        Spik3r's main program performing various capabilities
-        """
-        self.ev3_brick.screen.load_image(ImageFile.WARNING)
-
-        while True:
-            self.move_by_ir_beacon(speed=speed)
-            self.sting_by_ir_beacon(speed=speed)
-            self.pinch_if_touched(speed=speed)
-            wait(1)
-
-
-if __name__ == '__main__':
-    SPIK3R = Spik3r()
-    SPIK3R.main(speed=1000)
