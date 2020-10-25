@@ -1,21 +1,7 @@
-#!/usr/bin/env pybricks-micropython
-
-"""
-Example LEGO® MINDSTORMS® EV3 R3ptar Program
---------------------------------------------
-
-This program requires LEGO® EV3 MicroPython v2.0 downloadable at:
-https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
-
-Building instructions can be found at:
-https://www.lego.com/en-us/themes/mindstorms/buildarobot
-"""
-
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, TouchSensor, InfraredSensor
 from pybricks.media.ev3dev import SoundFile
 from pybricks.parameters import Button, Direction, Port, Stop
-from pybricks.tools import wait
 
 
 class R3ptar:
@@ -103,18 +89,3 @@ class R3ptar:
     def hiss_if_touched(self):
         if self.touch_sensor.pressed():
             self.ev3_brick.speaker.play_file(file=SoundFile.SNAKE_HISS)
-
-    def main(self, speed: float = 1000):
-        """
-        R3ptar's main program performing various capabilities
-        """
-        while True:
-            self.drive_by_ir_beacon(speed=speed)
-            self.strike_by_ir_beacon(speed=speed)
-            self.hiss_if_touched()
-            wait(1)
-
-
-if __name__ == '__main__':
-    R3PTAR = R3ptar()
-    R3PTAR.main(speed=1000)
