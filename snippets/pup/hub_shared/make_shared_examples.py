@@ -9,7 +9,7 @@ import os
 EXAMPLE_HUB = 'ExampleHub'
 
 # Define which hubs to run
-HUBS = ['MoveHub', 'CityHub', 'TechnicHub', 'PrimeHub']
+HUBS = ['MoveHub', 'CityHub', 'TechnicHub', 'PrimeHub', 'InventorHub']
 
 # This flag indicates to skip next X lines in a script
 SKIP_FLAG = 'SKIP_NEXT'
