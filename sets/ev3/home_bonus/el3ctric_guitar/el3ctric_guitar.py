@@ -47,8 +47,9 @@ class El3ctricGuitar:
             raw = sum(self.ir_sensor.distance() for _ in range(4)) / 4
 
             self.ev3_brick.speaker.beep(
-                frequency=self.NOTES[min(int(raw / 5), self.N_NOTES - 1)]
-                          - 11 * self.lever_motor.angle(),
+                frequency=self.NOTES[
+                            min(int(raw / 5), self.N_NOTES - 1)
+                          ] - 11 * self.lever_motor.angle(),
                 duration=100)
 
         wait(1)
