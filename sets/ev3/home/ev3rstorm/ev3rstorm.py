@@ -1,21 +1,7 @@
-#!/usr/bin/env pybricks-micropython
-
-"""
-Example LEGO® MINDSTORMS® EV3 Ev3rstorm Program
------------------------------------------------
-
-This program requires LEGO® EV3 MicroPython v2.0 downloadable at:
-https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
-
-Building instructions can be found at:
-https://www.lego.com/en-us/themes/mindstorms/buildarobot
-"""
-
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, TouchSensor, ColorSensor
-from pybricks.media.ev3dev import ImageFile, SoundFile
+from pybricks.media.ev3dev import SoundFile
 from pybricks.parameters import Button, Direction, Port, Stop
-from pybricks.tools import wait
 
 from random import randint
 
@@ -90,23 +76,3 @@ class Ev3rstorm(RemoteControlledTank):
                     wait=True)
 
                 self.ev3_brick.speaker.play_file(file=SoundFile.LAUGHING_2)
-
-    def main(
-            self,
-            driving_speed: float = 1000   # mm/s
-            ):
-        """
-        Ev3rstorm's main program performing various capabilities
-        """
-        self.ev3_brick.screen.load_image(ImageFile.TARGET)
-
-        while True:
-            self.drive_by_ir_beacon(speed=driving_speed)
-            self.dance_randomly_if_ir_beacon_button_pressed()
-            self.blast_bazooka_if_touched()
-            wait(1)
-
-
-if __name__ == '__main__':
-    EV3RSTORM = Ev3rstorm()
-    EV3RSTORM.main(driving_speed=1000)
