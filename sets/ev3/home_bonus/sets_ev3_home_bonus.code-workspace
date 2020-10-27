@@ -1,5 +1,12 @@
 {
-    "folders": [],
+    "folders": [
+        {
+            "path": "dinor3x"
+        },
+        {
+            "path": "el3ctric_guitar"
+        }
+    ],
     "settings": {
         "debug.openDebug": "neverOpen"
     }
