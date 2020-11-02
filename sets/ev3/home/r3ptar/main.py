@@ -1,5 +1,5 @@
 #!/usr/bin/env pybricks-micropython
- 
+
 
 from pybricks.tools import wait
 
