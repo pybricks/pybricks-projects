@@ -33,7 +33,6 @@ def make_workspace(root):
 
 # Make all the workspaces
 roots = (
-    path.join('snippets', 'ev3'),
     path.join('sets', 'ev3', 'education_core'),
     path.join('sets', 'ev3', 'education_expansion'),
     path.join('sets', 'ev3', 'home'),
