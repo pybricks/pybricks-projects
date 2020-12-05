@@ -17,7 +17,7 @@ class Wack3m:
             middle_motor_port: str = Port.A,
             touch_sensor_port: str = Port.S1, ir_sensor_port: str = Port.S4):
         self.ev3_brick = EV3Brick()
-        
+
         self.left_motor = Motor(port=left_motor_port,
                                 positive_direction=Direction.CLOCKWISE)
         self.right_motor = Motor(port=right_motor_port,
@@ -167,10 +167,10 @@ class Wack3m:
             self.ev3_brick.screen.print(
                 'Avg. Time: {:.1f}s'.format(average_response_time))
 
-            self.ev3_brick.speaker.play_file(
-                file=SoundFile.FANTASTIC
-                     if average_response_time <= 1
-                     else SoundFile.GOOD_JOB)
+            if average_response_time <= 1:
+                self.ev3_brick.speaker.play_file(file=SoundFile.FANTASTIC)
+            else:
+                self.ev3_brick.speaker.play_file(SoundFile.GOOD_JOB)
 
             self.ev3_brick.speaker.play_file(file=SoundFile.GAME_OVER)
 

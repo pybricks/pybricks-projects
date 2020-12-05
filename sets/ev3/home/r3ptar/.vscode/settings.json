@@ -3,5 +3,5 @@
 	"files.eol": "\n",
 	"debug.openDebug": "neverOpen",
 	"editor.rulers": [79],
-	"python.linting.enabled": true
+	"python.linting.flake8Enabled": true
 }

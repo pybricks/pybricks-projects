@@ -16,17 +16,15 @@ class Bobb3e:
             lift_motor_port: str = Port.A,
             ir_sensor_port: str = Port.S4, ir_beacon_channel: int = 1):
         self.ev3_brick = EV3Brick()
-        
-        self.drive_base = \
-            DriveBase(
-                left_motor=
-                    Motor(port=left_motor_port,
-                          positive_direction=Direction.COUNTERCLOCKWISE),
-                right_motor=
-                    Motor(port=right_motor_port,
-                          positive_direction=Direction.COUNTERCLOCKWISE),
-                wheel_diameter=self.WHEEL_DIAMETER,
-                axle_track=self.AXLE_TRACK)
+
+        left_motor = Motor(port=left_motor_port,
+                           positive_direction=Direction.COUNTERCLOCKWISE)
+        right_motor = Motor(port=right_motor_port,
+                            positive_direction=Direction.COUNTERCLOCKWISE)
+        self.drive_base = DriveBase(left_motor=left_motor,
+                                    right_motor=right_motor,
+                                    wheel_diameter=self.WHEEL_DIAMETER,
+                                    axle_track=self.AXLE_TRACK)
 
         self.lift_motor = Motor(port=lift_motor_port,
                                 positive_direction=Direction.CLOCKWISE)
