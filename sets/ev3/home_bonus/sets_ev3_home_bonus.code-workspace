@@ -1,6 +1,9 @@
 {
     "folders": [
         {
+            "path": "bobb3e"
+        },
+        {
             "path": "dinor3x"
         },
         {
@@ -11,8 +14,15 @@
         },
         {
             "path": "mr_b3am"
+        },
+        {
+            "path": "robodoz3r"
+        },
+        {
+            "path": "wack3m"
         }
     ],
+
     "settings": {
         "debug.openDebug": "neverOpen"
     }
