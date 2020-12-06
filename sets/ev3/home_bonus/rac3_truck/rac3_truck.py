@@ -1,11 +1,10 @@
-from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, InfraredSensor
 from pybricks.parameters import Button, Direction, Port, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait
 
 
-class Rac3Truck(EV3Brick):
+class Rac3Truck:
     WHEEL_DIAMETER = 30   # milimeters
     AXLE_TRACK = 120      # milimeters
 
