@@ -98,6 +98,8 @@ class Kraz3(RemoteControlledTank):
             self.ev3_brick.speaker.play_file(file=SoundFile.LEGO)
             self.ev3_brick.speaker.play_file(file=SoundFile.MINDSTORMS)
 
+            self.ev3_brick.light.off()
+
         elif detected_color == Color.BROWN:
             self.ev3_brick.speaker.play_file(file=SoundFile.BROWN)
 
@@ -138,8 +140,6 @@ class Kraz3(RemoteControlledTank):
                 wait=True)
 
             self.ev3_brick.speaker.play_file(file=SoundFile.MAGIC_WAND)
-
-        self.ev3_brick.light.off()
 
     def keep_reacting_to_colors(self):
         while True:
