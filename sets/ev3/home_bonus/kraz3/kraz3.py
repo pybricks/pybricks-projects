@@ -36,9 +36,9 @@ class Kraz3(RemoteControlledTank):
 
         self.color_sensor = ColorSensor(port=color_sensor_port)
 
-    def kungfu_maneouver_if_touched_or_remote_controlled(self):
+    def kungfu_manoeuvre_if_touched_or_remote_controlled(self):
         """
-        Kung-Fu Maneouver voa Touch Sensor and Remote Control of head and arms
+        Kung-Fu manoeuvre via Touch Sensor and Remote Control of head and arms
         """
         if self.touch_sensor.pressed():
             self.ev3_brick.speaker.play_file(file=SoundFile.KUNG_FU)
@@ -56,9 +56,9 @@ class Kraz3(RemoteControlledTank):
         else:
             self.wiggle_motor.stop()
 
-    def kungfu_maneouver_whenever_touched_or_remote_controlled(self):
+    def kungfu_manoeuvre_whenever_touched_or_remote_controlled(self):
         while True:
-            self.kungfu_maneouver_if_touched_or_remote_controlled()
+            self.kungfu_manoeuvre_if_touched_or_remote_controlled()
             wait(10)
 
     def react_to_color(self):
