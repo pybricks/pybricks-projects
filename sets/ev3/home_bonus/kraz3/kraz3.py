@@ -57,7 +57,7 @@ class Kraz3(RemoteControlledTank):
             else:
                 self.wiggle_motor.stop()
 
-            wait(10)            
+            wait(10)
 
     def keep_reacting_to_colors(self):
         while True:
