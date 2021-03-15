@@ -1,3 +1,12 @@
+"""
+This program is for Kiki the Dog.
+
+Follow the corresponding building instructions in the LEGO® SPIKE™ Prime App.
+
+Kiki shall respond to the blue, yellow or green objects by displaying something
+on the Hub's screen.
+"""
+
 from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import ColorSensor
 from pybricks.parameters import Color, Icon, Port
