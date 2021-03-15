@@ -1,4 +1,4 @@
-# Example LEGO® MINDSTORMS® SPIKE™ Prime programs for Kiki the Dog
+# Example LEGO® SPIKE™ Prime programs for Kiki the Dog
 
 These programs require PyBricks v3 firmware installed on the Prime Hub.
 
