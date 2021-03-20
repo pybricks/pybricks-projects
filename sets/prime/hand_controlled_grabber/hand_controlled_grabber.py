@@ -1,5 +1,6 @@
 """
-This program is for Hand-Controlled Grabbers.
+This program is for Hand-Controlled Grabbers
+(in the "Invention Squad: Super Clean-Up" lesson unit).
 
 Follow the corresponding building instructions in the LEGO® SPIKE™ Prime App.
 
