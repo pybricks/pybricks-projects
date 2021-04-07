@@ -10,3 +10,7 @@ description:
 ---
 
 Additional content may be added here as regular markdown.
+
+```python
+{% include_relative main.py %}
+```
