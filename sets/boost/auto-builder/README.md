@@ -10,3 +10,5 @@ description:
 ---
 
 Additional content may be added here as regular markdown.
+
+![](photo.jpg)
