@@ -1,5 +1,5 @@
 ---
-permalink: /projects/sets/boost/auto-builder/
+permalink: /projects/sets/boost/creative-toolbox/auto-builder/
 title: "LEGO Boost Auto Builder"
 maintainer:
     user: "pybricks"
