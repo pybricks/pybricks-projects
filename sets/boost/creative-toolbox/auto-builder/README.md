@@ -5,7 +5,7 @@ maintainer:
     user: "pybricks"
     name: "The Pybricks Authors"
 image:
-    local: "photo.jpg"
+    local: "auto-builder.jpg"
     credit: "LEGO"
 video:
     youtube: "https://www.youtube.com/embed/TXvCEK1MNGQ"
