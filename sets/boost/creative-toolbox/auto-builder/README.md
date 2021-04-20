@@ -41,7 +41,7 @@ The provided program is very basic, demonstrating only the core principles.
 Here's a few ideas and challenges for further exploration:
 - Change the order of the bricks in the `for`-loop to build something else.
 - Instead of pushing the element down for two seconds, you could stop sooner.
-  Try experimenting with the [`run_until_stalled`](https://docs.pybricks.com/en/latest/pupdevices/motor.html#pybricks.pupdevices.Motor.run_until_stalled)
+  Try experimenting with the [run_until_stalled](https://docs.pybricks.com/en/latest/pupdevices/motor.html#pybricks.pupdevices.Motor.run_until_stalled)
   method. This can speed up the build process.
 - Speaking of increasing speed, how fast can you make it? Optimize this robot
   and set a new world record!
