@@ -7,7 +7,7 @@ maintainer:
 image:
     local: "slope-detection.jpg"
 video:
-    youtube: "https://www.youtube.com/embed/Wc0mRIBjhIU"
+    youtube: "Wc0mRIBjhIU"
 description:
     "Detect the slope of the track. This lets you determine where the train
      is on the circuit."

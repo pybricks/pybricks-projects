@@ -8,7 +8,7 @@ image:
     local: "auto-builder.jpg"
     credit: "LEGO"
 video:
-    youtube: "https://www.youtube.com/embed/TXvCEK1MNGQ"
+    youtube: "TXvCEK1MNGQ"
 description:
     "The Auto Builder builds LEGO figures autonomously. These Python scripts
     make it work smoothly and accurately."

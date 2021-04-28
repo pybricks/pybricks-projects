@@ -7,7 +7,7 @@ maintainer:
 image:
     local: "steerbot.jpg"
 video:
-    youtube: "https://www.youtube.com/embed/i4WPa-rtFB8"
+    youtube: "i4WPa-rtFB8"
 description:
     "Super fast line following robot with Ackermann steering."
 building_instructions:
