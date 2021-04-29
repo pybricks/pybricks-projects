@@ -2,8 +2,8 @@
 permalink: /projects/sets/spike/prime/hand-controlled-grabber/
 title: "LEGO SPIKE Prime: Hand-Controlled Grabber"
 maintainer:
-    user: "ArianaLuongPham"
-    name: "Ariana Lương-Phạm Hải An"
+    user: "TheVinhLuong102"
+    name: "The Lương-Phạm Family"
 image:
     local: "hand-controlled-grabber.png"
     credit: "LEGO"
