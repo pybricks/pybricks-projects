@@ -48,6 +48,7 @@ speed without running off the line.
 ## Program
 
 
+{% include copy-code.html %}
 ```python
 {% include_relative main.py %}
 ```

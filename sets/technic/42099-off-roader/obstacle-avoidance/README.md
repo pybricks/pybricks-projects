@@ -28,6 +28,7 @@ Mount the sensor somewhere on the front of your truck.
 This program builds on the basic [driving example](../driving). It makes the
 truck back up and turn when it detects an obstacle.
 
+{% include copy-code.html %}
 ```python
 {% include_relative main.py %}
 ```

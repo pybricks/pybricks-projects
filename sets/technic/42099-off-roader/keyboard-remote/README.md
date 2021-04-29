@@ -24,6 +24,7 @@ You can read keyboard presses using `stdin`, as shown in the example below.
 Then you can make your program choose different behaviors based on which key
 is pressed.
 
+{% include copy-code.html %}
 ```python
 {% include_relative remote.py %}
 ```
@@ -36,6 +37,7 @@ the [basic driving program](../driving). This allows you to control the
 truck using the numeric keys on your keyboard. If your keyboard does not have
 separate numeric keys, just adapt the program to use other keys.
 
+{% include copy-code.html %}
 ```python
 {% include_relative main.py %}
 ```

@@ -19,6 +19,7 @@ This program centers the steering motor, and defines a function called
 ``drive`` which can be used to control the vehicle. Further details
 are given as comments in the program.
 
+{% include copy-code.html %}
 ```python
 {% include_relative main.py %}
 ```

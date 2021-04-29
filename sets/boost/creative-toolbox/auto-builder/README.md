@@ -30,6 +30,7 @@ This works by repeatedly:
 The brick positions are given as the degrees the belt motor turns relative to
 the base position. You can tweak these values by a few degrees if needed.
 
+{% include copy-code.html %}
 ```python
 {% include_relative main.py %}
 ```

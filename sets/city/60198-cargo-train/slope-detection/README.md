@@ -32,6 +32,7 @@ Connect the motor to port A and connect the tilt sensor to port B.
 This program makes the train drive until it detects a slope of 8 degrees or
 more. Then it drives back down.
 
+{% include copy-code.html %}
 ```python
 {% include_relative main.py %}
 ```
