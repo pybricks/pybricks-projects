@@ -8,10 +8,11 @@ image:
     local: "track3r.jpeg"
     credit: "LEGO"
 description:
-    "If you have never built a LEGO MINDSTORMS robot before, we recommend you start by building this one! TRACK3R is a crawler-mounted, all-terrain robot with four interchangeable tools. Start by building the body of the robot, then discover the possibilities of the four different TRACK3R tools: the bi-blade blender, the blasting bazooka, the gripping claw, and the hammer."
+    "TRACK3R is a crawler-mounted, all-terrain robot with four interchangeable tools. Start by building the body of the robot, then discover the possibilities of the four different TRACK3R tools: the bi-blade blender, the blasting bazooka, the gripping claw, and the hammer."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_TRACK3R.pdf
 ---
+
 
 # Example LEGO® MINDSTORMS® EV3 Track3r Programs
 
