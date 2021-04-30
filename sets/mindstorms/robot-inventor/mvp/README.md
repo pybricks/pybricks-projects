@@ -8,7 +8,7 @@ image:
     local: "mvp.jpeg"
     credit: "LEGO"
 video:
-    youtube: "https://www.youtube.com/watch?v=5Fa4m1XzlCA"
+    youtube: "https://www.youtube.com/embed/5Fa4m1XzlCA"
 description:
     "The Modular Vehicle Platform gets the job done. Create and code your own remote control and build the M.V.P. into a buggy, a crane, a shooter turret or even a brick-eating truck to pick up LEGO bricks left by the other robots."
 building_instructions:
