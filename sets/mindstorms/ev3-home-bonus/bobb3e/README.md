@@ -1,6 +1,6 @@
 ---
 permalink: /projects/sets/mindstorms/ev3-home-bonus/bobb3e/
-title: "LEGO Mindstorms EV3 Home Edition: Bobb3e"
+title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Bobb3e"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -9,10 +9,11 @@ image:
     credit: "LEGO"
 description:
     "This remote controlled Bobcat® can be steered to move and lift objects with the control buttons on the IR Beacon."
-
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_BOBB3E.pdf
 ---
+
+
 # Example LEGO® MINDSTORMS® EV3 Bobb3e Program
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
