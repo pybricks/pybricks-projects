@@ -1,6 +1,6 @@
 ---
 permalink: /projects/sets/mindstorms/ev3-home-bonus/robodoz3r/
-title: "LEGO Mindstorms EV3 Home Edition: Robodoz3r"
+title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Robodoz3r"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -12,6 +12,7 @@ description:
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_ROBODOZ3R.pdf
 ---
+
 
 # Example LEGO® MINDSTORMS® EV3 RoboDoz3r Program
 
