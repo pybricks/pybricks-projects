@@ -5,7 +5,7 @@ maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
 image:
-    local: "mrb3am.jpeg"
+    local: "mrb3am.png"
     credit: "LEGO"
 description:
     "This funny-looking robot is ready to organize all your LEGO® Technic beams. Simply insert the beams into the machine, and MR B3AM will detect their color and size."
