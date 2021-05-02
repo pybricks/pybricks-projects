@@ -1,3 +1,19 @@
+---
+permalink: /projects/sets/mindstorms/ev3-home-bonus/ev3-d4/
+title: "LEGO Mindstorms EV3 Home Edition: Ev3-D4"
+maintainer:
+    user: "TheVinhLuong102"
+    name: "The Lương-Phạm Family"
+image:
+    local: "ev3_d4.png"
+    credit: "LEGO"
+description:
+    "Inspired by R2D2 from StarWars, this robot can interact with you, follow you wherever you go or move around the room wherever you want – all via the IR Beacon. The EV3D4 supports a wide set of behaviors that can easily be programmed or extended in the EV3 software."
+
+building_instructions:
+    external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_EV3D4.pdf
+---
+
 # Example LEGO® MINDSTORMS® EV3-D4 Program
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
