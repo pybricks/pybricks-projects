@@ -1,6 +1,6 @@
 ---
 permalink: /projects/sets/mindstorms/ev3-home-bonus/dinor3x/
-title: "LEGO Mindstorms EV3 Home Edition: Dinor3x"
+title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Dinor3x"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -9,10 +9,10 @@ image:
     credit: "LEGO"
 description:
     "This charming robotic triceratops dinosaur is capable of walking and turning on all fours."
-
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_DINOREX.pdf
 ---
+
 
 # Example LEGO® MINDSTORMS® EV3 Dinor3x Program
 
