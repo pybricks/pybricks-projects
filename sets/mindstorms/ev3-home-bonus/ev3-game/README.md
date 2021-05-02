@@ -1,6 +1,6 @@
 ---
 permalink: /projects/sets/mindstorms/ev3-home-bonus/ev3_game/
-title: "LEGO Mindstorms EV3 Home Edition: EV3game"
+title: "LEGO Mindstorms EV3 Home Edition: Fan Robot: EV3 Game"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -13,7 +13,8 @@ building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_EV3%20GAME.pdf
 ---
 
-# Example LEGO® MINDSTORMS® EV3Game Program
+
+# Example LEGO® MINDSTORMS® EV3 Game Program
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
