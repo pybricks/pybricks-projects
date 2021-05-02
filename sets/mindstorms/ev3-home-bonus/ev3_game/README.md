@@ -1,3 +1,18 @@
+---
+permalink: /projects/sets/mindstorms/ev3-home-bonus/ev3_game/
+title: "LEGO Mindstorms EV3 Home Edition: EV3game"
+maintainer:
+    user: "TheVinhLuong102"
+    name: "The Lương-Phạm Family"
+image:
+    local: "ev3-game.jpeg"
+    credit: "LEGO"
+description:
+    "This robot is all set to play tricks on you. Hide the red ball under the shell, use the IR Beacon to set your level, and watch the robot shuffle and hide the ball – but where? Challenge your friends to see who can find the red ball first!"
+building_instructions:
+    external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_EV3%20GAME.pdf
+---
+
 # Example LEGO® MINDSTORMS® EV3Game Program
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
