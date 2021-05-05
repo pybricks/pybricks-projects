@@ -1,12 +1,14 @@
 ---
 permalink: /projects/sets/mindstorms/ev3-home-bonus/robodoz3r/
-title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Robodoz3r"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: RoboDoz3r"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
 image:
     local: "robodoz3r.jpeg"
     credit: "LEGO"
+video:
+    youtube: "https://www.youtube.com/embed/_L64yXSTpos"
 description:
     "This robot bulldozer can be controlled using the IR Beacon or it can drive on it’s own, avoiding obstacles while clearing and pushing things with its bulldozer bucket."
 building_instructions:
@@ -14,11 +16,11 @@ building_instructions:
 ---
 
 
-# Example LEGO® MINDSTORMS® EV3 RoboDoz3r Program
+# LEGO® MINDSTORMS® EV3 RoboDoz3r Program & Instructions
 
-This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
+This program requires LEGO® MINDSTORMS® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot.
+Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot or https://www.lego.com/en-us/service/buildinginstructions/31313.
 
 Control RoboDoz3r as follows:
 
