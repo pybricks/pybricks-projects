@@ -1,12 +1,14 @@
 ---
 permalink: /projects/sets/mindstorms/ev3-home-bonus/rac3-truck/
-title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Rac3 Truck"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Rac3 Truck"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
 image:
     local: "rac3-truck.jpeg"
     credit: "LEGO"
+video:
+    youtube: "https://www.youtube.com/embed/EAzsLYTumW4"
 description:
     "Want a remote controlled truck? Got it! This is one fun cool ride. You can modify the truck to make it go faster by adding gears, and you can add a custom-built trailer so the truck can be used as a transport vehicle."
 building_instructions:
@@ -14,11 +16,11 @@ building_instructions:
 ---
 
 
-# Example LEGO® MINDSTORMS® EV3 Rac3 Truck Program
+# LEGO® MINDSTORMS® EV3 Rac3 Truck Program & Instructions
 
-This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
+This program requires LEGO® MINDSTORMS® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot.
+Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot or https://www.lego.com/en-us/service/buildinginstructions/31313.
 
 Drive Rac3 Truck around according to instructions from Channel 1 of the IR Remote Control:
     - 2 Top/Up Buttons together: drive forward
@@ -27,3 +29,15 @@ Drive Rac3 Truck around according to instructions from Channel 1 of the IR Remot
     - Top-Right/Blue-Up: turn right forward
     - Bottom-Left/Red-Down: turn left backward
     - Bottom-Right/Blue-Down: turn right backward
+
+The code for the `Rac3Truck` class is in `rac3_truck.py` as follows:
+
+```python
+{% include_relative rac3_truck.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+```python
+{% include_relative main.py %}
+```
