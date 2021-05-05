@@ -41,3 +41,21 @@ Control RoboDoz3r as follows:
     - Use Channel 4 of the IR Remote Control to make RoboDoz3r raise the shovel by pressing either Up button, or lower the shovel by pressing either Down button
 
 - Autonomous Mode: RoboDoz3r drives around on his own to clean up small things but avoids big obstacles by reversing and turning
+
+The code for the `RoboDoz3r` class is in `robodoz3r.py` as follows:
+
+```python
+{% include_relative robodoz3r.py %}
+```
+
+`RoboDoz3r` uses a remote-controlled tank driving utility whose code is in `rc_tank_util.py` as follows:
+
+```python
+{% include_relative rc_tank_util.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+```python
+{% include_relative main.py %}
+```
