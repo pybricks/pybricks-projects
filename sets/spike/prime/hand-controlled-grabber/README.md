@@ -1,6 +1,6 @@
 ---
 permalink: /projects/sets/spike/prime/hand-controlled-grabber/
-title: "LEGO SPIKE Prime: Hand-Controlled Grabber"
+title: "LEGO® Education SPIKE™ Prime: Hand-Controlled Grabber"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
