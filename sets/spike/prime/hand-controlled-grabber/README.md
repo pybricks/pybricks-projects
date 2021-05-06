@@ -15,10 +15,17 @@ building_instructions:
     external: https://education.lego.com/v3/assets/blt293eea581807678a/blt56a81c75560c9a81/5f8802cbf71916144453a493/supercleaup-bi-pdf-book1of3.pdf
 ---
 
-# Example LEGO® SPIKE™ Prime programs for Hand-Controlled Grabbers
 
-These programs require PyBricks v3 firmware installed on the Prime Hub.
+# LEGO® Education SPIKE™ Prime: Hand-Controlled Grabber
+
+The program requires PyBricks v3 firmware installed on the Prime Hub.
 
 Building instructions can be found at https://education.lego.com/en-us/product-resources/spike-prime/downloads/building-instructions.
 
-The playing instructions for each robot variant are in the docstrings of the corresponding file.
+Press the Force Sensor to grab objects, and release the Force Sensor to let go of them.
+
+The programming code is as follows:
+
+```python
+{% include_relative hand-controlled-grabber.py %}
+```
