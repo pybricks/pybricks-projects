@@ -8,7 +8,7 @@ image:
     local: "robodoz3r.jpeg"
     credit: "LEGO"
 video:
-    youtube: "https://www.youtube.com/embed/_L64yXSTpos"
+    youtube: "_L64yXSTpos"
 description:
     "This robot bulldozer can be controlled using the IR Beacon or it can drive on it’s own, avoiding obstacles while clearing and pushing things with its bulldozer bucket."
 building_instructions:
@@ -16,11 +16,7 @@ building_instructions:
 ---
 
 
-# LEGO® MINDSTORMS® EV3 RoboDoz3r Program & Instructions
-
 This program requires LEGO® MINDSTORMS® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
-
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot or https://www.lego.com/en-us/service/buildinginstructions/31313.
 
 Control RoboDoz3r as follows:
 
@@ -44,18 +40,21 @@ Control RoboDoz3r as follows:
 
 The code for the `RoboDoz3r` class is in `robodoz3r.py` as follows:
 
+{% include copy-code.html %}
 ```python
 {% include_relative robodoz3r.py %}
 ```
 
 `RoboDoz3r` uses a remote-controlled tank driving utility whose code is in `rc_tank_util.py` as follows:
 
+{% include copy-code.html %}
 ```python
 {% include_relative rc_tank_util.py %}
 ```
 
 The code for the main program is in `main.py` as follows:
 
+{% include copy-code.html %}
 ```python
 {% include_relative main.py %}
 ```
