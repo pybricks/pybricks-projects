@@ -7,6 +7,8 @@ maintainer:
 image:
     local: "ev3-d4.png"
     credit: "LEGO"
+video:
+    youtube: "rtmRZpR0lNA"
 description:
     "Inspired by R2D2 from StarWars, this robot can interact with you, follow you wherever you go or move around the room wherever you want – all via the IR Beacon. The EV3D4 supports a wide set of behaviors that can easily be programmed or extended in the EV3 software."
 building_instructions:
@@ -31,3 +33,17 @@ Drive EV3-D4 around according to instructions from Channel 1 of the IR Remote Co
 Make him shake his head by pressing the IR Beacon button.
 
 Make him perform random funny actions by pressing his Touch Sensor or show his Color Sensor a red object.
+
+The code for the `EV3-D4` class is in `ev3_d4.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative rac3_truck.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative main.py %}
+```
