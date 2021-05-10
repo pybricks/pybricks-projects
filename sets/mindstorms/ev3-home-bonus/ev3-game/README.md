@@ -7,14 +7,14 @@ maintainer:
 image:
     local: "ev3-game.jpeg"
     credit: "LEGO"
+video:
+    youtube: "OdSyquY3RXA&t"
 description:
     "This robot is all set to play tricks on you. Hide the red ball under the shell, use the IR Beacon to set your level, and watch the robot shuffle and hide the ball – but where? Challenge your friends to see who can find the red ball first!"
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_EV3%20GAME.pdf
 ---
 
-
-# Example LEGO® MINDSTORMS® EV3 Game Program
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
@@ -34,3 +34,18 @@ EV3Game works as follows:
   - Right Up IR button: choose right cup
 
 - Repeat again and again to play many games.
+
+
+The code for the `EV3Game` class is in `ev3_game.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative rac3_truck.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative main.py %}
+```
