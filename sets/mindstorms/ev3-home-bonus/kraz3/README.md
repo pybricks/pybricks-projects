@@ -7,6 +7,8 @@ maintainer:
 image:
     local: "kraz3.jpeg"
     credit: "LEGO"
+video:
+    youtube: "8rJMC98Pjqk"
 description:
     "This robot is fun companion with a crazy attitude that reacts to it’s little IR Beacon bug friend. You can control it with the custom program, the IR Beacon, or simply set it to follow it’s little friend around the room."
 building_instructions:
