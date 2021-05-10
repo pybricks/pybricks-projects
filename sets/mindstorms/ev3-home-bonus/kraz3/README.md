@@ -14,11 +14,7 @@ building_instructions:
 ---
 
 
-# Example LEGO® MINDSTORMS® EV3 Kraz3 Program
-
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
-
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot.
 
 Drive Kraz3 around according to instructions from Channel 1 of the IR Remote Control:
     - 2 Top/Up Buttons together: drive forward
@@ -31,3 +27,17 @@ Drive Kraz3 around according to instructions from Channel 1 of the IR Remote Con
 Kraz3 makes a kung-fu move when you press the Touch Sensor or the IR Beacon button.
 
 Kraz3 reacts in funny ways to different colors.
+
+The code for the `Kraz3` class is in `kraz3.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative kraz3.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative main.py %}
+```
