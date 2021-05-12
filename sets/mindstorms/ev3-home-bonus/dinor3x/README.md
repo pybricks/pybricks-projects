@@ -7,6 +7,8 @@ maintainer:
 image:
     local: "dinor3x.jpeg"
     credit: "LEGO"
+video:
+    youtube: "eG5xdZ3l1AQ"
 description:
     "This charming robotic triceratops dinosaur is capable of walking and turning on all fours."
 building_instructions:
@@ -38,3 +40,17 @@ Dinor3x works as follows:
     - Top Right / Blue Up: turn right on the spot
     - Bottom Left / Red Down: stop
     - Bottom Right / Blue Down: calibrate to make the legs straight
+
+The code for the `Dinor3x` class is in `dinor3x.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative dinor3x.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative main.py %}
+```
