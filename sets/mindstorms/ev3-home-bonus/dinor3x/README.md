@@ -16,11 +16,8 @@ building_instructions:
 ---
 
 
-# Example LEGO® MINDSTORMS® EV3 Dinor3x Program
-
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot.
 
 NOTE: please add a Color Sensor to Dinor3x's back or tail. 
 
