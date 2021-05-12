@@ -7,6 +7,8 @@ maintainer:
 image:
     local: "el3ctric-guitar.jpeg"
     credit: "LEGO"
+video:
+    youtube: "WHOz3Zqkt5M"
 description:
     "Ready to to rock’n roll? This LEGO Guitar can be played almost like a real guitar. Stroke the string, slide your fingers across its fretless neck, and bend the notes using the tremolo bar to produce the most amazing guitar solos!"
 building_instructions:
@@ -14,8 +16,19 @@ building_instructions:
 ---
 
 
-# Example LEGO® MINDSTORMS® EV3 El3ctricGuitar Program
-
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot.
+
+The code for the `El3ctricGuitar` class is in `el3ctric-guitar.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative el3ctric-guitar.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative main.py %}
+```
