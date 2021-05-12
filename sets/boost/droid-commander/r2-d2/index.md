@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/boost/droid-commander/r2-d2/
 title: "LEGO® Star Wars™ BOOST Droid Commander R2-D2"
 maintainer:
     user: "pybricks"

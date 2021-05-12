@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/mindstorms/robot-inventor/steerbot/
 title: "Steer Bot"
 maintainer:
     user: "GusJansson"

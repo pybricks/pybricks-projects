@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/technic/42099-off-roader/keyboard-remote/
 title: "42099: Technic Off-Roader: Keyboard Remote"
 maintainer:
     user: "pybricks"
@@ -18,7 +17,7 @@ Your MicroPython programs can produce *output* using the `print` command, but
 it can also read *input*. To enter input, just click on the terminal window
 and press some keys.
 
-![](/_pages/projects/sets/technic/42099-off-roader/keyboard-remote/terminalwindow.png)
+![](./terminalwindow.png)
 
 You can read keyboard presses using `stdin`, as shown in the example below.
 Then you can make your program choose different behaviors based on which key

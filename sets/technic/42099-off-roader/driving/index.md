@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/technic/42099-off-roader/driving/
 title: "42099: Technic Off-Roader: Driving"
 maintainer:
     user: "pybricks"

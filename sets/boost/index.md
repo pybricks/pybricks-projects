@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/city/
-title: "LEGO City"
+title: "LEGO BOOST"
 layout: theme
 description: "Theme description"
 ---

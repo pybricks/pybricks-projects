@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/technic/42099-off-roader/obstacle-avoidance/
 title: "42099: Technic Off-Roader: Obstacle Avoidance"
 maintainer:
     user: "pybricks"

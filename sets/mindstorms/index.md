@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/boost/
-title: "LEGO BOOST"
+title: "LEGO MINDSTORMS"
 layout: theme
 description: "Theme description"
 ---

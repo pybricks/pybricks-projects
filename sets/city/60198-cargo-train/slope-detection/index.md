@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/city/60198-cargo-train/slope-detection/
 title: "Train slope detection"
 maintainer:
     user: "pybricks"
