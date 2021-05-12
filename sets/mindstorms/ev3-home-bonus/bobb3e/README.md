@@ -7,6 +7,8 @@ maintainer:
 image:
     local: "bobb3e.jpeg"
     credit: "LEGO"
+video:
+    youtube: "i3jsJiVKYsg"
 description:
     "This remote controlled Bobcat® can be steered to move and lift objects with the control buttons on the IR Beacon."
 building_instructions:
@@ -14,11 +16,7 @@ building_instructions:
 ---
 
 
-# Example LEGO® MINDSTORMS® EV3 Bobb3e Program
-
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
-
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot.
 
 Control Bobb3e as follows:
 
@@ -35,3 +33,17 @@ Control Bobb3e as follows:
     - Bottom-Right/Blue-Down: turn right backward
 
 - Bobb3e beeps his alarm whenever reversing
+
+The code for the `Bobb3e` class is in `bobb3e.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative bobb3e.py %}
+```
+
+The code for the main program is in `main.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative main.py %}
+```
