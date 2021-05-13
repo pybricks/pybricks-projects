@@ -34,11 +34,16 @@ def calibrate():
     global l_min, l_max, sign_edge
 
     # Find the Right and Left hard limits
-    a_right_limit = steer_motor.run_until_stalled(400, then=Stop.BRAKE, duty_limit=100)
-    a_left_limit = steer_motor.run_until_stalled(-400, then=Stop.BRAKE, duty_limit=100)
+    a_right_limit = steer_motor.run_until_stalled(
+        400, then=Stop.BRAKE, duty_limit=100
+    )
+    a_left_limit = steer_motor.run_until_stalled(
+        -400, then=Stop.BRAKE, duty_limit=100
+    )
 
-    # Calculate the steering limit as average of two extremes then reset
-    # angle to the negative limit since steering motor is now at neg. extreme
+    # Calculate the steering limit as average of two extremes then
+    # reset angle to the negative limit since steering motor is now
+    # at negative extreme
     a_steer_limit = (a_right_limit - a_left_limit) // 2
     steer_motor.reset_angle(-a_steer_limit)
 
@@ -50,11 +55,11 @@ def calibrate():
     steer_motor.run(100)
 
     while steer_motor.angle() < 30:
-        l = get_light()
-        if l > l_max:
-            l_max = l
-        if l < l_min:
-            l_min = l
+        light = get_light()
+        if light > l_max:
+            l_max = light
+        if light < l_min:
+            l_min = light
         wait(5)
 
     steer_motor.stop()
@@ -78,13 +83,14 @@ def track_speed_control():
     drive_motor.control.limits(1000, 2000, 100)
 
     while not any(hub.buttons.pressed()):
-        # Get a new light value and subtract mid to get signed error from edge
-        l = sign_edge * (get_light() - l_mid)
+        # Get a new light value and subtract mid to get signed error
+        # from edge
+        light = sign_edge * (get_light() - l_mid)
 
-        # Create a new target for the steering motor to move toward the
-        # approximate position of the edge
+        # Create a new target for the steering motor to move toward
+        # the approximate position of the edge
         a = steer_motor.angle()
-        t = a - m * l
+        t = a - m * light
 
         # Clamp the target angle to within +- a_steer_limit
         t = min(t, a_steer_limit)
@@ -94,7 +100,7 @@ def track_speed_control():
         steer_motor.track_target(t)
 
         # Speed control
-        if abs(l) < l_off_edge_thresh:
+        if abs(light) < l_off_edge_thresh:
             # On edge of line
             if abs(t) < 25:
                 # and going straight
