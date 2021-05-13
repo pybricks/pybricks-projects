@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/bobb3e/
-title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Bobb3e"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Bobb3e"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -16,7 +15,7 @@ building_instructions:
 ---
 
 
-This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
+This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
 Control Bobb3e as follows:
 
