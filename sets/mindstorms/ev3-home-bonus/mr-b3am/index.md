@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/mr-b3am/
 title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Mr. B3am"
 maintainer:
     user: "TheVinhLuong102"
