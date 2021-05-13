@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/el3ctric-guitar/
-title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: El3ctric Guitar"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: El3ctric Guitar"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -18,12 +17,11 @@ building_instructions:
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
-
-The code for the `El3ctricGuitar` class is in `el3ctric-guitar.py` as follows:
+The code for the `El3ctricGuitar` class is in `el3ctric_guitar.py` as follows:
 
 {% include copy-code.html %}
 ```python
-{% include_relative el3ctric-guitar.py %}
+{% include_relative el3ctric_guitar.py %}
 ```
 
 The code for the main program is in `main.py` as follows:
