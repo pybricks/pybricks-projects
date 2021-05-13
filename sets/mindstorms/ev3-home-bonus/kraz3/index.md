@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/Kraz3/
-title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Kraz3"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Kraz3"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -35,6 +34,13 @@ The code for the `Kraz3` class is in `kraz3.py` as follows:
 {% include copy-code.html %}
 ```python
 {% include_relative kraz3.py %}
+```
+
+`Kraz3` uses a remote-controlled tank driving utility whose code is in `rc_tank_util.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative rc_tank_util.py %}
 ```
 
 The code for the main program is in `main.py` as follows:
