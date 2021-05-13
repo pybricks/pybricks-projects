@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/rac3-truck/
 title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Rac3 Truck"
 maintainer:
     user: "TheVinhLuong102"
