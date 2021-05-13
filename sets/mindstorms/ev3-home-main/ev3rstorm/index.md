@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-main/ev3rstorm/
-title: "LEGO Mindstorms EV3 Home Edition: Ev3rstorm"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Ev3rstorm"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -16,7 +15,6 @@ building_instructions:
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
-
 Ev3rstorm works as follows:
 
 - You can drive Ev3rstorm around with the IR beacon.
@@ -30,6 +28,13 @@ The code for the `Ev3rstorm` class is in `ev3rstorm.py` as follows:
 {% include copy-code.html %}
 ```python
 {% include_relative ev3rstorm %}
+```
+
+`Ev3rstorm` uses a remote-controlled tank driving utility whose code is in `rc_tank_util.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative rc_tank_util.py %}
 ```
 
 The code for the main program is in `main.py` as follows:
