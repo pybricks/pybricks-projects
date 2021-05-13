@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-main/spik3r/
-title: "LEGO Mindstorms EV3 Home Edition: Spik3r"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Spik3r"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -15,7 +14,6 @@ building_instructions:
 
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
-
 
 Spik3r works as follows:
 
