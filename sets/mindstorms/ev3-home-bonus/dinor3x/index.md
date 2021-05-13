@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/dinor3x/
-title: "LEGO Mindstorms EV3 Home Edition: Fan Robots: Dinor3x"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Dinor3x"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -17,7 +16,6 @@ building_instructions:
 
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
-
 
 NOTE: please add a Color Sensor to Dinor3x's back or tail. 
 
