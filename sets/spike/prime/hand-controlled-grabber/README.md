@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/spike/prime/hand-controlled-grabber/
 title: "LEGO® Education SPIKE™ Prime: Hand-Controlled Grabber"
 maintainer:
     user: "TheVinhLuong102"
