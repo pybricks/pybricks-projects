@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-main/r3ptar/
-title: "LEGO Mindstorms EV3 Home Edition: R3ptar"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: R3ptar"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -15,7 +14,6 @@ building_instructions:
 
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable at https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
-
 
 R3ptar can be driven around by the IR Remote Control, strikes when the Beacon button is pressed, and hisses when the Touch Sensor is pressed.
 
