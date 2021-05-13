@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-main/gripp3r/
-title: "LEGO Mindstorms EV3 Home Edition: Gripp3r"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Gripp3r"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -23,6 +22,13 @@ The code for the `Gripp3r` class is in `gripp3r.py` as follows:
 {% include copy-code.html %}
 ```python
 {% include_relative gripp3r.py %}
+```
+
+`Gripp3r` uses a remote-controlled tank driving utility whose code is in `rc_tank_util.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative rc_tank_util.py %}
 ```
 
 The code for the main program is in `main.py` as follows:
