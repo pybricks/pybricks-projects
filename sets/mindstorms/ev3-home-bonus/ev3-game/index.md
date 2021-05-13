@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/ev3_game/
-title: "LEGO Mindstorms EV3 Home Edition: Fan Robot: EV3 Game"
+title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robot: EV3 Game"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -18,8 +17,6 @@ building_instructions:
 
 This program requires LEGO® EV3 MicroPython v2.0 downloadable https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3.
 
-Building instructions can be found at https://www.lego.com/en-us/themes/mindstorms/buildarobot.
-
 EV3Game works as follows:
 
 - Put a small ball or marble under the middle cup. 
@@ -35,12 +32,11 @@ EV3Game works as follows:
 
 - Repeat again and again to play many games.
 
-
 The code for the `EV3Game` class is in `ev3_game.py` as follows:
 
 {% include copy-code.html %}
 ```python
-{% include_relative rac3_truck.py %}
+{% include_relative ev3_game.py %}
 ```
 
 The code for the main program is in `main.py` as follows:
