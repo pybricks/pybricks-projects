@@ -1,5 +1,4 @@
 ---
-permalink: /projects/sets/mindstorms/ev3-home-bonus/wack3m/
 title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Wack3m"
 maintainer:
     user: "TheVinhLuong102"
