@@ -27,7 +27,7 @@ The code for the `Ev3rstorm` class is in `ev3rstorm.py` as follows:
 
 {% include copy-code.html %}
 ```python
-{% include_relative ev3rstorm %}
+{% include_relative ev3rstorm.py %}
 ```
 
 `Ev3rstorm` uses a remote-controlled tank driving utility whose code is in `rc_tank_util.py` as follows:
