@@ -9,7 +9,7 @@ image:
 video:
     youtube: "8uyx5npo4LA"
 description:
-    "Use the Grabber to pick up objects and bring them around!"
+    "Use the Grabber to pick up objects and bring them around! Press the Force Sensor to grab objects, and release the Force Sensor to let go of them."
 building_instructions:
     external:
     - https://education.lego.com/v3/assets/blt293eea581807678a/blt56a81c75560c9a81/5f8802cbf71916144453a493/supercleaup-bi-pdf-book1of3.pdf
@@ -17,13 +17,13 @@ building_instructions:
 ---
 
 
-The program requires PyBricks v3 firmware installed on the Prime Hub.
+This program is for the Hand-Controlled Grabber in the [Invention Squad: Super Clean-Up](https://education.lego.com/en-us/lessons/prime-invention-squad/super-cleanup) lesson unit.
 
-Press the Force Sensor to grab objects, and release the Force Sensor to let go of them.
+The program requires PyBricks v3 firmware installed on the Prime Hub.
 
 The programming code is as follows:
 
 {% include copy-code.html %}
 ```python
-{% include_relative hand-controlled-grabber.py %}
+{% include_relative main.py %}
 ```
