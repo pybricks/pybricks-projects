@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/robot-inventor/blast/
-title: "LEGO Mindstorms Robot Inventor: Blast"
+title: "LEGO® MINDSTORMS® Robot Inventor: Blast"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -15,10 +14,14 @@ building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/51515_Blast.pdf
 ---
 
-# Example LEGO® MINDSTORMS® Robot Inventor programs for Blast
 
 This program requires PyBricks v3 firmware installed on the Inventor Hub.
 
-Building instructions can be found at https://www.lego.com/en-us/service/buildinginstructions/51515.
-
 The playing instructions for each robot variant are in the docstrings of the corresponding file.
+
+The code for Blast's basic dance is in `blast-basic.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative blast-basic.py %}
+```
