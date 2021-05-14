@@ -18,14 +18,16 @@ rear = Motor(Port.B, Direction.COUNTERCLOCKWISE)
 front.control.limits(acceleration=1000)
 rear.control.limits(acceleration=1000)
 
-# Find the steering endpoint on the left and right. The difference between them
-# is the total angle it takes to go from left to right. The middle is in between.
+# Find the steering endpoint on the left and right. The difference
+# between them is the total angle it takes to go from left to right.
+# The middle is in between.
 left_end = steer.run_until_stalled(-200, then=Stop.HOLD)
 right_end = steer.run_until_stalled(200, then=Stop.HOLD)
 
 # We are now at the right. Reset this angle to be half the difference.
-# That puts zero in the middle. From now on, running to 0 means to the middle.
-steer.reset_angle((right_end - left_end)/2)
+# That puts zero in the middle. From now on, running to 0 means to
+# the middle.
+steer.reset_angle((right_end - left_end) / 2)
 steer.run_target(speed=200, target_angle=0, then=Stop.COAST)
 
 # Now keep setting steering and driving based on keypad key:
