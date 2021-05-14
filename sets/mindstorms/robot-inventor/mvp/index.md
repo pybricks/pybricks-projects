@@ -1,6 +1,5 @@
 ---
-permalink: /projects/sets/mindstorms/robot-inventor/mvp/
-title: "LEGO Mindstorms Robot Inventor: M.V.P."
+title: "LEGO® MINDSTORMS® Robot Inventor: M.V.P."
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
@@ -15,10 +14,14 @@ building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/51515_MVP.pdf
 ---
 
-# Example LEGO® MINDSTORMS® Robot Inventor programs for M.V.P.
 
 This program requires PyBricks v3.0 firmware installed on the Inventor Hub.
 
-Building instructions can be found at https://www.lego.com/en-us/service/buildinginstructions/51515.
-
 The playing instructions for each robot variant are in the docstrings of the corresponding file.
+
+The code for M.V.P.'s basic drive is in `mvp-basic.py` as follows:
+
+{% include copy-code.html %}
+```python
+{% include_relative mvp-basic.py %}
+```
