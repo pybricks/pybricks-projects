@@ -19,7 +19,7 @@ building_instructions:
 
 This program is for the Hand-Controlled Grabber in the [Invention Squad: Super Clean-Up](https://education.lego.com/en-us/lessons/prime-invention-squad/super-cleanup) lesson unit.
 
-The program requires PyBricks v3 firmware installed on the Prime Hub.
+The program requires Pybricks v3 firmware installed on the Prime Hub.
 
 The programming code is as follows:
 
