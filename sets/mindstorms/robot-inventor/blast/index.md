@@ -7,7 +7,7 @@ image:
     local: "blast.jpeg"
     credit: "LEGO"
 video:
-    youtube: "https://www.youtube.com/watch?v=5Fa4m1XzlCA"
+    youtube: "5Fa4m1XzlCA"
 description:
     "This master robot is a stoic action hero. It can fire or hammer its way through obstacles and grab items. Builders can be the ultimate commanders, programming it to scan its environment and fire darts if it senses danger. Perfect for guarding your room!"
 building_instructions:
