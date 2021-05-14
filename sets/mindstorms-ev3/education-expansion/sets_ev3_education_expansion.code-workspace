@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "path": "elephant"
+        },
+        {
+            "path": "stair_climber"
+        },
+        {
+            "path": "tank_bot"
+        },
+        {
+            "path": "znap"
+        }
+    ],
+    "settings": {
+        "debug.openDebug": "neverOpen"
+    }
+}
