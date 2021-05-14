@@ -1,0 +1,28 @@
+{
+    "folders": [
+        {
+            "path": "color_sorter"
+        },
+        {
+            "path": "gyro_boy"
+        },
+        {
+            "path": "puppy"
+        },
+        {
+            "path": "robot_arm"
+        },
+        {
+            "path": "robot_educator_basic"
+        },
+        {
+            "path": "robot_educator_line"
+        },
+        {
+            "path": "robot_educator_ultrasonic"
+        }
+    ],
+    "settings": {
+        "debug.openDebug": "neverOpen"
+    }
+}

@@ -9,7 +9,7 @@ keyboard.register(stdin)
 while True:
     # Check if a key has been pressed.
     if keyboard.poll(0):
-        
+
         # Read the key and print it.
         key = stdin.read(1)
         print("You pressed:", key)
