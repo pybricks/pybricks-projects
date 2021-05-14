@@ -1,5 +1,5 @@
 ---
-title: "51515: Robot Inventor Community Models"
+title: "51515: Robot Inventor Official Fan Models"
 image:
     local: "exploration-rover/exploration-rover.jpg"
 layout: set

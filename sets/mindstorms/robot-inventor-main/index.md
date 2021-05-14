@@ -1,5 +1,5 @@
 ---
-title: "51515: Robot Inventor"
+title: "51515: Robot Inventor Main Models"
 image:
     local: "robot-inventor.jpg"
     credit: "LEGO"
