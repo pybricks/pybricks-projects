@@ -23,23 +23,23 @@ BASE = 697
 
 # Place all the elements
 for element in (FEET, BELLY, ARMS, NECK, HEAD):
-    
+
     # Go to the element
     belt.run_target(speed=200, target_angle=element)
-    
+
     # Grab the element
     arm.run_time(speed=300, time=2000)
-    
+
     # Lift the element by going back to nearly zero
     arm.run_target(speed=300, target_angle=55)
-    
+
     # Go to the base
     belt.run_target(speed=200, target_angle=BASE)
     wait(500)
-    
+
     # Put the element down
     arm.run_time(speed=300, time=2000)
-    
+
     # Lift the arm back up
     arm.run_target(speed=300, target_angle=0)
 
