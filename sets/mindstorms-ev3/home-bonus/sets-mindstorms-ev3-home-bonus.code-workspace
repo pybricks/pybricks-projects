@@ -33,8 +33,6 @@
   ],
 
   "settings": {
-    "debug.openDebug": "neverOpen",
-
     "editor.rulers": [70],
 
     "python.linting.enabled": true,
