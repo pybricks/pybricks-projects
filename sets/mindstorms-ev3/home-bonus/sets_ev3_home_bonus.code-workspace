@@ -1,29 +1,50 @@
 {
-    "folders": [
-        {
-            "path": "bobb3e"
-        },
-        {
-            "path": "dinor3x"
-        },
-        {
-            "path": "el3ctric_guitar"
-        },
-        {
-            "path": "ev3_game"
-        },
-        {
-            "path": "mr_b3am"
-        },
-        {
-            "path": "robodoz3r"
-        },
-        {
-            "path": "wack3m"
-        }
-    ],
-
-    "settings": {
-        "debug.openDebug": "neverOpen"
+  "folders": [
+    {
+      "path": "bobb3e"
+    },
+    {
+      "path": "dinor3x"
+    },
+    {
+      "path": "el3ctric-guitar"
+    },
+    {
+      "path": "ev3-game"
+    },
+    {
+      "path": "ev3-d4"
+    },
+    {
+      "path": "kraz3"
+    },
+    {
+      "path": "mr-b3am"
+    },
+    {
+      "path": "rac3-truck"
+    },
+    {
+      "path": "robodoz3r"
+    },
+    {
+      "path": "wack3m"
     }
+  ],
+
+  "settings": {
+    "debug.openDebug": "neverOpen",
+
+    "editor.rulers": [70],
+
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pydocstyleEnabled": false,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.prospectorEnabled": true,
+    "python.linting.pylamaEnabled": true,
+    "python.linting.banditEnabled": true
+  }
 }
