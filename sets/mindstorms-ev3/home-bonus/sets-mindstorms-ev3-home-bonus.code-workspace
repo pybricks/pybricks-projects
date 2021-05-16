@@ -35,6 +35,9 @@
   "settings": {
     "editor.rulers": [70],
 
+    "ev3devBrowser.download.exclude": "{**/*.md,**/*.jpg,**/*.jpeg,**/*.png,**/*.pdf}",
+    "ev3devBrowser.download.include": "**/*.py",
+
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true,
