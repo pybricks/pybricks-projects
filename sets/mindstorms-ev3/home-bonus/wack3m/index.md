@@ -4,7 +4,7 @@ maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
 image:
-    local: "wack3m.jpeg"
+    local: "wack3m.jpg"
     credit: "LEGO"
 video:
     youtube: "ksojLbHrhJ8"
