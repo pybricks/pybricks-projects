@@ -13,17 +13,22 @@ class Wack3m:
 
     def __init__(
             self,
-            left_motor_port: str = Port.B, right_motor_port: str = Port.C,
+            left_motor_port: str = Port.B,
+            right_motor_port: str = Port.C,
             middle_motor_port: str = Port.A,
-            touch_sensor_port: str = Port.S1, ir_sensor_port: str = Port.S4):
+            touch_sensor_port: str = Port.S1,
+            ir_sensor_port: str = Port.S4):
         self.ev3_brick = EV3Brick()
 
-        self.left_motor = Motor(port=left_motor_port,
-                                positive_direction=Direction.CLOCKWISE)
-        self.right_motor = Motor(port=right_motor_port,
-                                 positive_direction=Direction.CLOCKWISE)
-        self.middle_motor = Motor(port=middle_motor_port,
-                                  positive_direction=Direction.CLOCKWISE)
+        self.left_motor = \
+            Motor(port=left_motor_port,
+                  positive_direction=Direction.CLOCKWISE)
+        self.right_motor = \
+            Motor(port=right_motor_port,
+                  positive_direction=Direction.CLOCKWISE)
+        self.middle_motor = \
+            Motor(port=middle_motor_port,
+                  positive_direction=Direction.CLOCKWISE)
 
         self.touch_sensor = TouchSensor(port=touch_sensor_port)
 
@@ -95,7 +100,8 @@ class Wack3m:
 
                     start_time = time()
 
-                    self.ev3_brick.screen.load_image(ImageFile.MIDDLE_LEFT)
+                    self.ev3_brick.screen.load_image(
+                        ImageFile.MIDDLE_LEFT)
 
                     self.left_motor.run_time(
                         speed=-1000,
@@ -104,7 +110,8 @@ class Wack3m:
                         wait=True)
 
                     proximity = self.ir_sensor.distance()
-                    while abs(self.ir_sensor.distance() - proximity) <= 4:
+                    while abs(self.ir_sensor.distance() - proximity) \
+                            <= 4:
                         wait(10)
 
                 elif which_motor == 2:
@@ -116,7 +123,8 @@ class Wack3m:
 
                     start_time = time()
 
-                    self.ev3_brick.screen.load_image(ImageFile.NEUTRAL)
+                    self.ev3_brick.screen.load_image(
+                        ImageFile.NEUTRAL)
 
                     self.middle_motor.run_time(
                         speed=-1000,
@@ -125,7 +133,8 @@ class Wack3m:
                         wait=True)
 
                     proximity = self.ir_sensor.distance()
-                    while abs(self.ir_sensor.distance() - proximity) <= 5:
+                    while abs(self.ir_sensor.distance() - proximity) \
+                            <= 5:
                         wait(10)
 
                 else:
@@ -137,7 +146,8 @@ class Wack3m:
 
                     start_time = time()
 
-                    self.ev3_brick.screen.load_image(ImageFile.MIDDLE_RIGHT)
+                    self.ev3_brick.screen.load_image(
+                        ImageFile.MIDDLE_RIGHT)
 
                     self.right_motor.run_time(
                         speed=-1000,
@@ -146,7 +156,8 @@ class Wack3m:
                         wait=True)
 
                     proximity = self.ir_sensor.distance()
-                    while abs(self.ir_sensor.distance() - proximity) <= 5:
+                    while abs(self.ir_sensor.distance() - proximity) \
+                            <= 5:
                         wait(10)
 
                 response_time = time() - start_time
@@ -161,14 +172,16 @@ class Wack3m:
 
                 total_response_time += response_time
 
-            average_response_time = total_response_time / self.N_WHACK_TIMES
+            average_response_time = \
+                total_response_time / self.N_WHACK_TIMES
 
             self.ev3_brick.screen.clear()
             self.ev3_brick.screen.print(
                 'Avg. Time: {:.1f}s'.format(average_response_time))
 
             if average_response_time <= 1:
-                self.ev3_brick.speaker.play_file(file=SoundFile.FANTASTIC)
+                self.ev3_brick.speaker.play_file(
+                    file=SoundFile.FANTASTIC)
             else:
                 self.ev3_brick.speaker.play_file(SoundFile.GOOD_JOB)
 
