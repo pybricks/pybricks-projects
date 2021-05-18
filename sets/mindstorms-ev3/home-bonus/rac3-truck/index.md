@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Rac3 Truck"
+title: "Rac3 Truck"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

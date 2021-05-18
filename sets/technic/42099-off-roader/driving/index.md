@@ -1,5 +1,5 @@
 ---
-title: "42099: Technic Off-Roader: Driving"
+title: "Autonomous Driving"
 maintainer:
     user: "pybricks"
     name: "The Pybricks Authors"

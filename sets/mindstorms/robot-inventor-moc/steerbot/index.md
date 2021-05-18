@@ -1,5 +1,5 @@
 ---
-title: "Steer Bot"
+title: "Fast line-following with Steer Bot"
 maintainer:
     user: "GusJansson"
     name: "Gus Jansson"

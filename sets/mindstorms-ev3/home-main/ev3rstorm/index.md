@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: Ev3rstorm"
+title: "Ev3rstorm"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

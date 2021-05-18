@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® Robot Inventor: Tricky"
+title: "Tricky"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

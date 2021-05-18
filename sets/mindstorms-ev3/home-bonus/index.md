@@ -1,5 +1,6 @@
 ---
-title: "31313: MINDSTORMS EV3 Bonus Models"
+title: "Official Fan Creations"
+number: 31313
 image:
     local: "rac3-truck/rac3-truck.jpeg"
 layout: set

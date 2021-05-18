@@ -1,5 +1,5 @@
 ---
-title: "LEGO MINDSTORMS"
+title: "MINDSTORMS"
 layout: theme
 description: "Theme description"
 ---

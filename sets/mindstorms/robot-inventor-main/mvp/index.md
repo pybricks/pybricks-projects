@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® Robot Inventor: M.V.P."
+title: "M.V.P."
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

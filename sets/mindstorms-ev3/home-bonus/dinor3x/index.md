@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Dinor3x"
+title: "Dinor3x"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

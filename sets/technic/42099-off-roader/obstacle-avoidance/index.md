@@ -1,5 +1,5 @@
 ---
-title: "42099: Technic Off-Roader: Obstacle Avoidance"
+title: "Obstacle Avoidance"
 maintainer:
     user: "pybricks"
     name: "The Pybricks Authors"

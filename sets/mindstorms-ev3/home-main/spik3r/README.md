@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: Spik3r"
+title: "Spik3r"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
