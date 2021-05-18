@@ -1,5 +1,5 @@
 ---
-title: "LEGO Boost Auto Builder"
+title: "Precision building with Auto Builder"
 maintainer:
     user: "pybricks"
     name: "The Pybricks Authors"

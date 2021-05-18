@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: El3ctric Guitar"
+title: "El3ctric Guitar"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

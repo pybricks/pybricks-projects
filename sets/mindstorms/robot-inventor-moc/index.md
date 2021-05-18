@@ -1,5 +1,6 @@
 ---
-title: "51515: Robot Inventor Unofficial Fan Creations"
+title: "Robot Inventor: Other Fan Creations"
+number: 51515
 image:
     local: "steerbot/steerbot.jpg"
 layout: set

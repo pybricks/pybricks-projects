@@ -1,5 +1,5 @@
 ---
-title: "LEGO® Education SPIKE™ Prime: Hand-Controlled Grabber"
+title: "Hand-Controlled Grabber"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

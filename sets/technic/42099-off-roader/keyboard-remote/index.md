@@ -1,5 +1,5 @@
 ---
-title: "42099: Technic Off-Roader: Keyboard Remote"
+title: "Keyboard Remote Control"
 maintainer:
     user: "pybricks"
     name: "The Pybricks Authors"

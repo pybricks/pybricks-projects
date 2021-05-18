@@ -1,5 +1,6 @@
 ---
-title: "17101: Creative Toolbox"
+title: Creative Toolbox   
+number: 17101 
 image:
     local: "creative-toolbox.jpg"
     credit: "LEGO"

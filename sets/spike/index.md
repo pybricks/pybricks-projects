@@ -1,5 +1,5 @@
 ---
-title: "LEGO Education SPIKE"
+title: "SPIKE"
 layout: theme
 description: "Theme description"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Kraz3"
+title: "Kraz3"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

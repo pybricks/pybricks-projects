@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: R3ptar"
+title: "R3ptar"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"
