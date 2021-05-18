@@ -1,5 +1,6 @@
 ---
-title: "75253: Star Wars™ BOOST Droid Commander"
+title: "Star Wars™ Droid Commander"
+number: 75253
 image:
     local: "droid-commander.jpg"
     credit: "LEGO"

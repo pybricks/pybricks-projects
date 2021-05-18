@@ -1,5 +1,5 @@
 ---
-title: "LEGO® MINDSTORMS® EV3 Home Edition: Fan Robots: Bobb3e"
+title: "Bobb3e"
 maintainer:
     user: "TheVinhLuong102"
     name: "The Lương-Phạm Family"

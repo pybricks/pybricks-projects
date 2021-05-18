@@ -1,5 +1,5 @@
 ---
-title: "LEGO® Star Wars™ BOOST Droid Commander R2-D2"
+title: "Driving and turning with R2-D2"
 maintainer:
     user: "pybricks"
     name: "The Pybricks Team"

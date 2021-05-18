@@ -1,5 +1,5 @@
 ---
-title: "LEGO City"
+title: "City"
 layout: theme
 description: "Theme description"
 ---

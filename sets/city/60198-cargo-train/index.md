@@ -1,5 +1,6 @@
 ---
-title: "Cargo train"
+title: "Cargo Train"
+number: 60198
 image:
     local: "60198-cargo-train.jpg"
     credit: "LEGO"
