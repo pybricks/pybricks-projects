@@ -13,6 +13,7 @@ description:
     make it work smoothly and accurately."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/17101_A_AutoBuilder.pdf
+code: "#coding-instructions"
 ---
 
 # Coding instructions

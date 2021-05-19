@@ -9,6 +9,7 @@ description:
     "Make the truck drive around autonomously using sensors."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6314518.pdf
+code: "#main-program"
 ---
 
 # Selecting a sensor

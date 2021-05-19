@@ -18,6 +18,7 @@ building_instructions:
     - https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6245924.pdf
     - https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6245926.pdf
     - https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6245931.pdf
+code: "#program"
 
 ---
 
@@ -31,9 +32,7 @@ driving:
 
 Connect the motor to port A and connect the tilt sensor to port B.
 
-## Coding Instructions
-
-
+## Program
 
 This program makes the train drive until it detects a slope of 8 degrees or
 more. Then it drives back down.
