@@ -2,7 +2,7 @@
 title: "Autonomous Driving"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "truck.jpg"
 description:

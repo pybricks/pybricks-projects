@@ -2,7 +2,7 @@
 title: "Train slope detection"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "slope-detection.jpg"
 video:

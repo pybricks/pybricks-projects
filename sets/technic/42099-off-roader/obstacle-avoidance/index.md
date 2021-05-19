@@ -2,7 +2,7 @@
 title: "Obstacle Avoidance"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "obstacle-avoidance.jpg"
 description:

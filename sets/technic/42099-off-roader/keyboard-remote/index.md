@@ -2,7 +2,7 @@
 title: "Keyboard Remote Control"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "keyboard-remote-truck.jpg"
 description:

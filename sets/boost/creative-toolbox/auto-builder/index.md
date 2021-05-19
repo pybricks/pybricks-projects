@@ -2,7 +2,7 @@
 title: "Precision building with Auto Builder"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "auto-builder.jpg"
     credit: "LEGO"
