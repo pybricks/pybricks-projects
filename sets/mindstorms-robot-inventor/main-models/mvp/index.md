@@ -11,12 +11,11 @@ video:
 description:
     "The Modular Vehicle Platform gets the job done. Create and code your own remote control and build the M.V.P. into a buggy, a crane, a shooter turret or even a brick-eating truck to pick up LEGO bricks left by the other robots."
 building_instructions:
-    external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/51515_MVP.pdf
+    external: https://ww.lego.com/cdn/product-assets/product.bi.additional.main.pdf/51515_MVP.pdf
+code: "#program"
 ---
 
-
-This program requires PyBricks v3.0 firmware installed on the Inventor Hub.
-
+## Program
 The playing instructions for each robot variant are in the docstrings of the corresponding file.
 
 The code for M.V.P.'s basic drive is in `mvp-basic.py` as follows:

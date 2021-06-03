@@ -2,7 +2,7 @@
 title: "Autonomous Driving"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "truck.jpg"
 description:
@@ -10,6 +10,7 @@ description:
     starting point for your own programs."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6314518.pdf
+code: "#basic-driving-and-steering"
 ---
 
 # Basic driving and steering

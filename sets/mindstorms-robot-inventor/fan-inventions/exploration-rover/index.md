@@ -11,6 +11,7 @@ description:
     "Six-wheeled rover with instruments to explore new worlds."
 building_instructions:
     local: "exploration-rover.pdf"
+code: "#program"
 ---
 
 ## Description

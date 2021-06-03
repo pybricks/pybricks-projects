@@ -11,6 +11,7 @@ description:
     "Super fast line following robot with Ackermann steering."
 building_instructions:
     local: "steerbot-instructions.pdf"
+code: "#program"
 ---
 
 ## Description

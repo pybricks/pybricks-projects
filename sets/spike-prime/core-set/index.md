@@ -1,5 +1,5 @@
 ---
-title: "Prime Core Set Models"
+title: "SPIKE Prime Core Set"
 number: 45678
 image:
     local: "spike-prime-core.jpg"

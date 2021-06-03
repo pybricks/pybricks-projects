@@ -1,5 +1,5 @@
 ---
-title: "Robot Inventor: Official Fan Creations"
+title: "Official Fan Inventions"
 number: 51515
 image:
     local: "exploration-rover/exploration-rover.jpg"
