@@ -1,14 +1,15 @@
 ---
-title: "42099: Technic Off-Roader: Keyboard Remote"
+title: "Keyboard Remote Control"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "keyboard-remote-truck.jpg"
 description:
     "This project shows how you can control the truck with your keyboard."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6314518.pdf
+code: "#the-remote-control-program"
 ---
 
 # How it works

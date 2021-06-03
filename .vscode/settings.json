@@ -1,0 +1,13 @@
+{
+  "editor.rulers": [70],
+
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pydocstyleEnabled": false,
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.prospectorEnabled": true,
+  "python.linting.pylamaEnabled": true,
+  "python.linting.banditEnabled": true
+}

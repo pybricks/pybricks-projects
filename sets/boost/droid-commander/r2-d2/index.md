@@ -1,5 +1,5 @@
 ---
-title: "LEGO® Star Wars™ BOOST Droid Commander R2-D2"
+title: "Driving and turning with R2-D2"
 maintainer:
     user: "pybricks"
     name: "The Pybricks Team"
@@ -12,6 +12,7 @@ description:
     "Fan-favorite droid R2-D2 is now Python-powered with Pybricks."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/75253_X_Artoo.pdf
+code: "#code"
 ---
 
 # Code

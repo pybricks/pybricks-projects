@@ -1,5 +1,5 @@
 ---
-title: "LEGO BOOST"
+title: "BOOST"
 layout: theme
 description: "Theme description"
 ---

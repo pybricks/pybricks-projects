@@ -1,5 +1,5 @@
 ---
-title: "MINDSTORMS EV3"
+title: "SPIKE Prime"
 layout: theme
 description: "Theme description"
 ---
