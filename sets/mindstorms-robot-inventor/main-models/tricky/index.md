@@ -12,12 +12,13 @@ description:
     "The sporty bot is the ultimate athlete. Code it to complete the perfect slam dunk or master a plethora of robot sports: basketball, bowling or soccer – the list goes on and on."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/51515_Tricky.pdf
+code: "#programs"
 ---
 
-
-These programs require Pybricks v3.0 firmware installed on the Inventor Hub.
+## Programs
 
 The playing instructions for each robot variant are in the docstrings of the corresponding file.
+
 
 The code for Tricky's basic dance is in `tricky-basic.py` as follows:
 

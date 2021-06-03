@@ -1,5 +1,5 @@
 ---
-title: "Robot Inventor: Main Models"
+title: "Main Models"
 number: 51515
 image:
     local: "robot-inventor.jpg"

@@ -12,6 +12,7 @@ description:
     "Fan-favorite droid R2-D2 is now Python-powered with Pybricks."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/75253_X_Artoo.pdf
+code: "#code"
 ---
 
 # Code

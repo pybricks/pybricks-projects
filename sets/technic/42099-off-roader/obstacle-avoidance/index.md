@@ -2,13 +2,14 @@
 title: "Obstacle Avoidance"
 maintainer:
     user: "pybricks"
-    name: "The Pybricks Authors"
+    name: "The Pybricks Team"
 image:
     local: "obstacle-avoidance.jpg"
 description:
     "Make the truck drive around autonomously using sensors."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6314518.pdf
+code: "#main-program"
 ---
 
 # Selecting a sensor
