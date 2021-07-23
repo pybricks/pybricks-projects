@@ -8,7 +8,7 @@ image:
 description:
     "Control LEGO Technic vehicles with the Powered Up Remote."
 video:
-    youtube: st_lcMgz618"
+    youtube: st_lcMgz618
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6351188.pdf
 code: "#program"
