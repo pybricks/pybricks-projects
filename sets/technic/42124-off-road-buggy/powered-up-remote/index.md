@@ -6,28 +6,27 @@ maintainer:
 image:
     local: "powered-up-remote-buggy.jpg"
 description:
-    "Control LEGO Technic vehicles with the Powered Up Remote."
+    "Control the Technic Off-Road Buggy with the Powered Up Remote."
 video:
-    youtube: st_lcMgz618
+    youtube: 6Urq0aX2jR4
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6351188.pdf
 code: "#program"
 ---
 
-# How it works
-
-Your MicroPython programs can connect to the Powered Up Remote so you can detect when
-any of the buttons are pressed and react to it.
+In this project we'll show you how to control the Technic Off-Road buggy with
+the Powered Up remote.
 
 # Program
 
-This program expands the [basic driving program](../driving) with the Powered
-Up Remote.
+This program is similar to most driving vehicles in the Technic series. Check
+out the [Technic X-treme Off-Roader](../../42099-off-roader) examples for
+additional tips and tricks.
 
-After the program starts it connects to your remote (just press the green button)
-then it makes a quick calibration of the steering and you are ready to drive.
+When the program starts, it connects to your remote and the steering mechanism
+is calibrated. Then you are ready to drive.
 
-Left Channel controls the steering and Right Channel drives the car.
+The left channel controls the steering and right channel drives the car.
 
 {% include copy-code.html %}
 ```python

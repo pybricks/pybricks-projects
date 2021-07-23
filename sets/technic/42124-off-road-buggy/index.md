@@ -1,6 +1,6 @@
 ---
 title: "Off-Road Buggy"
-number: 422124
+number: 42124
 image:
     local: "42124-off-road-buggy.jpg"
     credit: "LEGO"
