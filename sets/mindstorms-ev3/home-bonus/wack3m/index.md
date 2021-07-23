@@ -9,11 +9,13 @@ image:
 video:
     youtube: "ksojLbHrhJ8"
 description:
-    "Designed by [Martyn Boogaarts](https://www.robotmak3rs.com/Martyn-Boogarts). This is an arcade-style game that tests your reaction speed. The robot pops up disks that you have to whack as quickly as possible using the wack-wheel hammer. Challenge your friends and see who wackedy-wacks the fastest!"
+    "Arcade-style game that tests your reaction speed."
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.extra.pdf/31313_X_WACK3M.pdf
 ---
 
+
+Designed by [Martyn Boogaarts](https://www.robotmak3rs.com/Martyn-Boogarts). This is an arcade-style game that tests your reaction speed. The robot pops up disks that you have to whack as quickly as possible using the wack-wheel hammer. Challenge your friends and see who wackedy-wacks the fastest!
 
 This program requires [LEGO® MINDSTORMS® EV3 MicroPython v2.0](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installed on the EV3 Hub.
 
