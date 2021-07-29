@@ -1,7 +1,17 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-	"files.eol": "\n",
-	"debug.openDebug": "neverOpen",
-	"editor.rulers": [79],
-	"python.linting.flake8Enabled": true
+  "editor.rulers": [70],
+
+  "ev3devBrowser.download.exclude": "{**/*.md,**/*.jpg,**/*.jpeg,**/*.png,**/*.pdf}",
+  "ev3devBrowser.download.include": "**/*.py",
+
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pydocstyleEnabled": false,
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.prospectorEnabled": true,
+  "python.linting.pylamaEnabled": true,
+  "python.linting.banditEnabled": true
 }
