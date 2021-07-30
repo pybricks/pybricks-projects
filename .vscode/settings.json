@@ -1,6 +1,14 @@
 {
   "editor.rulers": [70],
 
+  "files.exclude": {
+    "**/.git": true,
+    "**/.mypy_cache": true,
+    "**/*.pyc": {"when": "$(basename).py"}, 
+    "**/__pycache__": true,
+    "**/.ropeproject": true,
+  },
+
   "python.linting.enabled": true,
 
   "python.linting.pylintEnabled": true,
