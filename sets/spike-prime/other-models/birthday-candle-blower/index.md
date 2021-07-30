@@ -34,11 +34,11 @@ Control the Birthday Candle Blower by the Powered-Up Remote as follows:
   - Counterclockwise: left Red button
 
 
-# Technical Design Notes
+## Technical Design Notes
 
 For the fan to spin fast enough to blow candles, we need a very large gear attached to the fan motor and a very small gear attached to the fan's axis.
 
-The fan blades' facing and spinning directions also matter. In the pictured design, the fan only generates strong forward winds when:
+The fan blades' facing and spinning directions also matter. In the pictured design, the fan only generates strong forward wind when:
 - the bottoms of the blade pieces face forward; AND
 - the fan spins clockwise from the robot's point of view.
 
