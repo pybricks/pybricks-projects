@@ -15,14 +15,13 @@ HAPPY_BIRTHDAY_SONG = [
 
 
 class RemoteControlledDriveBase:
-    def __init__(
-            self,
-            wheel_diameter: float,   # milimeters
-            axle_track: float,       # milimeters
-            left_motor_port: Port = Port.A,
-            left_motor_pos_dir: Dir = Dir.COUNTERCLOCKWISE,
-            right_motor_port: Port = Port.B,
-            right_motor_pos_dir: Dir = Dir.CLOCKWISE):
+    def __init__(self,
+                 wheel_diameter: float,   # milimeters
+                 axle_track: float,       # milimeters
+                 left_motor_port: Port = Port.A,
+                 left_motor_pos_dir: Dir = Dir.COUNTERCLOCKWISE,
+                 right_motor_port: Port = Port.B,
+                 right_motor_pos_dir: Dir = Dir.CLOCKWISE):
         self.drive_base = \
             DriveBase(left_motor=Motor(left_motor_port,
                                        left_motor_pos_dir),
