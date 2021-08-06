@@ -14,12 +14,19 @@ class RemoteControlledTank:
             axle_track: float,       # in milimeters
             left_motor_port: Port = Port.B,
             right_motor_port: Port = Port.C,
+            polarity: str = 'normal',
             ir_sensor_port: Port = Port.S4,
             ir_beacon_channel: int = 1):
-        left_motor = Motor(port=left_motor_port,
-                           positive_direction=Direction.CLOCKWISE)
-        right_motor = Motor(port=right_motor_port,
-                            positive_direction=Direction.CLOCKWISE)
+        motor_positive_direction = \
+            Direction.CLOCKWISE \
+            if polarity == 'normal' \
+            else Direction.COUNTERCLOCKWISE
+        left_motor = \
+            Motor(port=left_motor_port,
+                  positive_direction=motor_positive_direction)
+        right_motor = \
+            Motor(port=right_motor_port,
+                  positive_direction=motor_positive_direction)
         self.drive_base = DriveBase(left_motor=left_motor,
                                     right_motor=right_motor,
                                     wheel_diameter=wheel_diameter,
