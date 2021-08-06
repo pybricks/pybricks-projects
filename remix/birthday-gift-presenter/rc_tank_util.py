@@ -91,3 +91,12 @@ class RemoteControlledTank:
         # otherwise stop
         else:
             self.drive_base.stop()
+
+    def keep_driving_by_ir_beacon(self,
+                                  speed: float = 1000,    # mm/s
+                                  turn_rate: float = 90   # deg/s
+                                  ):
+        while True:
+            self.drive_by_ir_beacon(
+                speed=speed,
+                turn_rate=turn_rate)
