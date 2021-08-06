@@ -3,7 +3,7 @@
   "editor.rulers": [70],
 
   "ev3devBrowser.download.exclude": "{**/*.md,**/*.jpg,**/*.jpeg,**/*.png,**/*.pdf}",
-  "ev3devBrowser.download.include": "**/*.py",
+  "ev3devBrowser.download.include": "{**/*.py,**/*.json}",
   
   "files.exclude": {
     "**/.mypy_cache": true,
