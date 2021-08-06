@@ -8,7 +8,7 @@ image:
 video:
   youtube: "PAk9mxus1Nk"
 description:
-  "A cute robot who wheels around and sing Happy Birthday and blow candles by its powerful fan! Member of the Lương-Phạm family's Birthday Bots squad, alongside Birthday Cake Cutter and Birthday Gift Presenter."
+  "A cute robot who wheels around, sings Happy Birthday and blow candles by its powerful fan! Member of the Lương-Phạm family's Birthday Bots squad, alongside Birthday Cake Cutter and Birthday Gift Presenter."
 building_instructions:
   local: TODO
 code: "#program"
