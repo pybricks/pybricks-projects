@@ -62,7 +62,7 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
             volume=100,
             which='_all_')
 
-    def lower_or_raise_arm_by_ir_beacon(self):
+    def lower_or_raise_arms_by_ir_beacon(self):
         non_driving_ir_beacon_button_pressed = \
             self.ir_sensor.buttons(
                 channel=self.non_driving_ir_beacon_channel)
@@ -78,9 +78,9 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
         else:
             self.arm_control_motor.hold()
 
-    def keep_controlling_arm_by_ir_beacon(self):
+    def keep_controlling_arms_by_ir_beacon(self):
         while True:
-            self.lower_or_raise_arm_by_ir_beacon()
+            self.lower_or_raise_arms_by_ir_beacon()
 
     def say_happy_birthday_if_touch_sensor_pressed(self):
         if self.touch_sensor.pressed():
@@ -108,7 +108,7 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
 
         run_parallel(
             self.keep_driving_by_ir_beacon,
-            self.keep_controlling_arm_by_ir_beacon,
+            self.keep_controlling_arms_by_ir_beacon,
             self.say_happy_birthday_whenever_touch_sensor_pressed,
             self.sing_whenever_ir_beacon_button_pressed)
 
