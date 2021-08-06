@@ -12,6 +12,10 @@
     "**/.ropeproject": true,
   },
 
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none",
+  },
+
   "python.linting.enabled": true,
 
   "python.linting.pylintEnabled": true,
