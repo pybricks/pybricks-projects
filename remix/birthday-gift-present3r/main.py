@@ -38,7 +38,7 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
             ir_sensor_port=ir_sensor_port,
             ir_beacon_channel=driving_ir_beacon_channel)
 
-        self.hub = EV3Brick()
+        self.ev3_brick = EV3Brick()
 
         self.arm_control_motor = \
             Motor(port=medium_motor_port,
@@ -50,15 +50,15 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
             non_driving_ir_beacon_channel
 
     def start_up(self):
-        self.hub.screen.load_image(ImageFile.NEUTRAL)
+        self.ev3_brick.screen.load_image(ImageFile.NEUTRAL)
 
-        self.hub.speaker.set_speech_options(
+        self.ev3_brick.speaker.set_speech_options(
             language='en',
             voice='m3',
             speed=None,
             pitch=None)
 
-        self.hub.speaker.set_volume(
+        self.ev3_brick.speaker.set_volume(
             volume=100,
             which='_all_')
 
@@ -84,7 +84,7 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
 
     def say_happy_birthday_if_touch_sensor_pressed(self):
         if self.touch_sensor.pressed():
-            self.hub.speaker.say(text='Happy Birthday, My Love!')
+            self.ev3_brick.speaker.say(text='Happy Birthday, My Love!')
 
     def say_happy_birthday_whenever_touch_sensor_pressed(self):
         while True:
@@ -95,7 +95,7 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
                              self.ir_sensor.buttons(channel=2) +
                              self.ir_sensor.buttons(channel=3) +
                              self.ir_sensor.buttons(channel=4)):
-            self.hub.speaker.play_notes(
+            self.ev3_brick.speaker.play_notes(
                 notes=HAPPY_BIRTHDAY_SONG,
                 tempo=120)
 
