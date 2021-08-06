@@ -16,7 +16,7 @@ from rc_tank_util import RemoteControlledTank
 HAPPY_BIRTHDAY_SONG = json.load(open('Happy-Birthday-Song.json'))
 
 
-class BirthdayGiftBear3r(RemoteControlledTank, EV3Brick):
+class BirthdayGiftPresent3r(RemoteControlledTank):
     WHEEL_DIAMETER = 44   # milimeters
     AXLE_TRACK = 88       # milimeters
 
@@ -38,6 +38,8 @@ class BirthdayGiftBear3r(RemoteControlledTank, EV3Brick):
             ir_sensor_port=ir_sensor_port,
             ir_beacon_channel=driving_ir_beacon_channel)
 
+        self.hub = EV3Brick()
+
         self.arm_control_motor = \
             Motor(port=medium_motor_port,
                   positive_direction=Direction.COUNTERCLOCKWISE)
@@ -48,15 +50,15 @@ class BirthdayGiftBear3r(RemoteControlledTank, EV3Brick):
             non_driving_ir_beacon_channel
 
     def start_up(self):
-        self.screen.load_image(ImageFile.NEUTRAL)
+        self.hub.screen.load_image(ImageFile.NEUTRAL)
 
-        self.speaker.set_speech_options(
+        self.hub.speaker.set_speech_options(
             language='en',
             voice='m3',
             speed=None,
             pitch=None)
 
-        self.speaker.set_volume(
+        self.hub.speaker.set_volume(
             volume=100,
             which='_all_')
 
@@ -82,7 +84,7 @@ class BirthdayGiftBear3r(RemoteControlledTank, EV3Brick):
 
     def say_happy_birthday_if_touch_sensor_pressed(self):
         if self.touch_sensor.pressed():
-            self.speaker.say(text='Happy Birthday, My Love!')
+            self.hub.speaker.say(text='Happy Birthday, My Love!')
 
     def say_happy_birthday_whenever_touch_sensor_pressed(self):
         while True:
@@ -93,7 +95,7 @@ class BirthdayGiftBear3r(RemoteControlledTank, EV3Brick):
                              self.ir_sensor.buttons(channel=2) +
                              self.ir_sensor.buttons(channel=3) +
                              self.ir_sensor.buttons(channel=4)):
-            self.speaker.play_notes(
+            self.hub.speaker.play_notes(
                 notes=HAPPY_BIRTHDAY_SONG,
                 tempo=120)
 
@@ -112,6 +114,6 @@ class BirthdayGiftBear3r(RemoteControlledTank, EV3Brick):
 
 
 if __name__ == '__main__':
-    BIRTHDAY_GIFT_BEAR3R = BirthdayGiftBear3r()
+    birthday_gift_present3r = BirthdayGiftPresent3r()
 
-    BIRTHDAY_GIFT_BEAR3R.main()
+    birthday_gift_present3r.main()
