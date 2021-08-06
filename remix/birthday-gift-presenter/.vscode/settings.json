@@ -4,14 +4,37 @@
 
   "ev3devBrowser.download.exclude": "{**/*.md,**/*.jpg,**/*.jpeg,**/*.png,**/*.pdf}",
   "ev3devBrowser.download.include": "**/*.py",
+  
+  "files.exclude": {
+    "**/.mypy_cache": true,
+    "**/*.pyc": {"when": "$(basename).py"}, 
+    "**/__pycache__": true,
+    "**/.ropeproject": true,
+  },
 
   "python.linting.enabled": true,
+
   "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [
+    "--disable", "assignment-from-no-return",
+    "--disable", "import-error",
+    "--disable", "missing-class-docstring",
+    "--disable", "missing-function-docstring",
+    "--disable", "missing-module-docstring",
+    "--disable", "no-name-in-module",
+  ],
+
   "python.linting.flake8Enabled": true,
+
   "python.linting.mypyEnabled": true,
-  "python.linting.pydocstyleEnabled": true,
+
+  "python.linting.pydocstyleEnabled": false,
+
   "python.linting.pycodestyleEnabled": true,
+
   "python.linting.prospectorEnabled": true,
+
   "python.linting.pylamaEnabled": true,
-  "python.linting.banditEnabled": true
+
+  "python.linting.banditEnabled": true,
 }
