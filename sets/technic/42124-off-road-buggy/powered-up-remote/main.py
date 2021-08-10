@@ -1,3 +1,6 @@
+# Remote is currently in beta. This program only works with firmware
+# installed from <https://beta.pybricks.com>.
+
 from pybricks.pupdevices import Motor, Remote
 from pybricks.parameters import Port, Direction, Stop, Button
 from pybricks.tools import wait
