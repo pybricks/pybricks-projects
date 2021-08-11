@@ -127,7 +127,7 @@ class BirthdayCakeCutter(RemoteControlledDriveBase):
     def switch_to_cake_cutting_mode(self):
         self.cake_cutting_mode = True
 
-        self.hub.light.on(color=Color.ORANGE)
+        self.hub.light.on(color=Color.RED)
 
     def switch_mode_by_remote_red_buttons(self):
         remote_button_pressed = self.remote.buttons.pressed()
