@@ -186,7 +186,8 @@ class BirthdayCakeCutter(RemoteControlledDriveBase):
                 self.control_knife_by_remote_right_buttons()
 
             else:
-                self.drive_by_remote(speed=68)
+                # drive slowly to reduce risk of colliding with cake
+                self.drive_by_remote(speed=50)
 
 
 if __name__ == '__main__':
