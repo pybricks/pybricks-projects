@@ -45,9 +45,9 @@ Control the Birthday Cake Cutter by the Powered-Up Remote as follows:
 ## Technical Design and Safety Notes
 
 For the Arm and Knife to cut hard cakes, we design them with high torque.
-The opposite is true for the Candle Blower, which needs high speed adn low torque for its Fan.
+The opposite is true for the Candle Blower, which needs high speed and low torque for its fan.
 
-For safety, we use a butter knife for the robot but if you want a big, sharp metal knife, you have to re-design the knife holder.
+For safety, we use a plastic butter knife for the robot but if you want a big, sharp metal knife, you have to re-design the knife holder (and operate at your own risk!).
 
 
 ## Program
