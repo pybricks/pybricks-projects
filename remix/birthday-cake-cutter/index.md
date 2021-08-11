@@ -8,6 +8,9 @@ image:
 video:
   youtube: "PAk9mxus1Nk"
 description:
-  "Birthday Cake Cutter."
+    "A strong robot with a lot torque,
+     This robot is ready to cut the cake with its powerful knife.
+     It drives around on four wheels, controlled by the motors."
+
 code: "#program"
 ---
