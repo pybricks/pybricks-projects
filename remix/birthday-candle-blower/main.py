@@ -88,13 +88,12 @@ class BirthdayCandleBlower(RemoteControlledDriveBase):
                  fan_motor_port: Port = Port.A,
                  left_motor_port: Port = Port.D,
                  right_motor_port: Port = Port.C):
-        super().__init__(
-            wheel_diameter=self.WHEEL_DIAMETER,
-            axle_track=self.AXLE_TRACK,
-            left_motor_port=left_motor_port,
-            left_motor_pos_dir=Dir.COUNTERCLOCKWISE,
-            right_motor_port=right_motor_port,
-            right_motor_pos_dir=Dir.CLOCKWISE)
+        super().__init__(wheel_diameter=self.WHEEL_DIAMETER,
+                         axle_track=self.AXLE_TRACK,
+                         left_motor_port=left_motor_port,
+                         left_motor_pos_dir=Dir.COUNTERCLOCKWISE,
+                         right_motor_port=right_motor_port,
+                         right_motor_pos_dir=Dir.CLOCKWISE)
 
         self.hub = PrimeHub(top_side=Axis.X, front_side=Axis.Z)
 
