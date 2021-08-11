@@ -173,24 +173,23 @@ class BirthdayCakeCutter(RemoteControlledDriveBase):
         else:
             self.knife_control_motor.hold()
 
-    def main(self):
-        self.smile()
 
-        while True:
-            self.switch_mode_by_remote_red_buttons()
+# initialize Birthday Cake Cutter
+birthday_cake_cutter = BirthdayCakeCutter()
 
-            self.sing_happy_birthday_by_remote_center_button()
+# make it smile
+birthday_cake_cutter.smile()
 
-            if self.cake_cutting_mode:
-                self.control_arm_by_remote_left_buttons()
-                self.control_knife_by_remote_right_buttons()
+# remote-control it to drive around, sing and cut the cake
+while True:
+    birthday_cake_cutter.switch_mode_by_remote_red_buttons()
 
-            else:
-                # drive slowly to reduce risk of colliding with cake
-                self.drive_by_remote(speed=50)
+    birthday_cake_cutter.sing_happy_birthday_by_remote_center_button()
 
+    if birthday_cake_cutter.cake_cutting_mode:
+        birthday_cake_cutter.control_arm_by_remote_left_buttons()
+        birthday_cake_cutter.control_knife_by_remote_right_buttons()
 
-if __name__ == '__main__':
-    BIRTHDAY_CAKE_CUTTER = BirthdayCakeCutter()
-
-    BIRTHDAY_CAKE_CUTTER.main()
+    else:
+        # drive slowly to reduce risk of colliding with cake
+        birthday_cake_cutter.drive_by_remote(speed=50)
