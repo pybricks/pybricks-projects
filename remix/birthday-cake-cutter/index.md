@@ -8,7 +8,7 @@ image:
 video:
   youtube: "PAk9mxus1Nk"
 description:
-    "A strong robot with a lot of torque, this robot is ready to cut the cake with its powerful knife-wielding arm. It drives around on four wheels and also sings Happy Birthday. Member of the Lương-Phạm family's Birthday Bots squad, alongside Birthday Candle Blower and Birthday Gift Presenter."
+    "Strong with a lot of torque, this robot is ready to cut the cake with a knife wielded by its powerful arm. It drives around on four wheels and also sings Happy Birthday. Member of the Lương-Phạm family's Birthday Bots squad, alongside Birthday Candle Blower and Birthday Gift Presenter."
 building_instructions:
   local: TODO
 code: "#program"
@@ -17,7 +17,7 @@ code: "#program"
 
 Control the Birthday Cake Cutter by the Powered-Up Remote as follows:
 
-- Switch between two modes Cutting Mode:
+- Switch between two modes:
   - Left Red Button: Driving Mode (center button of Hub will turn green)
   - Right Red Button: Cake-Cutting Mode (center button of Hub will turn red)
 
@@ -44,10 +44,9 @@ Control the Birthday Cake Cutter by the Powered-Up Remote as follows:
 
 ## Technical Design and Safety Notes
 
-For the Arm and Knife to cut hard cakes, we design them with high torque.
-The opposite is true for the Candle Blower, which needs high speed and low torque for its fan.
+For the Arm and Knife to cut hard cakes, we design them with high torque. (The opposite is true for its friend Candle Blower, which needs high speed and low torque for its fan.)
 
-For safety, we use a plastic butter knife for the robot but if you want a big, sharp metal knife, you have to re-design the knife holder (and operate at your own risk!).
+For safety, this robot uses a plastic butter knife. If you want a big, sharp metal knife instead, you have to re-design the knife holder (and operate at your own risk!).
 
 
 ## Program
