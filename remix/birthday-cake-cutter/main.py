@@ -90,22 +90,19 @@ class BirthdayCakeCutter(RemoteControlledDriveBase):
     WHEEL_DIAMETER = 44   # milimeters
     AXLE_TRACK = 75       # milimeters
 
-    def __init__(
-            self,
-            left_motor_port: Port = Port.D,
-            right_motor_port: Port = Port.C,
-            arm_control_motor_port: Port = Port.A,
-            knife_control_motor_port: Port = Port.B):
-        super().__init__(
-            wheel_diameter=self.WHEEL_DIAMETER,
-            axle_track=self.AXLE_TRACK,
-            left_motor_port=left_motor_port,
-            left_motor_pos_dir=Dir.COUNTERCLOCKWISE,
-            right_motor_port=right_motor_port,
-            right_motor_pos_dir=Dir.CLOCKWISE)
+    def __init__(self,
+                 left_motor_port: Port = Port.D,
+                 right_motor_port: Port = Port.C,
+                 arm_control_motor_port: Port = Port.A,
+                 knife_control_motor_port: Port = Port.B):
+        super().__init__(wheel_diameter=self.WHEEL_DIAMETER,
+                         axle_track=self.AXLE_TRACK,
+                         left_motor_port=left_motor_port,
+                         left_motor_pos_dir=Dir.COUNTERCLOCKWISE,
+                         right_motor_port=right_motor_port,
+                         right_motor_pos_dir=Dir.CLOCKWISE)
 
-        self.hub = InventorHub(top_side=Axis.X,
-                               front_side=Axis.Z)
+        self.hub = InventorHub(top_side=Axis.X, front_side=Axis.Z)
 
         self.arm_control_motor = \
             Motor(port=arm_control_motor_port,
