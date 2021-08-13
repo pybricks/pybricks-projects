@@ -98,9 +98,9 @@ class BirthdayCakeCutter(RemoteControlledDriveBase):
         super().__init__(wheel_diameter=self.WHEEL_DIAMETER,
                          axle_track=self.AXLE_TRACK,
                          left_motor_port=left_motor_port,
-                         left_motor_pos_dir=Dir.COUNTERCLOCKWISE,
+                         left_motor_pos_dir=Dir.CLOCKWISE,
                          right_motor_port=right_motor_port,
-                         right_motor_pos_dir=Dir.CLOCKWISE)
+                         right_motor_pos_dir=Dir.COUNTERCLOCKWISE)
 
         self.hub = InventorHub(top_side=Axis.X, front_side=Axis.Z)
 
