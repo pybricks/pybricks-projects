@@ -110,7 +110,7 @@ class BirthdayCakeCutter(RemoteControlledDriveBase):
 
         self.knife_control_motor = \
             Motor(port=knife_control_motor_port,
-                  positive_direction=Dir.CLOCKWISE)
+                  positive_direction=Dir.COUNTERCLOCKWISE)
 
         self.cake_cutting_mode = False
 
