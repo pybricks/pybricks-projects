@@ -138,7 +138,7 @@ class BirthdayCakeCutter(RemoteControlledDriveBase):
                 self.switch_to_cake_cutting_mode()
 
     def smile(self):
-        self.hub.display.image(image=Icon.HAPPY)
+        self.hub.display.image(Icon.HAPPY)
 
     def sing_happy_birthday_by_remote_center_button(self):
         if self.remote.buttons.pressed() == (Button.CENTER,):
