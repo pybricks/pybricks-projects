@@ -6,7 +6,7 @@ maintainer:
 image:
   local: "birthday-cake-cutter.jpg"
 video:
-  youtube: "PAk9mxus1Nk"
+  youtube: "yckg0h2E-Ac"
 description:
     "Strong with a lot of torque, this robot is ready to cut the cake with a knife wielded by its powerful arm. It drives around on four wheels and also sings Happy Birthday. Member of the Lương-Phạm family's Birthday Bots squad, alongside Birthday Candle Blower and Birthday Gift Presenter."
 building_instructions:
