@@ -1,6 +1,6 @@
 from pybricks.hubs import MoveHub
 from pybricks.pupdevices import ColorDistanceSensor, Motor
-from pybricks.parameters import Port, Stop, Color, Direction
+from pybricks.parameters import Port, Direction
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait
 
@@ -26,11 +26,6 @@ sensor = ColorDistanceSensor(Port.C)
 # The gears are configured for the head.
 actuator = Motor(Port.D, Direction.COUNTERCLOCKWISE, gears=(24, 40))
 
-
-# Work around <https://github.com/pybricks/support/issues/323>.
-drive.distance_control.limits(duty=100)
-
-
 #################################
 # Define some helpful functions #
 #################################
@@ -52,11 +47,9 @@ def stand_up():
 
     # Save the old settings to restore later.
     settings = drive.settings()
-    limits = drive.distance_control.limits()
 
     # Set speed and acceleration high so that
     # we can make R2-D2 jerk forward or backward.
-    drive.distance_control.limits(1000, 5000)
     drive.settings(1000, 5000)
 
     # Drive quickly and stop to make R2-D2 change position.
@@ -65,7 +58,6 @@ def stand_up():
 
     # Restore the old settings.
     drive.settings(*settings)
-    drive.distance_control.limits(*limits)
 
     drive.straight(-40)
     wait(500)
@@ -116,7 +108,6 @@ print('starting:', 'upright' if is_upright() else 'tripod')
 # If you want to adjust the settings, it can be useful
 # to print the defaults so you know where to start.
 # print('default drive settings', drive.settings())
-# print('default drive limits', drive.distance_control.limits())
 
 
 ################
