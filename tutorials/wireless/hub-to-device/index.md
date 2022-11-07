@@ -1,5 +1,5 @@
 ---
-title: "Communicating with other devices"
+title: "Communicating with non-LEGO devices"
 image:
     local: "hub-to-device.png"
 layout: set

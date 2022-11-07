@@ -9,7 +9,7 @@
    id="svg918"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    sodipodi:docname="drawing.svg"
-   inkscape:export-filename="/home/laurens/git-pybricks/pybricks.github.io/projects/tutorials/wireless/hub-to-device/hub-keyboard.png"
+   inkscape:export-filename="/home/laurens/git-pybricks/pybricks.github.io/projects/tutorials/wireless/hub-to-device/hub-hub.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,9 +27,9 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="1.183948"
-     inkscape:cx="324.33856"
-     inkscape:cy="124.58317"
+     inkscape:zoom="0.94682145"
+     inkscape:cx="24.291803"
+     inkscape:cy="236.05295"
      inkscape:window-width="1856"
      inkscape:window-height="1136"
      inkscape:window-x="64"
@@ -372,5 +372,95 @@
        y="70.800369"
        rx="0.51087117"
        ry="0.51087117" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#9c9c9c;stroke-width:0.651958;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect2048"
+       width="28.037487"
+       height="17.500921"
+       x="-95.500038"
+       y="-119.31371"
+       transform="scale(-1)" />
+    <rect
+       style="fill:#00b333;fill-opacity:1;stroke:none;stroke-width:0.0539879"
+       id="rect2050"
+       width="6.5357037"
+       height="7.6487093"
+       x="-81.953529"
+       y="-114.38761"
+       rx="0.38744092"
+       ry="0.38731337"
+       transform="scale(-1)" />
+    <rect
+       style="fill:#00dee9;fill-opacity:1;stroke:none;stroke-width:0.0269971"
+       id="rect2052"
+       width="2.3390591"
+       height="5.3441834"
+       x="-111.73279"
+       y="67.743492"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#9c9c9c;stroke-width:0.651958;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1018"
+       width="29.799482"
+       height="15.175338"
+       x="65.388908"
+       y="138.75174"
+       rx="2.8648992"
+       ry="2.8648992" />
+    <rect
+       style="fill:#00dee9;fill-opacity:1;stroke:none;stroke-width:0.0269971"
+       id="rect1022"
+       width="2.3390591"
+       height="5.3441834"
+       x="79.119125"
+       y="138.38582" />
+    <g
+       id="g2046"
+       transform="matrix(-1,0,0,1,155.26267,111.47103)">
+      <path
+         style="fill:none;stroke:#246fff;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 87.898313,22.551998 c 3.480253,0.147862 6.338825,1.364881 6.765853,6.763626"
+         id="path1024"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#246fff;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 88.24038,17.811183 c 5.614411,0.246026 10.225915,2.27101 10.914803,11.253932"
+         id="path1026"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <rect
+       style="fill:#fad800;fill-opacity:1;stroke:#9c9c9c;stroke-width:0.651959;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1184"
+       width="29.799488"
+       height="14.314044"
+       x="65.388908"
+       y="145.59119"
+       rx="2.1734874"
+       ry="2.1734874" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#9c9c9c;stroke-width:0.651958;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3449"
+       width="29.799482"
+       height="15.175338"
+       x="65.388908"
+       y="138.75174"
+       rx="2.8648992"
+       ry="2.8648992" />
+    <rect
+       style="fill:#00dee9;fill-opacity:1;stroke:none;stroke-width:0.0269971"
+       id="rect3451"
+       width="2.3390591"
+       height="5.3441834"
+       x="79.119125"
+       y="138.38582" />
+    <rect
+       style="fill:#fad800;fill-opacity:1;stroke:#9c9c9c;stroke-width:0.651959;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3453"
+       width="29.799488"
+       height="14.314044"
+       x="65.388908"
+       y="145.59119"
+       rx="2.1734874"
+       ry="2.1734874" />
   </g>
 </svg>
