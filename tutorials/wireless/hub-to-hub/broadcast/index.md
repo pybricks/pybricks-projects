@@ -204,3 +204,8 @@ vehicle b3819a921c0001000d00 distance 13
 ```
 
 The output is updated live. Press `Ctrl+C` to stop the scanner.
+
+**WARNING**
+Bleak uses active scanning mode that can drain the batteries of any 
+other BLE devices you have in the neighborhood. Remember to quit the 
+scanner when you don't need it.
