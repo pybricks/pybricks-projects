@@ -6,7 +6,7 @@ maintainer:
 image:
     local: "mini-loader.JPG"
 video:
-    youtube: "IncSoa2D400"
+    youtube: "L0gnDPXkx4U"
 description:
     "Mini Loader controlled with LEGO Bluetooth Remote"
 building_instructions:
