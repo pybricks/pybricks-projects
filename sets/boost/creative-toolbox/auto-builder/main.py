@@ -28,7 +28,7 @@ for element in (FEET, BELLY, ARMS, NECK, HEAD):
     belt.run_target(speed=200, target_angle=element)
 
     # Grab the element
-    arm.run_time(speed=300, time=2000)
+    arm.run_time(speed=300, time=2000, then=Stop.BRAKE)
 
     # Lift the element by going back to nearly zero
     arm.run_target(speed=300, target_angle=55)
@@ -38,7 +38,7 @@ for element in (FEET, BELLY, ARMS, NECK, HEAD):
     wait(500)
 
     # Put the element down
-    arm.run_time(speed=300, time=2000)
+    arm.run_time(speed=300, time=2000, then=Stop.BRAKE)
 
     # Lift the arm back up
     arm.run_target(speed=300, target_angle=0)
