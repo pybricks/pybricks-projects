@@ -1,28 +1,42 @@
 ---
 title: "Gelo"
 maintainer:
-    user: "TheVinhLuong102"
-    name: "The Lương-Phạm Family"
+    user: "pybricks"
+    name: "The Pybricks Team"
 image:
     local: "gelo.jpg"
     credit: "LEGO"
-video:
-    youtube: "5Fa4m1XzlCA"
 description:
-    "A real life four-legged robot. Its unique mechanism means it can walk, avoid obstacles, and even perform tricks."
+    "Gelo is a 4-legged robot that operates autonomously or via remote control. It can even do tricks!"
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/51515_Gelo.pdf
-code: "#program"
+code: "#gelo-module"
 ---
 
+## Activities
 
-## Program
+These activities are similar to the starter programs available in the official
+LEGO app.
 
-The playing instructions for each robot variant are in the docstrings of the corresponding file.
+First copy the [Gelo module](#gelo-module) below and save it in Pybricks Code.
+It is used by all of the activities. Then follow one of the links below.
 
-The code for Gelo's basic walk is in `gelo-basic.py` as follows:
+- [Roam around](./roam): Gelo walks around uses the ultrasonic sensor to avoid obstacles.
+- [Tricks](./tricks): Use the color sensor to tell Gelo to do a trick for you.
+- [Remote control](./remote): Use the LEGO Powered Up remote to control Gelo.
+- [Command prompt](./repl): Use the interactive command prompt in Pybricks Code to control Gelo.
+- [Make your own program](./template): A starter template for writing your own program.
+
+## Gelo module
+
+Save this program as `gelo.py` in Pybricks Code. It is used in the
+[activities](#activities) above.
 
 {% include copy-code.html %}
 ```python
-{% include_relative gelo-basic.py %}
+{% include_relative gelo.py %}
 ```
+
+## Basic program
+
+If you are looking for something less complex, try out this [basic](./basic) program.
