@@ -19,7 +19,7 @@ REPL (Read Evaluate Print Loop). It can be used to run Python code as you
 type it in.
 
 Save the program below as `gelo_repl.py` in Pybricks Code. And make sure you
-have the [gelo.py](../#main-program) saved there too.
+have the [gelo.py](../#gelo-module) saved there too.
 
 Then connect to Gelo and run the program. In the terminal window in Pybricks
 Code, you will see a prompt like this:
