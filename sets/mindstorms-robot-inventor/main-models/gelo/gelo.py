@@ -157,9 +157,9 @@ class Gelo:
         }
 
         # 90% of full load for all motors
-        self._near_max_load = 90 * sum([
-            l.control.limits()[_TORQUE] for l in self._all_legs
-        ]) // 100
+        self._near_max_load = 90 * sum(
+            leg.control.limits()[_TORQUE] for leg in self._all_legs
+        ) // 100
 
         self._zero = {
             self.back_right: 0,
@@ -273,7 +273,7 @@ class Gelo:
             # legs is 0 while keeping the relative position of each
             # motor.
             avg = sum([
-                l.angle() - offset[l] for leg in self._all_legs
+                leg.angle() - offset[leg] for leg in self._all_legs
             ]) // len(self._all_legs)
 
             for leg in self._all_legs:
