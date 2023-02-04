@@ -272,9 +272,9 @@ class Gelo:
             # Adjust the angle of each so that the average of all
             # legs is 0 while keeping the relative position of each
             # motor.
-            avg = sum([
+            avg = sum(
                 leg.angle() - offset[leg] for leg in self._all_legs
-            ]) // len(self._all_legs)
+            ) // len(self._all_legs)
 
             for leg in self._all_legs:
                 leg.reset_angle(leg.angle() - avg)
