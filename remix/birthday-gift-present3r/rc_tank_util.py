@@ -59,38 +59,38 @@ class RemoteControlledTank:
 
         # turn left on the spot
         elif ir_beacon_button_pressed == \
-                {Button.LEFT_UP, Button.RIGHT_DOWN}:
+                {Button.LEFT_DOWN, Button.RIGHT_UP}:
             self.drive_base.drive(
                 speed=0,
                 turn_rate=-turn_rate)
 
         # turn right on the spot
         elif ir_beacon_button_pressed == \
-                {Button.RIGHT_UP, Button.LEFT_DOWN}:
+                {Button.RIGHT_DOWN, Button.LEFT_UP}:
             self.drive_base.drive(
                 speed=0,
                 turn_rate=turn_rate)
 
         # turn left forward
-        elif ir_beacon_button_pressed == {Button.LEFT_UP}:
+        elif ir_beacon_button_pressed == {Button.RIGHT_UP}:
             self.drive_base.drive(
                 speed=speed,
                 turn_rate=-turn_rate)
 
         # turn right forward
-        elif ir_beacon_button_pressed == {Button.RIGHT_UP}:
+        elif ir_beacon_button_pressed == {Button.LEFT_UP}:
             self.drive_base.drive(
                 speed=speed,
                 turn_rate=turn_rate)
 
         # turn left backward
-        elif ir_beacon_button_pressed == {Button.LEFT_DOWN}:
+        elif ir_beacon_button_pressed == {Button.RIGHT_DOWN}:
             self.drive_base.drive(
                 speed=-speed,
                 turn_rate=turn_rate)
 
         # turn right backward
-        elif ir_beacon_button_pressed == {Button.RIGHT_DOWN}:
+        elif ir_beacon_button_pressed == {Button.LEFT_DOWN}:
             self.drive_base.drive(
                 speed=-speed,
                 turn_rate=-turn_rate)

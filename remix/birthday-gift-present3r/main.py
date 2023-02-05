@@ -84,7 +84,8 @@ class BirthdayGiftPresent3r(RemoteControlledTank):
 
     def say_happy_birthday_if_touch_sensor_pressed(self):
         if self.touch_sensor.pressed():
-            self.ev3_brick.speaker.say(text='Happy Birthday, My Love!')
+            self.ev3_brick.speaker.say(
+                text='Happy Birthday, My Love!')
 
     def say_happy_birthday_whenever_touch_sensor_pressed(self):
         while True:
