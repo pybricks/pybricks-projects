@@ -15,24 +15,13 @@ code: "#the-remote-control-program"
 # How it works
 
 Your MicroPython programs can produce *output* using the `print` command, but
-it can also read *input*. To enter input, just click on the terminal window
-and press some keys.
-
-![](./terminalwindow.png)
-
-You can read keyboard presses using `stdin`, as shown in the example below.
-Then you can make your program choose different behaviors based on which key
-is pressed.
-
-{% include copy-code.html %}
-```python
-{% include_relative remote.py %}
-```
+it can also read *input*. You can learn more about this
+in [this tutorial](../../../../tutorials/wireless/hub-to-device/pc-keyboard/).
 
 
 # The remote control program
 
-This program combines the keyboard example shown above with
+This program combines the keyboard example linked above with
 the [basic driving program](../driving). This allows you to control the
 truck using the numeric keys on your keyboard. If your keyboard does not have
 separate numeric keys, just adapt the program to use other keys.
