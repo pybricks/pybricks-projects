@@ -4,8 +4,10 @@ from pybricks.tools import wait
 
 # Initialize the motors and sensor.
 steer = Motor(Port.C)
-front = Motor(Port.A, Direction.COUNTERCLOCKWISE)
-rear = Motor(Port.B, Direction.COUNTERCLOCKWISE)
+
+# Initialize the motors with increased smoothness profile.
+front = Motor(Port.A, Direction.COUNTERCLOCKWISE, profile=360)
+rear = Motor(Port.B, Direction.COUNTERCLOCKWISE, profile=360)
 sensor = ColorDistanceSensor(Port.D)
 
 # Lower the acceleration so the car starts and stops realistically.

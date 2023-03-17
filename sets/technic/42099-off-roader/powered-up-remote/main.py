@@ -4,8 +4,10 @@ from pybricks.tools import wait
 
 # Initialize the motors.
 steer = Motor(Port.C)
-front = Motor(Port.A, Direction.COUNTERCLOCKWISE)
-rear = Motor(Port.B, Direction.COUNTERCLOCKWISE)
+
+# Initialize the motors with increased smoothness profile.
+front = Motor(Port.A, Direction.COUNTERCLOCKWISE, profile=360)
+rear = Motor(Port.B, Direction.COUNTERCLOCKWISE, profile=360)
 
 # Lower the acceleration so the car starts and stops realistically.
 front.control.limits(acceleration=1000)
