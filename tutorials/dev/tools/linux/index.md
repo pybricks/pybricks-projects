@@ -4,7 +4,7 @@ maintainer:
     user: "pybricks"
     name: "The Pybricks Team"
 image:
-    local: "../../dev.png"
+    local: "pybricks-code-linux.png"
 description:
     "Configure udev and browser tools to use Pybricks."
 ---
