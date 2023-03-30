@@ -18,6 +18,9 @@ keyboard.register(stdin)
 
 while True:
 
+    # Let the remote program know we are ready for a command.
+    stdout.buffer.write(b"rdy")
+
     # Optional: Check available input.
     while not keyboard.poll(0):
         # Optional: Do something here.
@@ -35,6 +38,3 @@ while True:
         break
     else:
         motor.stop()
-    
-    # Send a response.
-    stdout.buffer.write(b"OK")
