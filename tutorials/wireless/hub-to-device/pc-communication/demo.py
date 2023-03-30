@@ -1,8 +1,9 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2020 Henrik Blidh
-# Copyright (c) 2022 The Pybricks Authors
+# Copyright (c) 2022-2023 The Pybricks Authors
 
 import asyncio
+from contextlib import suppress
 from bleak import BleakScanner, BleakClient
 
 UART_SERVICE_UUID = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
@@ -14,54 +15,68 @@ UART_TX_CHAR_UUID = "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
 HUB_NAME = "Pybricks Hub"
 
 
-def hub_filter(device, ad):
-    return device.name and device.name.lower() == HUB_NAME.lower()
-
-
-def handle_disconnect(_):
-    print("Hub was disconnected.")
-
-
-def handle_rx(_, data: bytearray):
-    print("Received:", data)
-
-
 async def main():
-    # Find the device and initialize client.
-    device = await BleakScanner.find_device_by_filter(hub_filter)
-    client = BleakClient(device, disconnected_callback=handle_disconnect)
+    main_task = asyncio.current_task()
 
-    # Shorthand for sending some data to the hub.
-    async def send(client, data):
-        await client.write_gatt_char(rx_char, data)
+    def handle_disconnect(_):
+        print("Hub was disconnected.")
 
-    try:
-        # Connect and get services.
-        await client.connect()
+        # If the hub disconnects before this program is done,
+        # cancel this program so it doesn't get stuck waiting
+        # forever.
+        if not main_task.done():
+            main_task.cancel()
+
+    ready_event = asyncio.Event()
+
+    def handle_rx(_, data: bytearray):
+        if data == b"rdy":
+            ready_event.set()
+        else:
+            print("Received:", data)
+
+    # Do a Bluetooth scan to find the hub.
+    device = await BleakScanner.find_device_by_name(HUB_NAME)
+
+    if device is None:
+        print(f"could not find hub with name: {HUB_NAME}")
+        return
+
+    # Connect to the hub.
+    async with BleakClient(device, handle_disconnect) as client:
+
+        # Subscribe to notifications from the hub.
         await client.start_notify(UART_TX_CHAR_UUID, handle_rx)
-        nus = client.services.get_service(UART_SERVICE_UUID)
-        rx_char = nus.get_characteristic(UART_RX_CHAR_UUID)
+
+        # Shorthand for sending some data to the hub.
+        async def send(data):
+            # Wait for hub to say that it is ready to receive data.
+            await ready_event.wait()
+            # Prepare for the next ready event.
+            ready_event.clear()
+            # Send the data to the hub.
+            await client.write_gatt_char(UART_RX_CHAR_UUID, data)
 
         # Tell user to start program on the hub.
         print("Start the program on the hub now with the button.")
 
         # Send a few messages to the hub.
         for i in range(5):
-            await send(client, b"fwd")
+            await send(b"fwd")
             await asyncio.sleep(1)
-            await send(client, b"rev")
+            await send(b"rev")
             await asyncio.sleep(1)
+            print(".", end="", flush=True)
 
         # Send a message to indicate stop.
-        await send(client, b"bye")
+        await send(b"bye")
 
-    except Exception as e:
-        # Handle exceptions.
-        print(e)
-    finally:
-        # Disconnect when we are done.
-        await client.disconnect()
+        print("done.")
+
+    # Hub disconnects here when async with block exits.
 
 
 # Run the main async program.
-asyncio.run(main())
+if __name__ == "__main__":
+    with suppress(asyncio.CancelledError):
+        asyncio.run(main())
