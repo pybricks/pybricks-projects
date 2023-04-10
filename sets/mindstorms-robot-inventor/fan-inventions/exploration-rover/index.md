@@ -16,7 +16,8 @@ code: "#program"
 
 ## Description
 
-TODO
+This program makes the robot drive around while watching out for colored rocks
+and obstacles.
 
 ## Program
 
