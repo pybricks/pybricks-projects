@@ -46,6 +46,10 @@ To use Pylance, you will need [Python] installed on your computer. You can
 install Python from the [official site][py-dl], or using your favorite package
 manager. On Linux, Python is most likely already installed.
 
+On Ubuntu, you will also need to ensure the `venv` package is installed.
+
+    sudo apt install python3-venv
+
 Then follow the link above or search for "Pylance" in the *Extensions* in VS Code
 and click *Install* to install the *Pylance* extension.
 
