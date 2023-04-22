@@ -63,7 +63,7 @@ isolated *virtual environment*.
 
 - Open your project folder in VS Code.
 - If you created your project using the *LEGO® MINDSTORMS® EV3 MicroPython*
-  extension, you will need to remove edit the `.vscode/settings.json` file and
+  extension, you will need to edit the `.vscode/settings.json` file and
   remove the `"python.languageServer": "None"` line and save the file, otherwise
   skip this step.
 - Use <kbd>F1</kbd> or <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd>
