@@ -122,10 +122,10 @@ To use the broadcasting feature, you have to install a special version of the
 Pybricks firmware that includes the ``Broadcast`` class:
 
 1. Download the firmware file for your hub:
-    - [Technic Hub](./technichub-firmware-build-2178.zip)
-    - [City Hub](./cityhub-firmware-build-2178.zip)
-    - [Essential Hub](./essentialhub-firmware-build-2178.zip)
-    - [Inventor Hub and Prime Hub](./primehub-firmware-build-2178.zip)
+    - [Technic Hub](./technichub-broadcast-fixed.zip)
+    - [City Hub](./cityhub-broadcast-fixed.zip)
+    - [Essential Hub](./essentialhub-broadcast-fixed.zip)
+    - [Inventor Hub and Prime Hub](./primehub-broadcast-fixed.zip)
 2. In [Pybricks Beta](https://beta.pybricks.com/), open the settings menu.
 3. Click ``Install Pybricks Firmware``.
 4. Instead of selecting your hub, choose ``Advanced`` at the bottom.
@@ -178,3 +178,34 @@ This is something we are still working on. To work around it, just load the
 program onto the hub and disconnect from your computer. You can just restart
 the program with the hub button.
 
+# Reading broadcast data on your computer
+
+If you want to check what your hub is broadcasting you can read that data 
+on your computer. There is a simple hub scanner code:
+
+{% include copy-code.html %}
+```python
+{% include_relative scanner.py %}
+```
+
+The scanner uses BLE library called bleak, that you need to install first:
+
+```
+pip install bleak
+```
+
+When you run the program, the expected output should be similar to:
+
+```
+python ./scanner.py 
+LEGO devices:
+remote 0af6893f1c02x0500eeff1200 tilt (-18, 18)  
+vehicle b3819a921c0001000d00 distance 13 
+```
+
+The output is updated live. Press `Ctrl+C` to stop the scanner.
+
+**WARNING**
+Bleak uses active scanning mode that can drain the batteries of any 
+other BLE devices you have in the neighborhood. Remember to quit the 
+scanner when you don't need it.
