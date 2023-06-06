@@ -82,8 +82,7 @@ Now end the program by pressing the button or by typing ``bye``.
 ```
 
 This program works on all hubs except for the BOOST Move Hub, since it does not
-support the ``usys`` or ``uselect`` module. You can still make it work on that
-hub by using the ``input()`` and ``print()`` functions instead.
+support the ``usys`` or ``uselect`` module.
 
 # Sending and receiving data from a PC
 
