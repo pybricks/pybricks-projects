@@ -137,6 +137,12 @@ If you have more than one active hub, you can specify a specific hub by name:
 
     pybricksdev run ble --name "my hub" my_program.py
 
+To get your program started with _F5_ or _CTRL+F5_, create a run configuration
+of type `Python` and subtype `Module` with module name `pybricksdev` and add
+following line to `.vscode/launch.json`:
+
+        "args": ["run", "ble", "${file}"],
+
 
 [pybricksdev]: https://pypi.org/project/pybricksdev
 
