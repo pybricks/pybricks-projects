@@ -38,7 +38,9 @@ while True:
         SPEED = speed_levels[current_speed_index]  # Update SPEED
 
     if right_button_pressed and not prev_right_button_pressed:
-        current_speed_index = min(len(speed_levels) - 1, current_speed_index + 1)  # Increase speed index
+        current_speed_index = min(
+            len(speed_levels) - 1, current_speed_index + 1
+        )  # Increase speed index
         SPEED = speed_levels[current_speed_index]  # Update SPEED
 
     # Store the current state for the next iteration

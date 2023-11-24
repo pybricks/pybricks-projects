@@ -22,3 +22,9 @@ Up Remote.
 ```python
 {% include_relative main.py %}
 ```
+
+Additional program submitted by [@mikeyupol](https://github.com/mikeyupol):
+
+```python
+{% include_relative main2.py %}
+```
