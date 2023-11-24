@@ -1,6 +1,3 @@
-# NOTE: Run this program with the latest
-# firmware provided via https://beta.pybricks.com/
-
 from pybricks.pupdevices import Motor
 from pybricks.parameters import Port
 from pybricks.tools import wait

@@ -2,13 +2,17 @@
 # Copyright (c) 2020 Henrik Blidh
 # Copyright (c) 2022-2023 The Pybricks Authors
 
+"""
+Example program for computer-to-hub communication.
+
+Requires Pybricks firmware >= 3.3.0.
+"""
+
 import asyncio
 from contextlib import suppress
 from bleak import BleakScanner, BleakClient
 
-UART_SERVICE_UUID = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
-UART_RX_CHAR_UUID = "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
-UART_TX_CHAR_UUID = "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
+PYBRICKS_COMMAND_EVENT_CHAR_UUID = "c5f50002-8280-46da-89f4-6d8051e4aeef"
 
 # Replace this with the name of your hub if you changed
 # it when installing the Pybricks firmware.
@@ -30,10 +34,13 @@ async def main():
     ready_event = asyncio.Event()
 
     def handle_rx(_, data: bytearray):
-        if data == b"rdy":
-            ready_event.set()
-        else:
-            print("Received:", data)
+        if data[0] == 0x01:  # "write stdout" event (0x01)
+            payload = data[1:]
+
+            if payload == b"rdy":
+                ready_event.set()
+            else:
+                print("Received:", payload)
 
     # Do a Bluetooth scan to find the hub.
     device = await BleakScanner.find_device_by_name(HUB_NAME)
@@ -46,7 +53,7 @@ async def main():
     async with BleakClient(device, handle_disconnect) as client:
 
         # Subscribe to notifications from the hub.
-        await client.start_notify(UART_TX_CHAR_UUID, handle_rx)
+        await client.start_notify(PYBRICKS_COMMAND_EVENT_CHAR_UUID, handle_rx)
 
         # Shorthand for sending some data to the hub.
         async def send(data):
@@ -55,7 +62,11 @@ async def main():
             # Prepare for the next ready event.
             ready_event.clear()
             # Send the data to the hub.
-            await client.write_gatt_char(UART_RX_CHAR_UUID, data)
+            await client.write_gatt_char(
+                PYBRICKS_COMMAND_EVENT_CHAR_UUID,
+                b"\x06" + data,  # prepend "write stdin" command (0x06)
+                response=True
+            )
 
         # Tell user to start program on the hub.
         print("Start the program on the hub now with the button.")
