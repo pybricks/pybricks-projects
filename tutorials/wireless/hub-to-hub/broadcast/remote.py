@@ -21,7 +21,7 @@ while True:
         roll = 0
 
     # Send the data!
-    hub.ble.broadcast(pitch, roll)
+    hub.ble.broadcast((pitch, roll))
 
     # Check for distance data.
     data = hub.ble.observe(2)

@@ -11,17 +11,6 @@ video:
     youtube: "i--8nBvNn_4"
 ---
 
-# Experimental features ahead!
-
-Hub to hub communication is still a work in progress. This page explains how
-you can install an experimental release on the hub to try it out. This
-functionality may change in the future and some things may not work.
-
-Last changed on 2023-05-16. Be sure to use [Pybricks Beta] and the most recent
-firmware.
-
-[Pybricks Beta]: https://beta.pybricks.com
-
 # Data broadcasting
 
 When a Bluetooth device is on but not yet connected to anything, it typically
@@ -64,10 +53,11 @@ hub = ThisHub(observe_channels=[1, 2])
 You can send data like this:
 
 ```python
-roll, pitch = sensor.tilt()
+# Get a tuple of pitch and roll angles.
+data = sensor.tilt()
 
 # Send it out to anyone listening.
-hub.ble.broadcast(roll, pitch)
+hub.ble.broadcast(data)
 ```
 
 On another hub, you can receive it as follows:
@@ -86,7 +76,7 @@ if data is not None:
 When sending data, your values will be automatically encoded into a format
 suitable for broadcasting. You can send integers (`1`, `-5`, ...), floats
 (`1.0` `-5.3`, ...), booleans (`True`, `False`), strings (`"example"`), bytes
-(`b"\x00\x02"`) and `None`.
+(`b"\x00\x02"`) or tuples thereof.
 
 
 # Running the example programs
@@ -97,7 +87,7 @@ wireless bidirectional communication.
 One hub sends tilt sensor data to control a driving vehicle. The vehicle
 sends back a distance measurement to show a warning light for nearby obstacles:
 
-**Run this program on the remote**
+**Run this program on the sender**
 
 You can use any hub with any type of sensor. For example, you could use the
 built-in tilt sensor of the Technic Hub, Prime Hub, Essential Hub, or the
@@ -126,13 +116,7 @@ sensor, you can delete the lines that make use of the Ultrasonic Sensor.
 
 If the hub is still connected to the computer, the bluetooth chip is quite busy
 and data broadcasting may be slow. Especially on the Technic Hub and the City
-Hub.
+Hub. On the Move Hub, it cannot broadcast at all while connected to the PC.
 
 To work around it, just load the program onto the hub and disconnect from your
 computer. You can just restart the program with the hub button.
-
-# Known issue: Broadcasting using the City hub does not work
-
-There is a bug in the Bluetooth chip firmware that prevents broadcasting
-from working properly on the City hub. It was working in previous experimental
-implementations because we were broadcasting data the "wrong" way.
