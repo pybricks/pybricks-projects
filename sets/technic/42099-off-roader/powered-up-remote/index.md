@@ -11,11 +11,17 @@ video:
     youtube: "kN47P6mksj4"
 building_instructions:
     external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6314518.pdf
-code: "#program"
+code: "#block-program"
 ---
 
+# Block Program
 
-# Program
+You can easily code this with the new block coding feature. Just drag and drop
+the blocks as shown below.
+
+![Powered Up Remote Control](off-roader-blocks-screenshot.png)
+
+# Python program
 
 This program expands the [basic driving program](../driving) with the Powered
 Up Remote.
