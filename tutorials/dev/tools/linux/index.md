@@ -33,3 +33,14 @@ If neither of these options is suitable, you can manually copy [this file](https
 After installing the `udev` rules, disconnect any affected devices and plug them back in. 
 
 If this doesn't seem to work, try rebooting.
+
+# Using Pybricks Code with Chromium
+
+If you use Chromium as a snap package, you may get an error when you try
+to install the firmware on a SPIKE hub or MINDSTORMS Robot Inventor hub via
+USB. To resolve this, enable access to USB devices:
+
+{% include copy-code.html %}
+```
+sudo snap connect chromium:raw-usb
+```
