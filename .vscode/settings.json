@@ -1,13 +1,43 @@
 {
   "editor.rulers": [70],
 
+  "files.exclude": {
+    "**/.git": true,
+    "**/.mypy_cache": true,
+    "**/*.pyc": {"when": "$(basename).py"}, 
+    "**/__pycache__": true,
+    "**/.ropeproject": true,
+  },
+
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none",
+  },
+
   "python.linting.enabled": true,
+
   "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [
+    "--disable", "assignment-from-no-return",
+    "--disable", "import-error",
+    "--disable", "missing-class-docstring",
+    "--disable", "missing-function-docstring",
+    "--disable", "missing-module-docstring",
+    "--disable", "no-name-in-module",
+    "--disable", "too-few-public-methods",
+    "--disable", "too-many-arguments",
+  ],
+
   "python.linting.flake8Enabled": true,
+
   "python.linting.mypyEnabled": true,
+
   "python.linting.pydocstyleEnabled": false,
+
   "python.linting.pycodestyleEnabled": true,
+
   "python.linting.prospectorEnabled": true,
+
   "python.linting.pylamaEnabled": true,
-  "python.linting.banditEnabled": true
+
+  "python.linting.banditEnabled": true,
 }
