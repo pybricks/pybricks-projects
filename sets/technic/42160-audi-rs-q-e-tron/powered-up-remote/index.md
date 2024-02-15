@@ -10,6 +10,8 @@ video:
     youtube: "c0KVNdJlAkc"
 description: "Control the Technic Audi RS Q e-tron with the Powered Up Remote."
 code: "#program"
+building_instructions:
+    external: https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6508358.pdf
 ---
 
 In this project we'll show you how to control the Audi RS Q e-tron with the Powered Up remote.
