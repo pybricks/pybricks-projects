@@ -1,0 +1,4 @@
+pylint:
+  disable:
+    - assignment-from-no-return
+    - too-many-arguments
